@@ -1,70 +1,158 @@
-/* ======= RESPONSIVE.CSS (versión estable 2025-11) ======= */
-/* Ajustes específicos para móviles y tablets */
+/* =======================================================
+   RESPONSIVE.CSS — Versión unificada y optimizada 2025
+   Compatible con: style.css (versión estable)
+   Autor: ChatGPT + Emiliano Naranjo
+   ======================================================= */
 
 /* ======= GENERAL ======= */
-@media (max-width: 1024px) {
-  body {
-    font-size: 15px;
+@media screen and (max-width: 1024px) {
+  header .container {
+    width: 95%;
   }
 
   nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  header .logo img {
-    height: 38px;
+    gap: 15px;
   }
 }
 
-/* ======= AJUSTES PARA MÓVILES PEQUEÑOS ======= */
-@media (max-width: 768px) {
-  #hero-talleres,
-  #hero-entrevistas {
-    align-items: flex-end;
-    padding-bottom: 5vh;
+/* ======= TABLET ======= */
+@media screen and (max-width: 992px) {
+  .hero-text {
+    padding: 16px 22px;
+    font-size: 1rem;
   }
 
-  #hero-talleres .hero-text,
-  #hero-entrevistas .hero-text {
-    width: 88%;
-    bottom: 5vh;
-    background: rgba(0, 0, 0, 0.45);
-    padding: 10px 14px;
+  .hero-text h1 {
+    font-size: 2rem;
   }
 
-  #hero-talleres h1,
-  #hero-entrevistas h1 {
-    font-size: 1.3rem;
-    margin-bottom: 4px;
-  }
-
-  #hero-talleres h2,
-  #hero-entrevistas h2 {
-    font-size: 0.85rem;
-    line-height: 1.25;
-  }
-}
-
-/* ======= MICROAJUSTES EXTRA ======= */
-@media (max-width: 480px) {
-  #hero-talleres .hero-text,
-  #hero-entrevistas .hero-text {
-    width: 90%;
-    padding: 8px 12px;
-    bottom: 4vh;
-  }
-
-  #hero-talleres h1,
-  #hero-entrevistas h1 {
+  .hero-text h2 {
     font-size: 1.1rem;
   }
 
-  #hero-talleres h2,
-  #hero-entrevistas h2 {
-    font-size: 0.8rem;
-    line-height: 1.2;
+  footer p {
+    font-size: 0.9rem;
   }
 }
 
-/* ======= FIN RESPONSIVE.CSS ======= */
+/* ======= MÓVIL (≤ 768px) ======= */
+@media screen and (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+
+  /* ==== HERO GENERAL ==== */
+  #hero,
+  #hero-sobre,
+  #hero-publicaciones,
+  #hero-talleres,
+  #hero-entrevistas,
+  #hero-contacto {
+    height: 70vh !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  /* Contenedor del texto */
+  .hero-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+    padding: 0 5%;
+  }
+
+  /* Recuadro de texto */
+  .hero-text {
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    text-align: center;
+    padding: 20px 15px;
+    border-radius: 15px;
+    max-width: 90%;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  .hero-text h1 {
+    font-size: 1.6rem !important;
+    line-height: 1.3 !important;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .hero-text h2 {
+    font-size: 1rem !important;
+    line-height: 1.4 !important;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+
+  /* ==== AJUSTES DE SECCIONES ==== */
+  section {
+    padding: 40px 15px;
+  }
+
+  h2,
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* ==== FOOTER ==== */
+  footer {
+    padding: 25px 10px;
+  }
+
+  footer p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+}
+
+/* ======= EXTRA SMALL (≤ 480px) ======= */
+@media screen and (max-width: 480px) {
+  .hero-text {
+    padding: 16px 12px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.4rem !important;
+  }
+
+  .hero-text h2 {
+    font-size: 0.9rem !important;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
+}
+
+/* ======= FIN DE ARCHIVO ======= */
