@@ -807,42 +807,49 @@ footer p {
     line-height: 1.3 !important;
   }
 }
-/* ======== AJUSTE VISUAL FINAL HERO TALLERES ======== */
+/* ======== AJUSTE FINAL HERO TALLERES Y PUBLICACIONES ======== */
 @media (max-width: 768px) {
-  #hero-talleres {
-    height: 48vh !important;
+
+  /* --- Contenedor del hero --- */
+  .hero-talleres,
+  .hero-publicaciones {
+    height: 48vh !important; /* mantiene buena proporción */
     display: flex !important;
-    align-items: flex-end !important; /* mueve el texto al borde inferior */
-    justify-content: flex-start !important;
-    padding: 0 0 4vh 5% !important; /* margen inferior e izquierdo */
-    background-position: center top !important;
-  }
-
-  #hero-talleres .hero-content {
-    width: 85% !important;
-    background: none !important; /* elimina el recuadro oscuro */
-    padding: 0 !important;
-    text-align: left !important;
-    box-shadow: none !important;
+    align-items: flex-end !important; /* texto hacia abajo */
+    justify-content: center !important;
+    padding-bottom: 6vh !important; /* más espacio inferior */
     position: relative !important;
-    bottom: 0 !important;
   }
 
-  #hero-talleres h1 {
-    font-size: 1rem !important; /* más chico */
+  /* --- Recuadro de texto --- */
+  .hero-talleres .hero-content,
+  .hero-publicaciones .hero-content {
+    width: 88% !important;
+    background: rgba(0, 0, 0, 0.25) !important;
+    padding: 6px 12px !important;
+    border-radius: 8px !important;
+    text-align: center !important;
+    box-shadow: none !important;
+    position: absolute !important;
+    bottom: 5vh !important; /* lo baja para dejar respirar la imagen */
+  }
+
+  /* --- Título --- */
+  .hero-talleres h1,
+  .hero-publicaciones h1 {
+    font-size: 1.2rem !important;
     margin-bottom: 2px !important;
-    line-height: 1.15 !important;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.45); /* leve sombra para contraste */
-    text-transform: uppercase !important;
+    line-height: 1.2 !important;
   }
 
-  #hero-talleres p {
-    font-size: 0.75rem !important;
-    line-height: 1.15 !important;
-    color: #f1f1f1 !important;
-    max-width: 90%;
-    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.35); /* solo contraste, sin fondo */
+  /* --- Subtítulo --- */
+  .hero-talleres p,
+  .hero-publicaciones p {
+    font-size: 0.8rem !important;
+    line-height: 1.15 !important; /* interlineado más compacto */
+    margin-top: 2px !important;
   }
+}
 }  /* --- Publicaciones --- */
   #hero-publicaciones {
     height: 48vh !important;
