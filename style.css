@@ -53,874 +53,158 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* ======= HERO INICIO ======= */
-#hero {
-  position: relative;
-  background: url("images/hero/hero-bg.jpg") center center / cover no-repeat;
-  height: 85vh;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  text-align: left;
-  color: #fff;
-  overflow: hidden;
-}
-
-/* Capa principal equilibrada */
-#hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.6) 20%,
-    rgba(0, 0, 0, 0.25) 70%
-  );
-  z-index: 1;
-}
-
-/* Capa secundaria: sombra localizada del contorno izquierdo */
-#hero::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 28%;
-  height: 100%;
-  background: radial-gradient(
-    circle at 8% 50%,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.25) 60%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  z-index: 2;
-  pointer-events: none;
-}
-
-/* Contenedor y texto del hero genérico */
-.hero-container {
-  position: relative;
-  z-index: 3;
-  padding-left: 8%;
-  padding-bottom: 8%;
-  max-width: 600px;
-}
-
-.hero-text {
-  background: rgba(0, 0, 0, 0.45);
-  padding: 18px 28px;
-  border-radius: 8px;
-  display: inline-block;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(2px);
-}
-
-.hero-text h1 {
-  color: #ffffff;
-  font-size: 2.4em;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  margin-bottom: 6px;
-}
-
-.hero-text h2 {
-  color: #e8e8e8;
-  font-weight: 400;
-  font-size: 1em;
-}
-
-/* ======= SECCIÓN CONTACTO ======= */
-#contacto {
-  padding: 60px 0;
-  text-align: center;
-}
-
-#contacto h3 {
-  color: #0c2d57;
-  font-size: 1.8em;
-  margin-bottom: 15px;
-}
-
-#contacto p {
-  color: #333;
-  font-size: 1em;
-  margin-bottom: 20px;
-}
-
-#contacto a {
-  color: #0c2d57;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-#contacto a:hover {
-  text-decoration: underline;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-/* ======= FOOTER ======= */
-footer {
-  background-color: #0c2d57;
-  color: #fff;
-  text-align: center;
-  padding: 30px 10px;
-  margin-top: 40px;
-}
-
-footer .footer-logo {
-  height: 50px;
-  margin-bottom: 10px;
-}
-
-footer p {
-  margin: 5px 0;
-  font-size: 0.95em;
-}
-
-/* ======= HERO SOBRE MÍ ======= */
-/* Usa la foto específica de la carpeta hero: hero-sobre.jpeg */
-#hero-sobre {
-  position: relative;
-  background: url("images/hero/hero-sobre.jpeg") center center / cover no-repeat;
-  height: 70vh;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  text-align: left;
-  color: #fff;
-  overflow: hidden;
-}
-
-#hero-sobre::before,
-#hero-sobre::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-#hero-sobre::before {
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.6) 20%,
-    rgba(0, 0, 0, 0.25) 70%
-  );
-  z-index: 1;
-}
-
-#hero-sobre::after {
-  width: 28%;
-  background: radial-gradient(
-    circle at 8% 50%,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.25) 60%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  z-index: 2;
-  pointer-events: none;
-}
-
-/* ======= SECCIÓN BIO ======= */
-#bio {
-  padding: 60px 0;
-}
-
-.bio-inner {
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-#bio h3 {
-  color: #0c2d57;
-  font-size: 1.8em;
-  margin-bottom: 15px;
-}
-
-.bio-inner p {
-  margin-bottom: 15px;
-}
-
-.bio-lista {
-  margin: 20px 0 25px 20px;
-}
-
-.bio-lista li {
-  margin-bottom: 10px;
-}
-
-.cv-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 8px 14px;
-  border-radius: 4px;
-  background-color: #0c2d57;
-  color: #fff;
-  text-decoration: none;
-  font-size: 0.95em;
-}
-
-.btn-alt {
-  background-color: #e5332a;
-}
-
-.btn:hover {
-  opacity: 0.9;
-}
-
-/* ======= HERO PUBLICACIONES ======= */
-/* Usa la imagen de headers: publicaciones-header.jpeg */
-#hero-publicaciones {
-  position: relative;
-  background: url("images/headers/publicaciones-header.jpeg") center center / cover no-repeat;
-  height: 70vh;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  text-align: left;
-  color: #fff;
-  overflow: hidden;
-}
-
-#hero-publicaciones::before,
-#hero-publicaciones::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-#hero-publicaciones::before {
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.6) 20%,
-    rgba(0, 0, 0, 0.25) 70%
-  );
-  z-index: 1;
-}
-
-#hero-publicaciones::after {
-  width: 28%;
-  background: radial-gradient(
-    circle at 8% 50%,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.25) 60%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  z-index: 2;
-  pointer-events: none;
-}
-
-/* ======= CONTENIDO PUBLICACIONES ======= */
-#publicaciones {
-  padding: 60px 0;
-}
-
-#publicaciones .container {
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.pub-list {
-  list-style: none;
-  margin-top: 10px;
-}
-
-.pub-item {
-  padding: 12px 16px;
-  margin-bottom: 10px;
-  background: #f7f7f7;
-  border-radius: 4px;
-  border-left: 4px solid #e5332a;
-}
-
-.pub-label {
-  font-weight: bold;
-  color: #0c2d57;
-}
-
-.pub-link {
-  color: #0c2d57;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.pub-link:hover {
-  text-decoration: underline;
-}
-
-/* ======== AJUSTE RESPONSIVE HERO CONTACTO (versión final) ======== */
-@media (max-width: 768px) {
-  .hero-contacto {
-    height: 52vh !important; /* un poco más baja para que no tape la cara */
-    background-position: center top !important;
-    display: flex !important;
-    align-items: flex-end !important;
-    justify-content: center !important;
-    padding-bottom: 5vh !important; /* agrega espacio con el borde inferior */
-  }
-
-  .hero-contacto .hero-content {
-    margin: 0 auto !important;
-    width: 90% !important;
-    text-align: center !important;
-    background: rgba(0, 0, 0, 0.18) !important; /* más transparente */
-    padding: 8px 14px !important;
-    border-radius: 10px !important;
-    position: relative !important;
-    bottom: 0 !important; /* elimina superposición vertical */
-    box-shadow: none !important;
-  }
-
-  .hero-contacto h1 {
-    font-size: 1.6rem !important;
-    margin-bottom: 8px !important;
-  }
-
-  .hero-contacto p {
-    font-size: 0.9rem !important;
-    line-height: 1.3 !important;
-  }
-}
-/* ======== AJUSTE FINAL HERO TALLERES Y PUBLICACIONES ======== */
-/* ======= ESTILOS GENERALES ======= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #ffffff;
-  color: #222;
-}
-
-/* ======= ENCABEZADO ======= */
-header {
-  background-color: #0c2d57;
-  color: #fff;
-  padding: 10px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-header .container {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-header .logo img {
-  height: 45px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #f8f8f8;
-  text-decoration: underline;
-}
-
-/* ======= HERO INICIO ======= */
-#hero {
-  position: relative;
-  background: url("images/hero/hero-bg.jpg") center center / cover no-repeat;
-  height: 85vh;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  text-align: left;
-  color: #fff;
-  overflow: hidden;
-}
-
-/* Capa principal equilibrada */
-#hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.6) 20%,
-    rgba(0, 0, 0, 0.25) 70%
-  );
-  z-index: 1;
-}
-
-/* Capa secundaria: sombra localizada del contorno izquierdo */
-#hero::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 28%;
-  height: 100%;
-  background: radial-gradient(
-    circle at 8% 50%,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.25) 60%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  z-index: 2;
-  pointer-events: none;
-}
-
-/* Contenedor y texto del hero genérico */
-.hero-container {
-  position: relative;
-  z-index: 3;
-  padding-left: 8%;
-  padding-bottom: 8%;
-  max-width: 600px;
-}
-
-.hero-text {
-  background: rgba(0, 0, 0, 0.45);
-  padding: 18px 28px;
-  border-radius: 8px;
-  display: inline-block;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(2px);
-}
-
-.hero-text h1 {
-  color: #ffffff;
-  font-size: 2.4em;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  margin-bottom: 6px;
-}
-
-.hero-text h2 {
-  color: #e8e8e8;
-  font-weight: 400;
-  font-size: 1em;
-}
-
-/* ======= SECCIÓN CONTACTO ======= */
-#contacto {
-  padding: 60px 0;
-  text-align: center;
-}
-
-#contacto h3 {
-  color: #0c2d57;
-  font-size: 1.8em;
-  margin-bottom: 15px;
-}
-
-#contacto p {
-  color: #333;
-  font-size: 1em;
-  margin-bottom: 20px;
-}
-
-#contacto a {
-  color: #0c2d57;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-#contacto a:hover {
-  text-decoration: underline;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-/* ======= FOOTER ======= */
-footer {
-  background-color: #0c2d57;
-  color: #fff;
-  text-align: center;
-  padding: 30px 10px;
-  margin-top: 40px;
-}
-
-footer .footer-logo {
-  height: 50px;
-  margin-bottom: 10px;
-}
-
-footer p {
-  margin: 5px 0;
-  font-size: 0.95em;
-}
-
-/* ======= HERO SOBRE MÍ ======= */
-/* Usa la foto específica de la carpeta hero: hero-sobre.jpeg */
-#hero-sobre {
-  position: relative;
-  background: url("images/hero/hero-sobre.jpeg") center center / cover no-repeat;
-  height: 70vh;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  text-align: left;
-  color: #fff;
-  overflow: hidden;
-}
-
-#hero-sobre::before,
-#hero-sobre::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-#hero-sobre::before {
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.6) 20%,
-    rgba(0, 0, 0, 0.25) 70%
-  );
-  z-index: 1;
-}
-
-#hero-sobre::after {
-  width: 28%;
-  background: radial-gradient(
-    circle at 8% 50%,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.25) 60%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  z-index: 2;
-  pointer-events: none;
-}
-
-/* ======= SECCIÓN BIO ======= */
-#bio {
-  padding: 60px 0;
-}
-
-.bio-inner {
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-#bio h3 {
-  color: #0c2d57;
-  font-size: 1.8em;
-  margin-bottom: 15px;
-}
-
-.bio-inner p {
-  margin-bottom: 15px;
-}
-
-.bio-lista {
-  margin: 20px 0 25px 20px;
-}
-
-.bio-lista li {
-  margin-bottom: 10px;
-}
-
-.cv-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 8px 14px;
-  border-radius: 4px;
-  background-color: #0c2d57;
-  color: #fff;
-  text-decoration: none;
-  font-size: 0.95em;
-}
-
-.btn-alt {
-  background-color: #e5332a;
-}
-
-.btn:hover {
-  opacity: 0.9;
-}
-
-/* ======= HERO PUBLICACIONES ======= */
-/* Usa la imagen de headers: publicaciones-header.jpeg */
-#hero-publicaciones {
-  position: relative;
-  background: url("images/headers/publicaciones-header.jpeg") center center / cover no-repeat;
-  height: 70vh;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  text-align: left;
-  color: #fff;
-  overflow: hidden;
-}
-
-#hero-publicaciones::before,
-#hero-publicaciones::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-#hero-publicaciones::before {
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.6) 20%,
-    rgba(0, 0, 0, 0.25) 70%
-  );
-  z-index: 1;
-}
-
-#hero-publicaciones::after {
-  width: 28%;
-  background: radial-gradient(
-    circle at 8% 50%,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.25) 60%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  z-index: 2;
-  pointer-events: none;
-}
-
-/* ======= CONTENIDO PUBLICACIONES ======= */
-#publicaciones {
-  padding: 60px 0;
-}
-
-#publicaciones .container {
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.pub-list {
-  list-style: none;
-  margin-top: 10px;
-}
-
-.pub-item {
-  padding: 12px 16px;
-  margin-bottom: 10px;
-  background: #f7f7f7;
-  border-radius: 4px;
-  border-left: 4px solid #e5332a;
-}
-
-.pub-label {
-  font-weight: bold;
-  color: #0c2d57;
-}
-
-.pub-link {
-  color: #0c2d57;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.pub-link:hover {
-  text-decoration: underline;
-}
-
-/* ======== AJUSTE RESPONSIVE HERO CONTACTO (versión final) ======== */
-@media (max-width: 768px) {
-  .hero-contacto {
-    height: 52vh !important; /* un poco más baja para que no tape la cara */
-    background-position: center top !important;
-    display: flex !important;
-    align-items: flex-end !important;
-    justify-content: center !important;
-    padding-bottom: 5vh !important; /* agrega espacio con el borde inferior */
-  }
-
-  .hero-contacto .hero-content {
-    margin: 0 auto !important;
-    width: 90% !important;
-    text-align: center !important;
-    background: rgba(0, 0, 0, 0.18) !important; /* más transparente */
-    padding: 8px 14px !important;
-    border-radius: 10px !important;
-    position: relative !important;
-    bottom: 0 !important; /* elimina superposición vertical */
-    box-shadow: none !important;
-  }
-
-  .hero-contacto h1 {
-    font-size: 1.6rem !important;
-    margin-bottom: 8px !important;
-  }
-
-  .hero-contacto p {
-    font-size: 0.9rem !important;
-    line-height: 1.3 !important;
-  }
-}
-/* ======== AJUSTE FINAL HERO TALLERES Y ENTREVISTAS (MÓVIL) ======== */
-@media (max-width: 768px) {
-
-  /* --- TALLERES Y CAPACITACIONES --- */
-  #hero-talleres .hero-text {
-    background: rgba(0, 0, 0, 0.35);
-    padding: 10px 16px;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    position: absolute;
-    bottom: 8vh; /* lo baja más */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 85%;
-    text-align: center;
-    box-shadow: none;
-  }
-
-  #hero-talleres h1 {
-    font-size: 1.3rem;
-    margin-bottom: 5px;
-    line-height: 1.1;
-  }
-
-  #hero-talleres h2 {
-    font-size: 0.85rem;
-    line-height: 1.2;
-  }
-
- /* ======= AJUSTE FINAL ENTREVISTAS Y TALLERES ======= */
-
-/* --- Entrevistas: mostrar recuadro abajo centrado --- */
+/* ======= HERO GENÉRICO ======= */
+#hero,
+#hero-sobre,
+#hero-publicaciones,
+#hero-talleres,
 #hero-entrevistas {
   position: relative;
-  background-position: center center !important;
-  background-size: cover !important;
-  height: 70vh !important;
+  height: 70vh;
+  background-position: center center;
+  background-size: cover;
   display: flex;
   align-items: flex-end;
+  justify-content: flex-start;
+  color: #fff;
+  overflow: hidden;
+}
+
+#hero::before,
+#hero-sobre::before,
+#hero-publicaciones::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.6) 20%,
+    rgba(0, 0, 0, 0.25) 70%
+  );
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 18px 28px;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+}
+
+.hero-text h1 {
+  font-size: 2.4em;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.hero-text h2 {
+  font-weight: 400;
+  font-size: 1em;
+  color: #e8e8e8;
+}
+
+/* ======= HERO TALLERES ======= */
+#hero-talleres {
   justify-content: center;
+  align-items: flex-end;
+}
+
+#hero-talleres .hero-text {
+  position: absolute;
+  bottom: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 16px 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+#hero-talleres h1 {
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+}
+
+#hero-talleres h2 {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+/* ======= HERO ENTREVISTAS ======= */
+#hero-entrevistas {
+  justify-content: center;
+  align-items: flex-end;
 }
 
 #hero-entrevistas .hero-text {
   position: absolute;
-  bottom: 6vh; /* 🔹 lo baja como marcaste */
+  bottom: 8vh;
   left: 50%;
   transform: translateX(-50%);
   width: 80%;
   background: rgba(0, 0, 0, 0.35);
   padding: 14px 18px;
   border-radius: 8px;
-  color: #fff;
-  text-align: center;
-  font-size: 0.9rem;
-  line-height: 1.2;
-  z-index: 3;
-}
-
-#hero-entrevistas h1 {
-  font-size: 1.4rem;
-  margin-bottom: 6px;
-}
-
-/* --- Talleres: recuadro más bajo, más ancho y legible --- */
-#hero-talleres {
-  position: relative;
-  background-position: center center !important;
-  background-size: cover !important;
-  height: 70vh !important;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-#hero-talleres .hero-text {
-  position: absolute;
-  bottom: 8vh; /* 🔹 lo baja a la zona que marcaste en azul */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 85%;
-  background: rgba(0, 0, 0, 0.38);
-  padding: 16px 22px;
-  border-radius: 8px;
-  color: #fff;
   text-align: center;
   font-size: 0.95rem;
-  line-height: 1.3;
-  z-index: 3;
-}
-
-#hero-talleres h1 {
-  font-size: 1.5rem;
-  margin-bottom: 8px;
-  line-height: 1.1;
-}
-
-#hero-talleres h2 {
-  font-size: 1rem;
   line-height: 1.25;
 }
 
-/* --- Ajuste móvil --- */
+#hero-entrevistas h1 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+/* ======= FOOTER ======= */
+footer {
+  background-color: #0c2d57;
+  color: #fff;
+  text-align: center;
+  padding: 30px 10px;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 0.95em;
+}
+
+/* ======= MÓVIL ======= */
 @media (max-width: 768px) {
-  #hero-entrevistas .hero-text,
   #hero-talleres .hero-text {
+    bottom: 5vh;
     width: 85%;
     padding: 10px 14px;
-    bottom: 5vh;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
-  #hero-entrevistas h1,
   #hero-talleres h1 {
     font-size: 1.2rem;
-    margin-bottom: 5px;
+  }
+
+  #hero-talleres h2 {
+    font-size: 0.85rem;
+  }
+
+  #hero-entrevistas .hero-text {
+    bottom: 5vh;
+    width: 85%;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+
+  #hero-entrevistas h1 {
+    font-size: 1.2rem;
   }
 }
