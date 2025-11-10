@@ -1,14 +1,11 @@
-/* ======= RESPONSIVE.JS (versión final) ======= */
+/* ======= RESPONSIVE.JS — versión estable 2025-11-10 ======= */
 document.addEventListener("DOMContentLoaded", () => {
-  const isEnglish = window.location.pathname.includes("/en/");
-  const cssFile = isEnglish ? "../responsive.css?v=final" : "responsive.css?v=final";
-  const link = document.createElement("link");
-  link.rel = "stylesheet";
-  link.href = cssFile;
-  document.head.appendChild(link);
-
-  // Mantiene coherencia de idioma
-  const preferred = localStorage.getItem("preferredLanguage");
-  if (isEnglish && preferred !== "en") localStorage.setItem("preferredLanguage", "en");
-  if (!isEnglish && preferred !== "es") localStorage.setItem("preferredLanguage", "es");
+  // Forzamos recarga de CSS (evita caché de GitHub Pages)
+  const version = "v20251110";
+  ["style.css", "responsive.css"].forEach(file => {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = `${file}?${version}`;
+    document.head.appendChild(link);
+  });
 });

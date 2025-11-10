@@ -1,7 +1,11 @@
-/* ======= STYLE.CSS (versión estable final) ======= */
+/* ======= STYLE.CSS — versión estable final 2025-11-10 ======= */
 
 /* ======= RESET ======= */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
@@ -10,7 +14,7 @@ body {
   line-height: 1.6;
 }
 
-/* ======= ENCABEZADO ======= */
+/* ======= HEADER ======= */
 header {
   background-color: #0c2d57;
   color: #fff;
@@ -19,6 +23,7 @@ header {
   top: 0;
   z-index: 1000;
 }
+
 header .container {
   width: 90%;
   margin: auto;
@@ -26,23 +31,32 @@ header .container {
   justify-content: space-between;
   align-items: center;
 }
-header .logo img { height: 45px; }
+
+header .logo img {
+  height: 45px;
+}
+
 nav ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
+
 nav a {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
 }
-nav a:hover { text-decoration: underline; }
 
-/* ======= HERO GENÉRICO ======= */
-[id^="hero-"] {
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ======= HERO (aplica a todas las páginas) ======= */
+[id^="hero-"], #hero {
   position: relative;
-  height: 70vh;
+  height: 75vh;
   background-size: cover;
   background-position: center center;
   display: flex;
@@ -52,11 +66,11 @@ nav a:hover { text-decoration: underline; }
   overflow: hidden;
 }
 
-[id^="hero-"]::before {
+[id^="hero-"]::before, #hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.1));
+  background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.15));
   z-index: 1;
 }
 
@@ -75,6 +89,7 @@ nav a:hover { text-decoration: underline; }
   font-size: 1.8rem;
   margin-bottom: 6px;
 }
+
 .hero-text h2 {
   font-size: 1rem;
   color: #eaeaea;
@@ -89,6 +104,10 @@ footer {
   padding: 30px 10px;
   margin-top: 40px;
 }
-footer p { font-size: 0.95em; margin: 5px 0; }
+
+footer p {
+  font-size: 0.95em;
+  margin: 5px 0;
+}
 
 /* ======= FIN STYLE.CSS ======= */
