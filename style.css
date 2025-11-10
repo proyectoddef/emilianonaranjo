@@ -836,59 +836,91 @@ footer p {
     line-height: 1.2;
   }
 
-  /* ======== AJUSTE DEFINITIVO HERO TALLERES Y ENTREVISTAS ======== */
+ /* ======= AJUSTE FINAL ENTREVISTAS Y TALLERES ======= */
 
-/* ----- Vista de escritorio y tabletas grandes ----- */
-#hero-talleres .hero-text,
-#hero-entrevistas .hero-text {
-  background: rgba(0, 0, 0, 0.35);
-  padding: 16px 22px;
-  border-radius: 8px;
-  max-width: 700px;
-  width: 70%;
-  text-align: center;
-  transform: translateX(-50%);
-  left: 50%;
-  position: absolute;
-  bottom: 12vh;
-  font-size: 0.65em;   /* 🔹 Reduce todo a ~60 % del tamaño original */
-  line-height: 1.25;
-  box-shadow: none;
+/* --- Entrevistas: mostrar recuadro abajo centrado --- */
+#hero-entrevistas {
+  position: relative;
+  background-position: center center !important;
+  background-size: cover !important;
+  height: 70vh !important;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
-#hero-talleres h1,
+#hero-entrevistas .hero-text {
+  position: absolute;
+  bottom: 6vh; /* 🔹 lo baja como marcaste */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 14px 18px;
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  z-index: 3;
+}
+
 #hero-entrevistas h1 {
-  font-size: 1.6rem;   /* antes ~2.6 rem */
+  font-size: 1.4rem;
   margin-bottom: 6px;
+}
+
+/* --- Talleres: recuadro más bajo, más ancho y legible --- */
+#hero-talleres {
+  position: relative;
+  background-position: center center !important;
+  background-size: cover !important;
+  height: 70vh !important;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+#hero-talleres .hero-text {
+  position: absolute;
+  bottom: 8vh; /* 🔹 lo baja a la zona que marcaste en azul */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  background: rgba(0, 0, 0, 0.38);
+  padding: 16px 22px;
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  z-index: 3;
+}
+
+#hero-talleres h1 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
   line-height: 1.1;
 }
 
-#hero-talleres h2,
-#hero-entrevistas h2 {
-  font-size: 0.95rem;  /* antes ~1.6 rem */
-  line-height: 1.2;
-  font-weight: 400;
+#hero-talleres h2 {
+  font-size: 1rem;
+  line-height: 1.25;
 }
 
-/* ----- Vista móvil ----- */
+/* --- Ajuste móvil --- */
 @media (max-width: 768px) {
-  #hero-talleres .hero-text,
-  #hero-entrevistas .hero-text {
+  #hero-entrevistas .hero-text,
+  #hero-talleres .hero-text {
     width: 85%;
-    font-size: 0.7em;
     padding: 10px 14px;
-    bottom: 6vh;  /* deja más imagen visible */
-  }
-
-  #hero-talleres h1,
-  #hero-entrevistas h1 {
-    font-size: 1.1rem;
-    line-height: 1.1;
-  }
-
-  #hero-talleres h2,
-  #hero-entrevistas h2 {
+    bottom: 5vh;
     font-size: 0.8rem;
-    line-height: 1.1;
+  }
+
+  #hero-entrevistas h1,
+  #hero-talleres h1 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
   }
 }
