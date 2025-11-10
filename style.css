@@ -807,47 +807,59 @@ footer p {
     line-height: 1.3 !important;
   }
 }
-/* ======== AJUSTE FINAL HERO TALLERES Y PUBLICACIONES ======== */
+/* ======== AJUSTE FINAL HERO TALLERES Y ENTREVISTAS (MÓVIL) ======== */
 @media (max-width: 768px) {
 
-  /* --- Contenedor del hero --- */
-  .hero-talleres,
-  .hero-publicaciones {
-    height: 48vh !important; /* mantiene buena proporción */
-    display: flex !important;
-    align-items: flex-end !important; /* texto hacia abajo */
-    justify-content: center !important;
-    padding-bottom: 6vh !important; /* más espacio inferior */
-    position: relative !important;
+  /* --- TALLERES Y CAPACITACIONES --- */
+  #hero-talleres .hero-text {
+    background: rgba(0, 0, 0, 0.35);
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 8vh; /* lo baja más */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    text-align: center;
+    box-shadow: none;
   }
 
-  /* --- Recuadro de texto --- */
-  .hero-talleres .hero-content,
-  .hero-publicaciones .hero-content {
-    width: 88% !important;
-    background: rgba(0, 0, 0, 0.25) !important;
-    padding: 6px 12px !important;
-    border-radius: 8px !important;
-    text-align: center !important;
-    box-shadow: none !important;
-    position: absolute !important;
-    bottom: 5vh !important; /* lo baja para dejar respirar la imagen */
+  #hero-talleres h1 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    line-height: 1.1;
   }
 
-  /* --- Título --- */
-  .hero-talleres h1,
-  .hero-publicaciones h1 {
-    font-size: 1.2rem !important;
-    margin-bottom: 2px !important;
-    line-height: 1.2 !important;
+  #hero-talleres h2 {
+    font-size: 0.85rem;
+    line-height: 1.2;
   }
 
-  /* --- Subtítulo --- */
-  .hero-talleres p,
-  .hero-publicaciones p {
-    font-size: 0.8rem !important;
-    line-height: 1.15 !important; /* interlineado más compacto */
-    margin-top: 2px !important;
+  /* --- ENTREVISTAS Y NOTAS PERIODÍSTICAS --- */
+  #hero-entrevistas .hero-text {
+    background: rgba(0, 0, 0, 0.35);
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 6vh; /* lo baja aún más */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    text-align: center;
+    box-shadow: none;
+  }
+
+  #hero-entrevistas h1 {
+    font-size: 1.25rem;
+    line-height: 1.1;
+    margin-bottom: 5px;
+  }
+
+  #hero-entrevistas h2 {
+    font-size: 0.8rem;
+    line-height: 1.1;
   }
 }
 }  /* --- Publicaciones --- */
