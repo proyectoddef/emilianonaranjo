@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Publicaciones de Emiliano Naranjo sobre educación inclusiva, discapacidad y derechos humanos.">
+  <title>Publicaciones – Emiliano Naranjo</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ======= HERO PUBLICACIONES ======= */
+    #hero-publicaciones {
+      position: relative;
+      background: url("images/headers/publicaciones-header.jpeg") center center / cover no-repeat;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: left;
+      color: #fff;
+      overflow: hidden;
+      padding-left: 8vw;
+      image-rendering: -webkit-optimize-contrast;
+      filter: brightness(1.12) contrast(1.08);
+    }
+
+    #hero-publicaciones::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      z-index: 1;
+    }
+
+    #hero-publicaciones .hero-container {
+      position: relative;
+      z-index: 2;
+      max-width: 480px;
+    }
+
+    #hero-publicaciones .hero-text {
+      background: rgba(0, 0, 0, 0.55);
+      padding: 16px 26px;
+      border-radius: 10px;
+      display: inline-block;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    #hero-publicaciones h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 0 6px 0;
+      line-height: 1.2;
+    }
+
+    #hero-publicaciones h2 {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #eaeaea;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      #hero-publicaciones {
+        justify-content: center;
+        padding-left: 0;
+        text-align: center;
+      }
+
+      #hero-publicaciones .hero-container {
+        max-width: 90%;
+      }
+    }
+
+    /* ======= SECCIÓN DE PUBLICACIONES ======= */
+    .publicaciones-section {
+      max-width: 950px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .publicaciones-section h3 {
+      color: #002855;
+      border-left: 4px solid #002855;
+      padding-left: 10px;
+      font-size: 1.6em;
+      margin-bottom: 25px;
+    }
+
+    .publicaciones-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .publicaciones-list li {
+      margin-bottom: 18px;
+      background: #f8f9fb;
+      border-left: 4px solid #003366;
+      padding: 12px 16px;
+      border-radius: 8px;
+      transition: background 0.2s ease;
+    }
+
+    .publicaciones-list li:hover {
+      background: #e9eef7;
+    }
+
+    .publicaciones-list a {
+      text-decoration: none;
+      color: #003366;
+      font-weight: 600;
+    }
+
+    .publicaciones-list a:hover {
+      color: #0055cc;
+      text-decoration: underline;
+    }
+
+    /* Etiqueta para artículos externos */
+    .externo::after {
+      content: " 🌐";
+      font-size: 1em;
+      color: #0077cc;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= HEADER ======= -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="images/logos/en-logo.svg" alt="Logo Emiliano Naranjo" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="sobre.html">Sobre mí</a></li>
+          <li><a href="publicaciones.html" class="active">Publicaciones</a></li>
+          <li><a href="talleres.html">Talleres y capacitaciones</a></li>
+          <li><a href="entrevistas.html">Entrevistas</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======= HERO ======= -->
+  <section id="hero-publicaciones">
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>PUBLICACIONES Y ARTÍCULOS DE INTERÉS</h1>
+        <h2>Textos académicos y escritos personales</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= SECCIÓN DE PUBLICACIONES ======= -->
+  <section class="publicaciones-section">
+    <h3>Tesis e investigaciones</h3>
+    <ul class="publicaciones-list">
+      <li>
+        📘
+        <a href="publicaciones/tesis_maestria_educacion_superior.pdf" download>
+          La educación superior y el derecho de las personas con discapacidad en la formación docente de educación física
+        </a>
+      </li>
+      <li>
+        🧩
+        <a href="publicaciones/investigacion_buenas_practicas_inclusion.pdf" download>
+          Estudio sobre buenas prácticas de educación inclusiva en escuelas comunes de Buenos Aires y CABA
+        </a>
+      </li>
+    </ul>
+
+    <h3>Libros</h3>
+    <ul class="publicaciones-list">
+      <li>
+        📖
+        <a href="publicaciones/malestar_de_educado.pdf" download>
+          Malestar de educado
+        </a>
+      </li>
+    </ul>
+
+    <h3>Artículos</h3>
+    <ul class="publicaciones-list">
+      <li>
+        📰
+        <a href="publicaciones/articulo_106_minutos_porno_inspirarnos.pdf" download>
+          106 minutos para “porno” inspirarnos
+        </a>
+      </li>
+      <li>
+        📰
+        <a href="publicaciones/articulo_la_transmision_cobra_kai.pdf" download>
+          La transmisión (Cobra Kai)
+        </a>
+      </li>
+      <li>
+        📰
+        <a href="publicaciones/articulo_educacion_bien_publico.pdf" download>
+          La educación es un bien público, no económico
+        </a>
+      </li>
+      <li>
+        📰
+        <a href="publicaciones/articulo_educacion_fisica_practica_teorica.pdf" download>
+          ¿La asignatura educación física es práctica o es teórica?
+        </a>
+      </li>
+
+      <!-- ARTÍCULOS EXTERNOS EFDEPORTES (títulos reales) -->
+      <li>
+        📰
+        <a href="https://efdeportes.com/efdeportes/index.php/EFDeportes/article/view/2819" target="_blank" rel="noopener noreferrer" class="externo">
+          La educación inclusiva y el derecho de las personas con discapacidad en la formación docente de educación física
+        </a>
+      </li>
+      <li>
+        📰
+        <a href="https://efdeportes.com/efdeportes/index.php/EFDeportes/article/view/7077" target="_blank" rel="noopener noreferrer" class="externo">
+          Genealogía del cuerpo docente en la educación en Argentina. ¿Dónde están los cuerpos que faltan?
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer>
+    <img src="images/logos/en-logo.svg" alt="Logo Emiliano Naranjo" class="footer-logo" />
+    <p>Educación inclusiva | Derechos Humanos | Anticapacitismo</p>
+    <p>© 2025 Emiliano Naranjo — Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

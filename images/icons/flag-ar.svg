@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480">
+  <rect width="640" height="480" fill="#74acdf"></rect>
+  <rect y="160" width="640" height="160" fill="#fff"></rect>
+  <circle cx="320" cy="240" r="34" fill="#f6b40e"></circle>
+  <g fill="#f6b40e">
+    <path d="M320 180v-30M320 330v30M260 240h-30M410 240h30M280 200l-20-20M400 280l20 20M280 280l-20 20M400 200l20-20"></path>
+    <path d="M320 240m-16 0a16 16 0 1 0 32 0 16 16 0 1 0 -32 0z"></path>
+  </g>
+</svg>
