@@ -152,27 +152,20 @@
     header {
       background-color: #0c2d57;
       padding: 10px 0;
-    }
-
-    header .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo img {
-      height: 44px;
+      text-align: center;
     }
 
     nav ul {
       display: flex;
-      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
       list-style: none;
       padding: 0;
       margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
     }
 
     nav ul li a {
@@ -201,16 +194,6 @@
       .hero-contacto h1 {
         font-size: 2rem;
       }
-
-      header .container {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
     }
   </style>
 </head>
@@ -218,22 +201,16 @@
 <body>
   <!-- NAVBAR UNIFICADO -->
   <header>
-    <div class="container">
-      <div class="logo">
-        <img src="images/logos/en-logo.svg" alt="Logo Emiliano Naranjo">
-      </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="sobre.html">Sobre mí</a></li>
-          <li><a href="publicaciones.html">Publicaciones</a></li>
-          <li><a href="talleres.html">Talleres y capacitaciones</a></li>
-          <li><a href="entrevistas.html">Entrevistas</a></li>
-          <li><a href="contacto.html" class="active">Contacto</a></li>
-          <li><a href="en/contact.html">🇬🇧 English</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="publicaciones.html">Publicaciones</a></li>
+        <li><a href="talleres.html">Talleres y capacitaciones</a></li>
+        <li><a href="entrevistas.html">Entrevistas</a></li>
+        <li><a href="contacto.html" class="active">Contacto</a></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- HERO -->

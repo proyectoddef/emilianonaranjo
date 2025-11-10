@@ -53,7 +53,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* ======= HERO INICIO ======= */
+/* ======= HERO ======= */
 #hero {
   position: relative;
   background: url("images/hero/hero-bg.jpg") center center / cover no-repeat;
@@ -88,19 +88,19 @@ nav a:hover {
   position: absolute;
   top: 0;
   left: 0;
-  width: 28%;
+  width: 28%; /* más ajustado al borde, sin invadir tu zona */
   height: 100%;
   background: radial-gradient(
-    circle at 8% 50%,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.25) 60%,
+    circle at 8% 50%, 
+    rgba(0, 0, 0, 0.7) 0%,   /* oscurece contorno */
+    rgba(0, 0, 0, 0.25) 60%, 
     rgba(0, 0, 0, 0) 100%
   );
   z-index: 2;
   pointer-events: none;
 }
 
-/* Contenedor y texto del hero genérico */
+/* Contenedor y texto */
 .hero-container {
   position: relative;
   z-index: 3;
@@ -186,189 +186,6 @@ footer p {
   font-size: 0.95em;
 }
 
-/* ======= HERO SOBRE MÍ ======= */
-/* Usa la foto específica de la carpeta hero: hero-sobre.jpeg */
-#hero-sobre {
-  position: relative;
-  background: url("images/hero/hero-sobre.jpeg") center center / cover no-repeat;
-  height: 70vh;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  text-align: left;
-  color: #fff;
-  overflow: hidden;
-}
-
-#hero-sobre::before,
-#hero-sobre::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-#hero-sobre::before {
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.6) 20%,
-    rgba(0, 0, 0, 0.25) 70%
-  );
-  z-index: 1;
-}
-
-#hero-sobre::after {
-  width: 28%;
-  background: radial-gradient(
-    circle at 8% 50%,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.25) 60%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  z-index: 2;
-  pointer-events: none;
-}
-
-/* ======= SECCIÓN BIO ======= */
-#bio {
-  padding: 60px 0;
-}
-
-.bio-inner {
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-#bio h3 {
-  color: #0c2d57;
-  font-size: 1.8em;
-  margin-bottom: 15px;
-}
-
-.bio-inner p {
-  margin-bottom: 15px;
-}
-
-.bio-lista {
-  margin: 20px 0 25px 20px;
-}
-
-.bio-lista li {
-  margin-bottom: 10px;
-}
-
-.cv-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 8px 14px;
-  border-radius: 4px;
-  background-color: #0c2d57;
-  color: #fff;
-  text-decoration: none;
-  font-size: 0.95em;
-}
-
-.btn-alt {
-  background-color: #e5332a;
-}
-
-.btn:hover {
-  opacity: 0.9;
-}
-
-/* ======= HERO PUBLICACIONES ======= */
-/* Usa la imagen de headers: publicaciones-header.jpeg */
-#hero-publicaciones {
-  position: relative;
-  background: url("images/headers/publicaciones-header.jpeg") center center / cover no-repeat;
-  height: 70vh;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  text-align: left;
-  color: #fff;
-  overflow: hidden;
-}
-
-#hero-publicaciones::before,
-#hero-publicaciones::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-#hero-publicaciones::before {
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.6) 20%,
-    rgba(0, 0, 0, 0.25) 70%
-  );
-  z-index: 1;
-}
-
-#hero-publicaciones::after {
-  width: 28%;
-  background: radial-gradient(
-    circle at 8% 50%,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.25) 60%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  z-index: 2;
-  pointer-events: none;
-}
-
-/* ======= CONTENIDO PUBLICACIONES ======= */
-#publicaciones {
-  padding: 60px 0;
-}
-
-#publicaciones .container {
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.pub-list {
-  list-style: none;
-  margin-top: 10px;
-}
-
-.pub-item {
-  padding: 12px 16px;
-  margin-bottom: 10px;
-  background: #f7f7f7;
-  border-radius: 4px;
-  border-left: 4px solid #e5332a;
-}
-
-.pub-label {
-  font-weight: bold;
-  color: #0c2d57;
-}
-
-.pub-link {
-  color: #0c2d57;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.pub-link:hover {
-  text-decoration: underline;
-}
-
 /* ======= RESPONSIVE ======= */
 @media (max-width: 768px) {
   nav ul {
@@ -376,13 +193,10 @@ footer p {
     align-items: center;
   }
 
-  #hero,
-  #hero-sobre,
-  #hero-publicaciones {
+  #hero {
     justify-content: center;
     text-align: center;
     align-items: center;
-    height: 70vh;
   }
 
   .hero-container {
@@ -400,10 +214,5 @@ footer p {
 
   .hero-text h2 {
     font-size: 0.9em;
-  }
-
-  .cv-links {
-    flex-direction: column;
-    align-items: flex-start;
   }
 }

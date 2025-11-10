@@ -350,10 +350,9 @@
             </div>
           </article>
 
-          <!-- SOMOS CAPACES -->
-          <article class="media-card" style="grid-column: span 2; max-width: 600px;">
+          <article class="media-card">
             <div class="media-card__image">
-              <img src="images/entrevistas-emiliano/entrevista-somos-capaces.jpg" alt="Radio Somos Capaces" class="media-card__img" style="object-position: 60% center;">
+<img src="images/entrevistas-emiliano/entrevista-somos-capaces.jpg" alt="Radio Somos Capaces" class="media-card__img" style="object-position: 0% center;">
             </div>
             <div class="media-card__body">
               <h3 class="media-card__title">Entrevista en programa “Somos Capaces”</h3>
@@ -362,7 +361,6 @@
               <a href="https://ar.radiocut.fm/audiocut/en-voz-del-lic-emiliano-naranjo-aprendemos-sobre-educacion-inclusiva-y-mas-mucho-mas/" class="media-card__link" target="_blank">Escuchar entrevista ↗</a>
             </div>
           </article>
-
         </div>
       </div>
     </section>
@@ -370,4 +368,9 @@
 
   <footer>
     <img src="images/logos/en-logo.svg" alt="Logo Emiliano Naranjo" class="footer-logo">
-    <p>Educación inclusiva | Derechos Humanos | Anticapacitismo
+    <p>Educación inclusiva | Derechos Humanos | Anticapacitismo</p>
+    <p>© 2025 Emiliano Naranjo — Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
+
