@@ -1,28 +1,40 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const head = document.querySelector("head");
+/* ======= RESPONSIVE.JS (versión estable 2025-11) ======= */
+/* Este script garantiza que el CSS responsivo se cargue correctamente,
+   mantiene la preferencia de idioma y evita conflictos de rutas. */
 
-  // Asegura viewport responsivo
-  if (!document.querySelector('meta[name="viewport"]')) {
-    const viewport = document.createElement("meta");
-    viewport.name = "viewport";
-    viewport.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0";
-    head.appendChild(viewport);
+document.addEventListener("DOMContentLoaded", () => {
+  const currentPath = window.location.pathname;
+  const isEnglish = currentPath.includes("/en/");
+  const preferredLang = localStorage.getItem("preferredLanguage");
+
+  // === 1. Carga correcta del CSS ===
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = isEnglish ? "../responsive.css" : "responsive.css"; // ✅ ruta correcta
+  document.head.appendChild(link);
+
+  // === 2. Guarda preferencia actual ===
+  if (isEnglish) {
+    localStorage.setItem("preferredLanguage", "en");
+  } else {
+    localStorage.setItem("preferredLanguage", "es");
   }
 
-  // Carga un CSS responsive común si no está ya incluido
-  if (!document.querySelector('link[href*="responsive.css"]')) {
-    const link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.href = "style/responsive.css";
-    head.appendChild(link);
-  }
+  // === 3. Asegura coherencia de idioma entre enlaces ===
+  document.querySelectorAll("nav a").forEach(link => {
+    const href = link.getAttribute("href");
+    if (!href || href.startsWith("http")) return;
 
-  // Ajuste básico de clases para imágenes y contenedores
-  document.querySelectorAll("img").forEach(img => {
-    img.style.maxWidth = "100%";
-    img.style.height = "auto";
+    if (isEnglish && !href.startsWith("/en/")) {
+      const cleanHref = href.replace("../", "").replace("./", "").replace(/^\/+/, "");
+      link.setAttribute("href", `/en/${cleanHref}`);
+    } else if (!isEnglish && href.includes("/en/")) {
+      link.setAttribute("href", href.replace("/en/", "/"));
+    }
   });
 
-  // Asegura padding y margen razonables para móviles
-  document.body.style.padding = "1rem";
+  // === 4. Redirige a inglés si la preferencia lo indica y estás fuera de /en/ ===
+  if (preferredLang === "en" && !isEnglish && currentPath.endsWith("/index.html")) {
+    window.location.href = "/en/index.html";
+  }
 });
