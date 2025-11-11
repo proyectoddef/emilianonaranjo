@@ -8,11 +8,9 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    /* ======= AJUSTES ESTÉTICOS SOLO PARA ESTA PÁGINA ======= */
-
+    /* ======= HERO ======= */
     #hero-sobre {
       position: relative;
-      /* mostramos la foto completa en formato más vertical */
       background: url("images/hero/hero-sobre.jpeg") center 30% / contain no-repeat;
       height: 95vh;
       display: flex;
@@ -21,9 +19,8 @@
       text-align: left;
       color: #fff;
       overflow: hidden;
-      background-color: #000; /* relleno lateral negro */
+      background-color: #000;
       image-rendering: -webkit-optimize-contrast;
-      /* imagen más clara, menos pesada */
       filter: brightness(1.15) contrast(1.08) saturate(1.08);
     }
 
@@ -31,7 +28,6 @@
       content: "";
       position: absolute;
       inset: 0;
-      /* reducimos la sombra lateral para que no apague tanto la imagen */
       background: linear-gradient(
         to right,
         rgba(0, 0, 0, 0.45) 18%,
@@ -60,12 +56,11 @@
     #hero-sobre .hero-container {
       position: relative;
       z-index: 3;
-      padding-left: 8%;
-      padding-top: 10%;  /* deja la cabeza libre y el texto por encima */
+      padding-left: 6%;
+      padding-top: 5%;
       max-width: 650px;
     }
 
-    /* Recuadro dedicado a la sección, no al nombre */
     #hero-sobre .hero-text {
       background: rgba(0, 0, 0, 0.5);
       padding: 18px 28px;
@@ -87,8 +82,43 @@
       font-weight: 400;
     }
 
-    /* Ajustes responsive para móvil */
+    /* ======= BOTONES CV ======= */
+    .cv-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .cv-links .btn {
+      background-color: #0c2d57;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+
+    .cv-links .btn:hover {
+      background-color: #124a8a;
+    }
+
+    .cv-links .btn-alt {
+      background-color: #c62828;
+    }
+
+    .cv-links .btn-alt:hover {
+      background-color: #e53935;
+    }
+
     @media (max-width: 768px) {
+      .cv-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+
       #hero-sobre {
         background: url("images/hero/hero-sobre.jpeg") center center / cover no-repeat;
         height: 70vh;
@@ -108,13 +138,17 @@
         font-size: 2em;
       }
     }
-
-    /* ======= FIN AJUSTES ESTÉTICOS ======= */
   </style>
+  <script src="js/social/meta-common.js"></script>
+<script src="js/social/meta-facebook.js"></script>
+<script src="js/social/meta-twitter.js"></script>
+<script src="js/social/meta-linkedin.js"></script>
+<link rel="stylesheet" href="style.css?v=20251110">
+<link rel="stylesheet" href="responsive.css?v=20251110">
+
 </head>
 
 <body>
-
   <!-- ======= HEADER ======= -->
   <header>
     <div class="container">
@@ -129,6 +163,8 @@
           <li><a href="talleres.html">Talleres y capacitaciones</a></li>
           <li><a href="entrevistas.html">Entrevistas</a></li>
           <li><a href="contacto.html">Contacto</a></li>
+          <!-- BANDERA DE IDIOMA -->
+          <li><a href="en/about.html">🇬🇧 English</a></li>
         </ul>
       </nav>
     </div>
@@ -181,6 +217,7 @@
         </li>
       </ul>
 
+      <!-- ===== BOTONES DE DESCARGA ===== -->
       <div class="cv-links">
         <a href="docs/EmilianoNaranjo_English_Summary.pdf" class="btn" target="_blank" rel="noopener">
           🌐 Download English summary
@@ -201,6 +238,9 @@
     <p>Educación inclusiva | Derechos Humanos | Anticapacitismo</p>
     <p>© 2025 Emiliano Naranjo — Todos los derechos reservados.</p>
   </footer>
-
+  <script src="js/header.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/responsive.js"></script>
+<script src="js/lang-handler.js"></script>
 </body>
 </html>
