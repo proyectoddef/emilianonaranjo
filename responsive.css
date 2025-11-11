@@ -1,135 +1,37 @@
 /* =======================================================
-   RESPONSIVE.CSS — Versión definitiva 2025-11-10 (Revisión 2)
-   Reducción de recuadros y tipografía en móvil
+   FORZAR PRIORIDAD DE ESTILOS MOVILES
    ======================================================= */
-
-/* ======= TABLET (≤ 992px) ======= */
-@media screen and (max-width: 992px) {
-  header .container {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-  }
-
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-
-  .hero-text h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero-text h2 {
-    font-size: 1rem;
-  }
-}
-
-/* ======= MÓVIL (≤ 768px) ======= */
 @media screen and (max-width: 768px) {
-
-  /* ===== HERO GENERAL ===== */
-  #hero,
-  #hero-sobre,
-  #hero-publicaciones,
-  #hero-talleres,
-  #hero-entrevistas,
-  #hero-contacto {
-    position: relative;
-    height: 68vh;
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding: 0 5%;
+  #hero .hero-text,
+  #hero-sobre .hero-text,
+  #hero-publicaciones .hero-text,
+  #hero-talleres .hero-text,
+  #hero-entrevistas .hero-text,
+  #hero-contacto .hero-text {
+    background: rgba(0, 0, 0, 0.55) !important;
+    color: #fff !important;
+    padding: 8px 12px !important;
+    border-radius: 8px !important;
+    max-width: 75% !important;
+    margin-bottom: 8vh !important;
+    font-size: 0.8rem !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
   }
 
-  /* ===== RECUADROS DE TEXTO REDUCIDOS ===== */
-  .hero-text {
-    background: rgba(0, 0, 0, 0.55);
-    color: #fff;
-    padding: 8px 12px;          /* 🔹 más compacto */
-    border-radius: 8px;
-    max-width: 75%;             /* 🔹 más estrecho */
-    margin-bottom: 8vh;         /* 🔹 más bajo en la imagen */
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(2px);
+  #hero-talleres .hero-text,
+  #hero-entrevistas .hero-text {
+    margin-bottom: 9vh !important;
   }
 
   .hero-text h1 {
-    font-size: 1.2rem !important;   /* 🔹 tamaño reducido */
+    font-size: 1.2rem !important;
     line-height: 1.2 !important;
-    margin-bottom: 4px;
-    font-weight: 700;
   }
 
   .hero-text h2,
   .hero-text p {
     font-size: 0.78rem !important;
-    line-height: 1.2;
-    font-weight: 400;
-  }
-
-  /* ===== POSICIÓN POR SECCIÓN ===== */
-
-  /* Inicio, Sobre, Publicaciones → izquierda */
-  #hero .hero-text,
-  #hero-sobre .hero-text,
-  #hero-publicaciones .hero-text {
-    text-align: left;
-    align-self: flex-end;
-    margin-left: 6%;
-  }
-
-  /* Talleres, Entrevistas, Contacto → centrado abajo */
-  #hero-talleres .hero-text,
-  #hero-entrevistas .hero-text,
-  #hero-contacto .hero-text {
-    text-align: center;
-    align-self: flex-end;
-    margin: 0 auto;
-  }
-
-  /* ===== FOOTER ===== */
-  footer {
-    padding: 25px 10px;
-    text-align: center;
-  }
-
-  footer p {
-    font-size: 0.85rem;
-    line-height: 1.4;
+    line-height: 1.2 !important;
   }
 }
-
-/* ======= EXTRA SMALL (≤ 480px) ======= */
-@media screen and (max-width: 480px) {
-  .hero-text {
-    padding: 6px 10px;
-    margin-bottom: 7vh;
-    max-width: 80%;
-    border-radius: 6px;
-  }
-
-  .hero-text h1 {
-    font-size: 1rem !important;
-  }
-
-  .hero-text h2,
-  .hero-text p {
-    font-size: 0.72rem !important;
-  }
-
-  nav a {
-    font-size: 0.9rem;
-  }
-
-  footer p {
-    font-size: 0.78rem;
-  }
-}
-
-/* ======= FIN DE ARCHIVO ======= */
