@@ -1,54 +1,11 @@
 /* =======================================================
-   RESPONSIVE.CSS — Versión definitiva 2025-11-10
-   Adaptación móvil optimizada (Emiliano Naranjo)
+   RESPONSIVE.CSS — Versión final 2025-11-10
+   Corrección: recuadros reducidos y reposicionados
    ======================================================= */
-
-/* ======= TABLET ======= */
-@media screen and (max-width: 992px) {
-  header .container {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-  }
-
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-
-  .hero-text {
-    padding: 16px 22px;
-  }
-
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-
-  .hero-text h2 {
-    font-size: 1.1rem;
-  }
-}
 
 /* ======= MÓVIL (≤ 768px) ======= */
 @media screen and (max-width: 768px) {
-  header .container {
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    text-align: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  nav a {
-    font-size: 1rem;
-  }
-
-  /* ==== HERO GENERAL ==== */
+  /* HERO GENERAL */
   #hero,
   #hero-sobre,
   #hero-publicaciones,
@@ -56,73 +13,63 @@
   #hero-entrevistas,
   #hero-contacto {
     position: relative;
-    height: 70vh;
+    height: 68vh;
     background-size: cover !important;
     background-position: center center !important;
-    background-repeat: no-repeat !important;
     display: flex;
     align-items: flex-end;
-    justify-content: flex-start;
-    padding: 0 6%;
+    justify-content: center;
+    padding: 0 5%;
   }
 
-  /* Recuadro de texto — reducido y con mejor ubicación */
+  /* === HERO TEXT GENERAL === */
   .hero-text {
     background: rgba(0, 0, 0, 0.6);
     color: #fff;
-    padding: 14px 18px;
+    padding: 10px 14px;
     border-radius: 10px;
-    max-width: 85%;
-    margin-bottom: 25px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    max-width: 78%;
+    margin-bottom: 6vh; /* 🔹 distancia desde la parte inferior (flecha amarilla) */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(2px);
   }
 
-  /* Centrados o ligeramente a la izquierda según la composición */
+  .hero-text h1 {
+    font-size: 1.3rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 4px;
+  }
+
+  .hero-text h2,
+  .hero-text p {
+    font-size: 0.85rem !important;
+    line-height: 1.25;
+  }
+
+  /* === AJUSTE POR SECCIÓN === */
+
+  /* Inicio / Sobre / Publicaciones → Izquierda */
   #hero .hero-text,
   #hero-sobre .hero-text,
   #hero-publicaciones .hero-text {
     text-align: left;
     align-self: flex-end;
+    margin-left: 5%;
   }
 
+  /* Talleres / Entrevistas / Contacto → Centrado inferior */
   #hero-talleres .hero-text,
   #hero-entrevistas .hero-text,
   #hero-contacto .hero-text {
     text-align: center;
     align-self: flex-end;
+    margin: 0 auto;
   }
 
-  .hero-text h1 {
-    font-size: 1.4rem !important;
-    line-height: 1.3 !important;
-    font-weight: 700;
-    margin-bottom: 6px;
-  }
-
-  .hero-text h2 {
-    font-size: 0.9rem !important;
-    line-height: 1.3 !important;
-    font-weight: 400;
-  }
-
-  /* ==== SECCIONES ==== */
-  section {
-    padding: 40px 15px;
-  }
-
-  h2, h3 {
-    font-size: 1.2rem;
-  }
-
-  p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-
-  /* ==== FOOTER ==== */
+  /* Footer */
   footer {
     padding: 25px 10px;
+    text-align: center;
   }
 
   footer p {
@@ -134,27 +81,17 @@
 /* ======= EXTRA SMALL (≤ 480px) ======= */
 @media screen and (max-width: 480px) {
   .hero-text {
-    padding: 12px 14px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    max-width: 90%;
+    padding: 8px 12px;
+    margin-bottom: 5vh;
+    max-width: 85%;
   }
 
   .hero-text h1 {
-    font-size: 1.2rem !important;
+    font-size: 1.15rem !important;
   }
 
-  .hero-text h2 {
-    font-size: 0.85rem !important;
-  }
-
-  nav a {
-    font-size: 0.95rem;
-  }
-
-  footer p {
-    font-size: 0.8rem;
+  .hero-text h2,
+  .hero-text p {
+    font-size: 0.8rem !important;
   }
 }
-
-/* ======= FIN DE ARCHIVO ======= */
