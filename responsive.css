@@ -1,100 +1,70 @@
-/* =======================================================
-   RESPONSIVE.CSS — versión definitiva 2025-11-11
-   Ajustes de recuadros hero y compatibilidad estable
-   ======================================================= */
+/* ======= RESPONSIVE.CSS (versión estable 2025-11) ======= */
+/* Ajustes específicos para móviles y tablets */
 
-/* ======= MÓVIL (≤ 768px) ======= */
-@media screen and (max-width: 768px) {
-  /* HERO GENERAL */
-  [id^="hero-"], #hero {
-    position: relative;
-    height: 68vh !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    display: flex !important;
-    align-items: flex-end !important;
-    justify-content: center !important;
-    padding: 0 5%;
+/* ======= GENERAL ======= */
+@media (max-width: 1024px) {
+  body {
+    font-size: 15px;
   }
 
-  /* RECUADROS */
-  .hero-text {
-    background: rgba(0, 0, 0, 0.55) !important;
-    color: #fff !important;
-    padding: 8px 12px !important;
-    border-radius: 8px !important;
-    max-width: 70% !important;
-    margin-bottom: 9vh !important; /* 🔹 más bajo */
-    font-size: 0.8rem !important;
-    line-height: 1.25 !important;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4) !important;
-    backdrop-filter: blur(2px);
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .hero-text h1 {
-    font-size: 1.15rem !important;
-    margin-bottom: 4px !important;
-    font-weight: 700;
+  header .logo img {
+    height: 38px;
   }
+}
 
-  .hero-text h2,
-  .hero-text p {
-    font-size: 0.78rem !important;
-    line-height: 1.2 !important;
-    font-weight: 400;
-  }
-
-  /* === POSICIÓN ESPECÍFICA === */
-  #hero,
-  #hero-sobre,
-  #hero-publicaciones {
-    align-items: flex-end !important;
-    justify-content: flex-start !important;
-  }
-
+/* ======= AJUSTES PARA MÓVILES PEQUEÑOS ======= */
+@media (max-width: 768px) {
   #hero-talleres,
-  #hero-entrevistas,
-  #hero-contacto {
-    align-items: flex-end !important;
-    justify-content: center !important;
-  }
-
-  #hero-publicaciones .hero-text {
-    margin-left: 6% !important;
-    text-align: left !important;
+  #hero-entrevistas {
+    align-items: flex-end;
+    padding-bottom: 5vh;
   }
 
   #hero-talleres .hero-text,
   #hero-entrevistas .hero-text {
-    text-align: center !important;
-    margin-bottom: 10vh !important;
+    width: 88%;
+    bottom: 5vh;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 10px 14px;
   }
 
-  /* FOOTER */
-  footer {
-    padding: 25px 10px;
+  #hero-talleres h1,
+  #hero-entrevistas h1 {
+    font-size: 1.3rem;
+    margin-bottom: 4px;
   }
 
-  footer p {
+  #hero-talleres h2,
+  #hero-entrevistas h2 {
     font-size: 0.85rem;
-    line-height: 1.4;
+    line-height: 1.25;
   }
 }
 
-/* ======= EXTRA SMALL (≤ 480px) ======= */
-@media screen and (max-width: 480px) {
-  .hero-text {
-    padding: 6px 10px !important;
-    margin-bottom: 8vh !important;
-    max-width: 80% !important;
+/* ======= MICROAJUSTES EXTRA ======= */
+@media (max-width: 480px) {
+  #hero-talleres .hero-text,
+  #hero-entrevistas .hero-text {
+    width: 90%;
+    padding: 8px 12px;
+    bottom: 4vh;
   }
 
-  .hero-text h1 {
-    font-size: 1rem !important;
+  #hero-talleres h1,
+  #hero-entrevistas h1 {
+    font-size: 1.1rem;
   }
 
-  .hero-text h2,
-  .hero-text p {
-    font-size: 0.7rem !important;
+  #hero-talleres h2,
+  #hero-entrevistas h2 {
+    font-size: 0.8rem;
+    line-height: 1.2;
   }
 }
+
+/* ======= FIN RESPONSIVE.CSS ======= */
