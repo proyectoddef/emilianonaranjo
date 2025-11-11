@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inicio — Emiliano Naranjo</title>
 
-  <!-- Enlaces a hojas de estilo -->
+  <!-- Hojas de estilo -->
   <link rel="stylesheet" href="style.css?v=20251113" />
   <link rel="stylesheet" href="responsive.css?v=20251113" media="(max-width:1024px)" />
 
-  <!-- Script responsive -->
+  <!-- Script de menú -->
   <script src="responsive.js" defer></script>
 </head>
 
@@ -34,11 +34,17 @@
   </header>
 
   <!-- ===== SECCIÓN HERO ===== -->
-  <section
-    id="hero"
-    style="background: url('images/hero/hero-bg.jpg') center center / cover no-repeat;"
-  >
-    <div class="hero-container">
+  <section id="hero" style="position: relative; background: url('images/hero/hero-bg.jpg') center center / cover no-repeat;">
+    <!-- Overlay oscuro para mejorar contraste -->
+    <div style="
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+        z-index: 1;
+      ">
+    </div>
+
+    <div class="hero-container" style="position: relative; z-index: 2;">
       <div class="hero-text">
         <h1>EMILIANO NARANJO</h1>
         <h2>EDUCACIÓN INCLUSIVA | DERECHOS HUMANOS</h2>
@@ -51,26 +57,42 @@
     <section id="intro">
       <div class="container" style="width: 90%; margin: auto; text-align: center;">
         <p>
-          Docente, investigador y consultor especializado en educación inclusiva y
-          políticas de discapacidad.
-        </p>
-        <p>
-          Su trabajo combina la educación física, los derechos humanos y la
-          transformación cultural desde una mirada anticapacitista.
+          Docente e investigador especializado en educación inclusiva y discapacidad.
         </p>
       </div>
     </section>
   </main>
 
-  <!-- ===== PIE DE PÁGINA ===== -->
-  <footer>
+  <!-- ===== PIE DE PÁGINA RESTAURADO ===== -->
+  <footer style="text-align: center;">
     <img
       src="images/logos/en-logo.svg"
       alt="Logo Emiliano Naranjo"
       class="footer-logo"
+      style="margin-bottom: 10px;"
     />
-    <p>Educación inclusiva | Derechos Humanos | Anticapacitismo</p>
-    <p>© 2025 Emiliano Naranjo — Todos los derechos reservados.</p>
+    <p>
+      <strong>Contacto:</strong>
+      <a href="mailto:emiliano.naranjo@unahur.edu.ar">emiliano.naranjo@unahur.edu.ar</a>
+    </p>
+
+    <p>
+      📷
+      <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+      📘
+      <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+      👔
+      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> |
+      ▶️
+      <a href="https://www.youtube.com" target="_blank">YouTube</a>
+    </p>
+
+    <p style="margin-top: 15px;">
+      Educación inclusiva | Derechos Humanos | Anticapacitismo
+    </p>
+    <p style="font-size: 0.9rem;">
+      © 2025 Emiliano Naranjo — Todos los derechos reservados.
+    </p>
   </footer>
 </body>
 </html>
