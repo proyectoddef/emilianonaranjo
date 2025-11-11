@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inicio — Emiliano Naranjo</title>
-  <link rel="stylesheet" href="style.css?v=20251112">
+
+  <!-- Enlaces a hojas de estilo -->
+  <link rel="stylesheet" href="style.css?v=20251113" />
+  <link rel="stylesheet" href="responsive.css?v=20251113" media="(max-width:1024px)" />
+
+  <!-- Script responsive -->
+  <script src="responsive.js" defer></script>
 </head>
+
 <body>
+  <!-- ===== ENCABEZADO ===== -->
   <header>
     <div class="container">
       <div class="logo">
-        <img src="images/logos/en-logo.svg" alt="Logo Emiliano Naranjo">
+        <img src="images/logos/en-logo.svg" alt="Logo Emiliano Naranjo" />
       </div>
       <nav>
         <ul>
@@ -25,7 +33,11 @@
     </div>
   </header>
 
-  <section id="hero" style="background: url('images/hero/hero-bg.jpg') center center / cover no-repeat;">
+  <!-- ===== SECCIÓN HERO ===== -->
+  <section
+    id="hero"
+    style="background: url('images/hero/hero-bg.jpg') center center / cover no-repeat;"
+  >
     <div class="hero-container">
       <div class="hero-text">
         <h1>EMILIANO NARANJO</h1>
@@ -34,14 +46,29 @@
     </div>
   </section>
 
-  <section>
-    <div class="container" style="width:90%;margin:auto;text-align:center;">
-      <p>Docente e investigador especializado en educación inclusiva y discapacidad.</p>
-    </div>
-  </section>
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <main>
+    <section id="intro">
+      <div class="container" style="width: 90%; margin: auto; text-align: center;">
+        <p>
+          Docente, investigador y consultor especializado en educación inclusiva y
+          políticas de discapacidad.
+        </p>
+        <p>
+          Su trabajo combina la educación física, los derechos humanos y la
+          transformación cultural desde una mirada anticapacitista.
+        </p>
+      </div>
+    </section>
+  </main>
 
+  <!-- ===== PIE DE PÁGINA ===== -->
   <footer>
-    <img src="images/logos/en-logo.svg" alt="Logo Emiliano Naranjo" class="footer-logo" />
+    <img
+      src="images/logos/en-logo.svg"
+      alt="Logo Emiliano Naranjo"
+      class="footer-logo"
+    />
     <p>Educación inclusiva | Derechos Humanos | Anticapacitismo</p>
     <p>© 2025 Emiliano Naranjo — Todos los derechos reservados.</p>
   </footer>
