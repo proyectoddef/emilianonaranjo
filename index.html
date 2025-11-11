@@ -3,18 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inicio — Emiliano Naranjo</title>
+  <meta name="description" content="Sitio web oficial de Emiliano Naranjo, educador especializado en educación inclusiva y derechos humanos.">
+  <title>Emiliano Naranjo – Educador</title>
 
-  <!-- Hojas de estilo -->
-  <link rel="stylesheet" href="style.css?v=20251113" />
-  <link rel="stylesheet" href="responsive.css?v=20251113" media="(max-width:1024px)" />
-
-  <!-- Script de menú -->
-  <script src="responsive.js" defer></script>
+  <!-- Vinculación correcta del CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="responsive.css" media="(max-width:1024px)" />
 </head>
 
 <body>
-  <!-- ===== ENCABEZADO ===== -->
+
+  <!-- ======= HEADER / MENÚ SUPERIOR ======= -->
   <header>
     <div class="container">
       <div class="logo">
@@ -25,7 +24,7 @@
           <li><a href="index.html" class="active">Inicio</a></li>
           <li><a href="sobre.html">Sobre mí</a></li>
           <li><a href="publicaciones.html">Publicaciones</a></li>
-          <li><a href="talleres.html">Talleres</a></li>
+          <li><a href="talleres.html">Talleres y capacitaciones</a></li>
           <li><a href="entrevistas.html">Entrevistas</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
@@ -33,66 +32,48 @@
     </div>
   </header>
 
-  <!-- ===== SECCIÓN HERO ===== -->
+  <!-- ======= SECCIÓN PRINCIPAL / HERO ======= -->
   <section id="hero" style="position: relative; background: url('images/hero/hero-bg.jpg') center center / cover no-repeat;">
-    <!-- Overlay oscuro para mejorar contraste -->
     <div style="
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
-        z-index: 1;
-      ">
-    </div>
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0,0,0,0.75) 20%, rgba(0,0,0,0.35) 70%);
+      z-index: 1;
+    "></div>
 
     <div class="hero-container" style="position: relative; z-index: 2;">
       <div class="hero-text">
         <h1>EMILIANO NARANJO</h1>
-        <h2>EDUCACIÓN INCLUSIVA | DERECHOS HUMANOS</h2>
+        <h2>EDUCADOR | EDUCACIÓN INCLUSIVA &amp; DERECHOS HUMANOS</h2>
       </div>
     </div>
   </section>
 
-  <!-- ===== CONTENIDO PRINCIPAL ===== -->
-  <main>
-    <section id="intro">
-      <div class="container" style="width: 90%; margin: auto; text-align: center;">
-        <p>
-          Docente e investigador especializado en educación inclusiva y discapacidad.
-        </p>
+  <!-- ======= SECCIÓN DE CONTACTO ======= -->
+  <section id="contacto">
+    <div class="container">
+      <h3>Contacto</h3>
+      <p>
+        Podés escribirme a 
+        <a href="mailto:emiliano.naranjo@unahur.edu.ar">emiliano.naranjo@unahur.edu.ar</a>
+        o seguir mis publicaciones en redes sociales:
+      </p>
+
+      <div class="social-links">
+        <a href="https://www.instagram.com/epnnaranjo/" aria-label="Instagram">📷 Instagram</a>
+        <a href="https://www.facebook.com/emiliano.naranjo" aria-label="Facebook">📘 Facebook</a>
+        <a href="https://www.linkedin.com/feed/" aria-label="LinkedIn">💼 LinkedIn</a>
+        <a href="https://www.youtube.com/@proyectoddef" aria-label="YouTube">▶️ YouTube</a>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <!-- ===== PIE DE PÁGINA RESTAURADO ===== -->
-  <footer style="text-align: center;">
-    <img
-      src="images/logos/en-logo.svg"
-      alt="Logo Emiliano Naranjo"
-      class="footer-logo"
-      style="margin-bottom: 10px;"
-    />
-    <p>
-      <strong>Contacto:</strong>
-      <a href="mailto:emiliano.naranjo@unahur.edu.ar">emiliano.naranjo@unahur.edu.ar</a>
-    </p>
-
-    <p>
-      📷
-      <a href="https://www.instagram.com" target="_blank">Instagram</a> |
-      📘
-      <a href="https://www.facebook.com" target="_blank">Facebook</a> |
-      👔
-      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> |
-      ▶️
-      <a href="https://www.youtube.com" target="_blank">YouTube</a>
-    </p>
-
-    <p style="margin-top: 15px;">
-      Educación inclusiva | Derechos Humanos | Anticapacitismo
-    </p>
-    <p style="font-size: 0.9rem;">
-      © 2025 Emiliano Naranjo — Todos los derechos reservados.
-    </p>
+  <!-- ======= FOOTER ======= -->
+  <footer>
+    <img src="images/logos/en-logo.svg" alt="Logo Emiliano Naranjo" class="footer-logo" />
+    <p>Educación inclusiva | Derechos Humanos | Anticapacitismo</p>
+    <p>© 2025 Emiliano Naranjo — Todos los derechos reservados.</p>
   </footer>
+
 </body>
 </html>
