@@ -6,61 +6,16 @@
   <meta name="description" content="Sitio web oficial de Emiliano Naranjo, educador especializado en educación inclusiva y derechos humanos." />
   <title>Emiliano Naranjo – Educador</title>
 
+  <!-- Estilos base -->
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="responsive.css" media="(max-width:1024px)" />
 
   <style>
-    /* ===== Control general y anti-desbordes ===== */
-    html, body {
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-      box-sizing: border-box;
-    }
+    /* ===== Anti-overflow estable ===== */
+    html, body { margin:0; padding:0; overflow-x:hidden; }
+    * { box-sizing:border-box; }
 
-    * {
-      box-sizing: inherit;
-    }
-
-    /* ===== Encabezado ===== */
-    header {
-      background: #0c2d57;
-    }
-
-    header .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 0;
-    }
-
-    .logo img {
-      height: 44px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    nav a.active,
-    nav a:hover {
-      color: #ffd700;
-    }
-
-    /* ===== HERO ===== */
+    /* ===== Hero ===== */
     #hero {
       position: relative;
       width: 100%;
@@ -70,144 +25,71 @@
       align-items: flex-end;
       justify-content: flex-start;
     }
-
-    #hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
+    /* Gradiente lateral suave (restaurado) */
+    #hero::before{
+      content:"";
+      position:absolute; inset:0;
       background: linear-gradient(to right,
-        rgba(0, 0, 0, 0.75) 10%,
-        rgba(0, 0, 0, 0.55) 35%,
-        rgba(0, 0, 0, 0.25) 70%,
-        rgba(0, 0, 0, 0.05) 100%);
-      z-index: 1;
-      transition: opacity 0.4s ease-in-out;
+        rgba(0,0,0,0.75) 10%,
+        rgba(0,0,0,0.55) 35%,
+        rgba(0,0,0,0.25) 70%,
+        rgba(0,0,0,0.05) 100%);
+      z-index:1; transition:opacity .4s ease-in-out;
     }
-
-    .hero-container {
-      position: relative;
-      z-index: 2;
-      color: #fff;
-      margin-left: 8%;
-      margin-bottom: 8%;
-      background: rgba(0, 0, 0, 0.45);
-      padding: 18px 28px;
-      border-radius: 8px;
-      max-width: 620px;
+    .hero-container{
+      position:relative; z-index:2; color:#fff;
+      margin-left:8%; margin-bottom:8%;
+      background:rgba(0,0,0,.45);
+      padding:18px 28px; border-radius:8px; max-width:620px;
     }
+    .hero-container h1{ font-size:2.6rem; font-weight:800; margin:0 0 8px 0; }
+    .hero-container h2{ font-size:1.2rem; font-weight:500; margin:0; }
 
-    .hero-container h1 {
-      font-size: 2.6rem;
-      font-weight: 800;
-      margin: 0 0 8px 0;
+    /* ===== Contacto ===== */
+    #contacto{ text-align:center; padding:60px 0; background:#fff; }
+    #contacto h3{ color:#0c2d57; font-size:1.8rem; margin:0 0 15px 0; }
+    #contacto p{ color:#333; font-size:1rem; margin:0 0 25px 0; }
+
+    .social-links{
+      display:flex; justify-content:center; align-items:center;
+      gap:26px; flex-wrap:wrap;
     }
-
-    .hero-container h2 {
-      font-size: 1.2rem;
-      font-weight: 500;
-      margin: 0;
+    .social-links a{
+      display:inline-flex; align-items:center; justify-content:center;
+      width:40px; height:40px; /* caja clickeable grande */
     }
-
-    /* ===== CONTACTO ===== */
-    #contacto {
-      text-align: center;
-      padding: 60px 0;
-      background: #fff;
+    .social-links img,
+    .social-links svg{
+      width:36px; height:36px; transition:transform .2s ease;
     }
+    .social-links a:hover img,
+    .social-links a:hover svg{ transform:scale(1.11); }
 
-    #contacto h3 {
-      color: #0c2d57;
-      font-size: 1.8rem;
-      margin-bottom: 15px;
+    /* Ícono LinkedIn inline: color coherente con paleta */
+    .icon-linkedin{ fill:#0c2d57; }
+    .icon-linkedin circle{ fill:#ffffff; } /* fondo blanco dentro del círculo */
+
+    /* ===== Footer ===== */
+    footer{
+      background:#0c2d57; color:#fff; text-align:center;
+      padding:40px 10px; margin-top:40px;
     }
+    .footer-logo{ height:60px; margin-bottom:10px; }
+    footer p{ margin:6px 0; font-size:.95rem; }
 
-    #contacto p {
-      color: #333;
-      font-size: 1rem;
-      margin-bottom: 25px;
-    }
-
-    .social-links {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 32px;
-      flex-wrap: wrap;
-      margin-top: 10px;
-    }
-
-    .social-links a {
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      transition: transform 0.25s ease;
-    }
-
-    .social-links a:hover {
-      transform: scale(1.2);
-    }
-
-    .social-links img {
-      width: 42px;
-      height: 42px;
-      filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.15));
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background-color: #0c2d57;
-      color: #fff;
-      text-align: center;
-      padding: 40px 10px;
-      margin-top: 40px;
-    }
-
-    .footer-logo {
-      height: 60px;
-      margin-bottom: 10px;
-    }
-
-    footer p {
-      margin: 6px 0;
-      font-size: 0.95rem;
-    }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 768px) {
-      #hero {
-        height: 75vh;
-        background-position: center top;
-      }
-
-      .hero-container {
-        margin: 0 auto 12%;
-        text-align: center;
-        padding: 16px 20px;
-      }
-
-      .hero-container h1 {
-        font-size: 2rem;
-      }
-
-      .hero-container h2 {
-        font-size: 1rem;
-      }
-
-      header .container {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
+    /* ===== Responsive ===== */
+    @media (max-width:768px){
+      #hero{ height:75vh; background-position:center top; }
+      .hero-container{ margin:0 auto 12%; text-align:center; padding:16px 20px; }
+      .hero-container h1{ font-size:2rem; }
+      .hero-container h2{ font-size:1rem; }
+      .social-links a{ width:36px; height:36px; }
+      .social-links img, .social-links svg{ width:32px; height:32px; }
     }
   </style>
 </head>
-
 <body>
-  <!-- ===== HEADER ===== -->
+  <!-- ===== Header ===== -->
   <header>
     <div class="container">
       <div class="logo">
@@ -226,15 +108,15 @@
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section id="hero">
+  <!-- ===== Hero ===== -->
+  <section id="hero" aria-label="Presentación">
     <div class="hero-container">
       <h1>EMILIANO NARANJO</h1>
       <h2>EDUCADOR | EDUCACIÓN INCLUSIVA &amp; DERECHOS HUMANOS</h2>
     </div>
   </section>
 
-  <!-- ===== CONTACTO ===== -->
+  <!-- ===== Contacto ===== -->
   <section id="contacto">
     <h3>Contacto</h3>
     <p>
@@ -243,23 +125,35 @@
       o seguir mis publicaciones en redes sociales:
     </p>
 
-    <<div class="social-links">
-  <a href="https://www.instagram.com/epnnaranjo/" target="_blank" title="Instagram">
-    <img src="https://cdn.simpleicons.org/instagram/0c2d57" alt="Instagram" />
-  </a>
-  <a href="https://www.facebook.com/emiliano.naranjo" target="_blank" title="Facebook">
-    <img src="https://cdn.simpleicons.org/facebook/0c2d57" alt="Facebook" />
-  </a>
-  <a href="https://www.linkedin.com/feed/" target="_blank" title="LinkedIn">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" />
-  </a>
-  <a href="https://www.youtube.com/@proyectoddef" target="_blank" title="YouTube">
-    <img src="https://cdn.simpleicons.org/youtube/0c2d57" alt="YouTube" />
-  </a>
-</div>
+    <div class="social-links" aria-label="Redes sociales">
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/epnnaranjo/" target="_blank" rel="noopener" aria-label="Instagram">
+        <img src="images/icons/instagram.svg" alt="Instagram">
+      </a>
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/emiliano.naranjo" target="_blank" rel="noopener" aria-label="Facebook">
+        <img src="images/icons/facebook.svg" alt="Facebook">
+      </a>
+
+      <!-- LinkedIn (inline, no depende de archivos externos) -->
+      <a href="https://www.linkedin.com/in/emilianonaranjo/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+        <svg class="icon-linkedin" viewBox="0 0 24 24" role="img" aria-hidden="true">
+          <!-- círculo de borde (opcional para estética consistente con tus otros íconos) -->
+          <circle cx="12" cy="12" r="11.5" />
+          <!-- logotipo -->
+          <path d="M19 0H5C2.2 0 0 2.2 0 5v14c0 2.8 2.2 5 5 5h14c2.8 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5zM7 19H4V9h3v10zm-1.5-12.3C4.1 6.7 3 5.6 3 4.2S4.1 1.7 5.5 1.7 8 2.8 8 4.2 6.9 6.7 5.5 6.7zM21 19h-3v-5.2c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V19h-3V9h2.9v1.4h.1c.4-.7 1.5-1.5 3-1.5 3.2 0 3.8 2.1 3.8 4.9V19z"/>
+        </svg>
+      </a>
+
+      <!-- YouTube -->
+      <a href="https://www.youtube.com/@proyectoddef" target="_blank" rel="noopener" aria-label="YouTube">
+        <img src="images/icons/youtube.svg" alt="YouTube">
+      </a>
+    </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- ===== Footer ===== -->
   <footer>
     <img src="images/logos/en-logo.svg" alt="Logo Emiliano Naranjo" class="footer-logo" />
     <p>Educación inclusiva | Derechos Humanos | Anticapacitismo</p>
