@@ -6,76 +6,92 @@
   <meta name="description" content="Sitio web oficial de Emiliano Naranjo, educador especializado en educación inclusiva y derechos humanos." />
   <title>Emiliano Naranjo – Educador</title>
 
-  <!-- Estilos base -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="responsive.css" media="(max-width:1024px)" />
 
   <style>
-    /* ===== Anti-overflow estable ===== */
+    /* ===== Ajustes globales ===== */
     html, body { margin:0; padding:0; overflow-x:hidden; }
     * { box-sizing:border-box; }
 
     /* ===== Hero ===== */
     #hero {
-      position: relative;
-      width: 100%;
-      height: 90vh;
-      background: url("images/hero/hero-bg.jpg") center center / cover no-repeat;
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-start;
+      position:relative;
+      width:100%;
+      height:90vh;
+      background:url("images/hero/hero-bg.jpg") center center/cover no-repeat;
+      display:flex;
+      align-items:flex-end;
+      justify-content:flex-start;
     }
-    /* Gradiente lateral suave (restaurado) */
-    #hero::before{
+    #hero::before {
       content:"";
-      position:absolute; inset:0;
-      background: linear-gradient(to right,
+      position:absolute;
+      inset:0;
+      background:linear-gradient(to right,
         rgba(0,0,0,0.75) 10%,
         rgba(0,0,0,0.55) 35%,
         rgba(0,0,0,0.25) 70%,
         rgba(0,0,0,0.05) 100%);
-      z-index:1; transition:opacity .4s ease-in-out;
+      z-index:1;
     }
-    .hero-container{
-      position:relative; z-index:2; color:#fff;
-      margin-left:8%; margin-bottom:8%;
-      background:rgba(0,0,0,.45);
-      padding:18px 28px; border-radius:8px; max-width:620px;
+    .hero-container {
+      position:relative;
+      z-index:2;
+      color:#fff;
+      margin-left:8%;
+      margin-bottom:8%;
+      background:rgba(0,0,0,0.45);
+      padding:18px 28px;
+      border-radius:8px;
+      max-width:620px;
     }
-    .hero-container h1{ font-size:2.6rem; font-weight:800; margin:0 0 8px 0; }
-    .hero-container h2{ font-size:1.2rem; font-weight:500; margin:0; }
+    .hero-container h1 { font-size:2.6rem; font-weight:800; margin:0 0 8px 0; }
+    .hero-container h2 { font-size:1.2rem; font-weight:500; margin:0; }
 
     /* ===== Contacto ===== */
-    #contacto{ text-align:center; padding:60px 0; background:#fff; }
-    #contacto h3{ color:#0c2d57; font-size:1.8rem; margin:0 0 15px 0; }
-    #contacto p{ color:#333; font-size:1rem; margin:0 0 25px 0; }
+    #contacto { text-align:center; padding:60px 0; background:#fff; }
+    #contacto h3 { color:#0c2d57; font-size:1.8rem; margin-bottom:15px; }
+    #contacto p { color:#333; font-size:1rem; margin-bottom:25px; }
 
-    .social-links{
-      display:flex; justify-content:center; align-items:center;
-      gap:26px; flex-wrap:wrap;
+    .social-links {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:28px;
+      flex-wrap:wrap;
     }
-    .social-links a{
-      display:inline-flex; align-items:center; justify-content:center;
-      width:40px; height:40px; /* caja clickeable grande */
-    }
-    .social-links img,
-    .social-links svg{
-      width:36px; height:36px; transition:transform .2s ease;
-    }
-    .social-links a:hover img,
-    .social-links a:hover svg{ transform:scale(1.11); }
 
-    /* Ícono LinkedIn inline: color coherente con paleta */
-    .icon-linkedin{ fill:#0c2d57; }
-    .icon-linkedin circle{ fill:#ffffff; } /* fondo blanco dentro del círculo */
+    .social-links a {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:44px;
+      height:44px;
+    }
+
+    .social-links svg {
+      width:38px;
+      height:38px;
+      transition:transform .25s ease;
+      fill:#0c2d57;
+    }
+
+    .social-links a:hover svg {
+      transform:scale(1.15);
+      fill:#0a3a7a;
+    }
 
     /* ===== Footer ===== */
-    footer{
-      background:#0c2d57; color:#fff; text-align:center;
-      padding:40px 10px; margin-top:40px;
+    footer {
+      background-color:#0c2d57;
+      color:#fff;
+      text-align:center;
+      padding:40px 10px;
+      margin-top:40px;
     }
-    .footer-logo{ height:60px; margin-bottom:10px; }
-    footer p{ margin:6px 0; font-size:.95rem; }
+    .footer-logo { height:60px; margin-bottom:10px; }
+    footer p { margin:6px 0; font-size:.95rem; }
 
     /* ===== Responsive ===== */
     @media (max-width:768px){
@@ -83,12 +99,12 @@
       .hero-container{ margin:0 auto 12%; text-align:center; padding:16px 20px; }
       .hero-container h1{ font-size:2rem; }
       .hero-container h2{ font-size:1rem; }
-      .social-links a{ width:36px; height:36px; }
-      .social-links img, .social-links svg{ width:32px; height:32px; }
+      .social-links svg{ width:34px; height:34px; }
     }
   </style>
 </head>
 <body>
+
   <!-- ===== Header ===== -->
   <header>
     <div class="container">
@@ -109,7 +125,7 @@
   </header>
 
   <!-- ===== Hero ===== -->
-  <section id="hero" aria-label="Presentación">
+  <section id="hero">
     <div class="hero-container">
       <h1>EMILIANO NARANJO</h1>
       <h2>EDUCADOR | EDUCACIÓN INCLUSIVA &amp; DERECHOS HUMANOS</h2>
@@ -120,35 +136,31 @@
   <section id="contacto">
     <h3>Contacto</h3>
     <p>
-      Podés escribirme a
+      Podés escribirme a 
       <a href="mailto:emiliano.naranjo@unahur.edu.ar">emiliano.naranjo@unahur.edu.ar</a>
       o seguir mis publicaciones en redes sociales:
     </p>
 
-    <div class="social-links" aria-label="Redes sociales">
+    <div class="social-links">
+
       <!-- Instagram -->
-      <a href="https://www.instagram.com/epnnaranjo/" target="_blank" rel="noopener" aria-label="Instagram">
-        <img src="images/icons/instagram.svg" alt="Instagram">
+      <a href="https://www.instagram.com/epnnaranjo/" target="_blank" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm8.75 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-4.25 2.25a4.75 4.75 0 1 1 0 9.5 4.75 4.75 0 0 1 0-9.5zm0 1.5a3.25 3.25 0 1 0 0 6.5 3.25 3.25 0 0 0 0-6.5z"/></svg>
       </a>
 
       <!-- Facebook -->
-      <a href="https://www.facebook.com/emiliano.naranjo" target="_blank" rel="noopener" aria-label="Facebook">
-        <img src="images/icons/facebook.svg" alt="Facebook">
+      <a href="https://www.facebook.com/emiliano.naranjo" target="_blank" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M13.5 9H15V6h-1.5c-2.21 0-4 1.79-4 4v2H8v3h1.5v6h3v-6H15l.5-3h-3v-1c0-.55.45-1 1-1z"/></svg>
       </a>
 
-      <!-- LinkedIn (inline, no depende de archivos externos) -->
-      <a href="https://www.linkedin.com/in/emilianonaranjo/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
-        <svg class="icon-linkedin" viewBox="0 0 24 24" role="img" aria-hidden="true">
-          <!-- círculo de borde (opcional para estética consistente con tus otros íconos) -->
-          <circle cx="12" cy="12" r="11.5" />
-          <!-- logotipo -->
-          <path d="M19 0H5C2.2 0 0 2.2 0 5v14c0 2.8 2.2 5 5 5h14c2.8 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5zM7 19H4V9h3v10zm-1.5-12.3C4.1 6.7 3 5.6 3 4.2S4.1 1.7 5.5 1.7 8 2.8 8 4.2 6.9 6.7 5.5 6.7zM21 19h-3v-5.2c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V19h-3V9h2.9v1.4h.1c.4-.7 1.5-1.5 3-1.5 3.2 0 3.8 2.1 3.8 4.9V19z"/>
-        </svg>
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/emilianonaranjo/" target="_blank" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.43c0-1.3-.03-2.97-1.81-2.97-1.81 0-2.09 1.42-2.09 2.88v5.52H9.45V9h3.4v1.56h.05c.47-.9 1.62-1.84 3.33-1.84 3.56 0 4.22 2.34 4.22 5.38v6.35zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM3.57 20.45h3.55V9H3.57v11.45zM22.22 0H1.78C.8 0 0 .8 0 1.78v20.44C0 23.2.8 24 1.78 24h20.44c.98 0 1.78-.8 1.78-1.78V1.78C24 .8 23.2 0 22.22 0z"/></svg>
       </a>
 
       <!-- YouTube -->
-      <a href="https://www.youtube.com/@proyectoddef" target="_blank" rel="noopener" aria-label="YouTube">
-        <img src="images/icons/youtube.svg" alt="YouTube">
+      <a href="https://www.youtube.com/@proyectoddef" target="_blank" aria-label="YouTube">
+        <svg viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6zm12-3c0-2.37-.19-4.74-.55-7.1A2.78 2.78 0 0 0 18.72 3H5.28A2.78 2.78 0 0 0 2.55 4.9 54.35 54.35 0 0 0 2 12c0 2.37.19 4.74.55 7.1A2.78 2.78 0 0 0 5.28 21h13.44a2.78 2.78 0 0 0 2.73-1.9c.36-2.36.55-4.73.55-7.1z"/></svg>
       </a>
     </div>
   </section>
