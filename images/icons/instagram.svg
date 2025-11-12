@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <style>
+      .s0{fill:#0c2d57}
+    </style>
+  </defs>
+  <rect x="6" y="6" width="36" height="36" rx="9" class="s0"/>
+  <circle cx="24" cy="24" r="9" fill="#ffffff"/>
+  <circle cx="24" cy="24" r="6" class="s0"/>
+  <circle cx="33.2" cy="14.8" r="2.2" fill="#ffffff"/>
+</svg>
