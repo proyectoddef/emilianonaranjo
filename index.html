@@ -3,16 +3,156 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sitio web oficial de Emiliano Naranjo, educador especializado en educación inclusiva y derechos humanos.">
+  <meta name="description" content="Sitio web oficial de Emiliano Naranjo, educador especializado en educación inclusiva y derechos humanos." />
   <title>Emiliano Naranjo – Educador</title>
 
-  <!-- Vinculación de estilos -->
+  <!-- Estilos -->
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="responsive.css" media="(max-width: 1024px)" />
+  <link rel="stylesheet" href="responsive.css" media="(max-width:1024px)" />
+
+  <style>
+    /* ===== Ajustes globales anti-desbordamiento ===== */
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /* ===== Hero Section ===== */
+    #hero {
+      position: relative;
+      width: 100%;
+      height: 90vh;
+      background: url("images/hero/hero-bg.jpg") center center / cover no-repeat;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+    }
+
+    /* Gradiente original restaurado: suave y lateral */
+    #hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right,
+        rgba(0,0,0,0.75) 10%,
+        rgba(0,0,0,0.55) 35%,
+        rgba(0,0,0,0.25) 70%,
+        rgba(0,0,0,0.05) 100%);
+      z-index: 1;
+      transition: opacity 0.4s ease-in-out;
+    }
+
+    .hero-container {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      margin-left: 8%;
+      margin-bottom: 8%;
+      background: rgba(0,0,0,0.45);
+      padding: 18px 28px;
+      border-radius: 8px;
+      max-width: 620px;
+    }
+
+    .hero-container h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      margin: 0 0 8px 0;
+    }
+
+    .hero-container h2 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    /* ===== Contact Section ===== */
+    #contacto {
+      text-align: center;
+      padding: 60px 0;
+      background: #fff;
+    }
+
+    #contacto h3 {
+      color: #0c2d57;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    #contacto p {
+      color: #333;
+      font-size: 1rem;
+      margin-bottom: 25px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .social-links a img {
+      width: 28px;
+      height: 28px;
+      transition: transform 0.25s ease;
+    }
+
+    .social-links a:hover img {
+      transform: scale(1.1);
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background-color: #0c2d57;
+      color: #fff;
+      text-align: center;
+      padding: 40px 10px;
+      margin-top: 40px;
+    }
+
+    .footer-logo {
+      height: 60px;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      margin: 6px 0;
+      font-size: 0.95rem;
+    }
+
+    /* ===== Responsive Hero ===== */
+    @media (max-width: 768px) {
+      #hero {
+        height: 75vh;
+        background-position: center top;
+      }
+
+      .hero-container {
+        margin: 0 auto 12%;
+        text-align: center;
+        padding: 16px 20px;
+      }
+
+      .hero-container h1 {
+        font-size: 2rem;
+      }
+
+      .hero-container h2 {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <!-- ======= ENCABEZADO ======= -->
+  <!-- ===== Header ===== -->
   <header>
     <div class="container">
       <div class="logo">
@@ -31,55 +171,44 @@
     </div>
   </header>
 
-  <!-- ======= SECCIÓN PRINCIPAL ======= -->
-  <section id="hero" style="position: relative; background: url('images/hero/hero-bg.jpg') center center / cover no-repeat; height: 90vh;">
-    <div style="
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 10%, rgba(0, 0, 0, 0.55) 40%, rgba(0, 0, 0, 0.25) 80%);
-      z-index: 1;">
-    </div>
-
-    <div class="hero-container" style="position: relative; z-index: 2; display: flex; align-items: flex-end; justify-content: flex-start; padding-left: 8%; padding-bottom: 8%;">
-      <div class="hero-text" style="background: rgba(0, 0, 0, 0.45); padding: 18px 28px; border-radius: 8px; color: #fff; max-width: 600px;">
-        <h1>EMILIANO NARANJO</h1>
-        <h2>EDUCADOR | EDUCACIÓN INCLUSIVA &amp; DERECHOS HUMANOS</h2>
-      </div>
+  <!-- ===== Hero Section ===== -->
+  <section id="hero">
+    <div class="hero-container">
+      <h1>EMILIANO NARANJO</h1>
+      <h2>EDUCADOR | EDUCACIÓN INCLUSIVA &amp; DERECHOS HUMANOS</h2>
     </div>
   </section>
 
-  <!-- ======= SECCIÓN CONTACTO ======= -->
-  <section id="contacto" style="text-align: center; padding: 60px 0;">
-    <div class="container">
-      <h3 style="color: #0c2d57;">Contacto</h3>
-      <p>Podés escribirme a 
-        <a href="mailto:emiliano.naranjo@unahur.edu.ar">emiliano.naranjo@unahur.edu.ar</a> 
-        o seguir mis publicaciones en redes sociales:
-      </p>
+  <!-- ===== Contact Section ===== -->
+  <section id="contacto">
+    <h3>Contacto</h3>
+    <p>
+      Podés escribirme a 
+      <a href="mailto:emiliano.naranjo@unahur.edu.ar">emiliano.naranjo@unahur.edu.ar</a>
+      o seguir mis publicaciones en redes sociales:
+    </p>
 
-      <div class="social-links" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 15px;">
-        <a href="https://www.instagram.com/epnnaranjo/" target="_blank" aria-label="Instagram">
-          <img src="images/icons/instagram.svg" alt="Instagram" width="28" height="28" />
-        </a>
-        <a href="https://www.facebook.com/emiliano.naranjo" target="_blank" aria-label="Facebook">
-          <img src="images/icons/facebook.svg" alt="Facebook" width="28" height="28" />
-        </a>
-        <a href="https://www.linkedin.com/feed/" target="_blank" aria-label="LinkedIn">
-          <img src="images/icons/linkedin.svg" alt="LinkedIn" width="28" height="28" />
-        </a>
-        <a href="https://www.youtube.com/@proyectoddef" target="_blank" aria-label="YouTube">
-          <img src="images/icons/youtube.svg" alt="YouTube" width="28" height="28" />
-        </a>
-      </div>
+    <div class="social-links">
+      <a href="https://www.instagram.com/epnnaranjo/" target="_blank">
+        <img src="images/icons/instagram.svg" alt="Instagram" />
+      </a>
+      <a href="https://www.facebook.com/emiliano.naranjo" target="_blank">
+        <img src="images/icons/facebook.svg" alt="Facebook" />
+      </a>
+      <a href="https://www.linkedin.com/feed/" target="_blank">
+        <img src="images/icons/linkedin.svg" alt="LinkedIn" />
+      </a>
+      <a href="https://www.youtube.com/@proyectoddef" target="_blank">
+        <img src="images/icons/youtube.svg" alt="YouTube" />
+      </a>
     </div>
   </section>
 
-  <!-- ======= PIE DE PÁGINA ======= -->
-  <footer style="background-color: #0c2d57; color: #fff; text-align: center; padding: 40px 10px; margin-top: 40px;">
-    <img src="images/logos/en-logo.svg" alt="Logo Emiliano Naranjo" class="footer-logo" style="height: 60px; margin-bottom: 10px;">
+  <!-- ===== Footer ===== -->
+  <footer>
+    <img src="images/logos/en-logo.svg" alt="Logo Emiliano Naranjo" class="footer-logo" />
     <p>Educación inclusiva | Derechos Humanos | Anticapacitismo</p>
     <p>© 2025 Emiliano Naranjo — Todos los derechos reservados.</p>
   </footer>
-
 </body>
 </html>
