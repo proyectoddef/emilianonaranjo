@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto – Emiliano Naranjo</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css" media="(max-width:1024px)" />
 
   <style>
     /* ======== HERO CONTACTO ======== */
@@ -18,14 +19,14 @@
       justify-content: flex-start;
       color: #fff;
       overflow: hidden;
-      filter: brightness(1.15) contrast(1.05);
+      filter: brightness(1.1) contrast(1.05);
     }
 
     .hero-contacto::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(to right, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.10));
+      background: linear-gradient(to right, rgba(0,0,0,0.65), rgba(0,0,0,0.25));
       z-index: 1;
     }
 
@@ -33,15 +34,15 @@
       position: relative;
       z-index: 2;
       margin-left: 8%;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.45);
       padding: 26px 32px;
-      border-radius: 14px;
-      max-width: 420px;
-      box-shadow: 0 8px 28px rgba(0,0,0,0.35);
+      border-radius: 12px;
+      max-width: 440px;
+      box-shadow: 0 8px 26px rgba(0,0,0,0.35);
     }
 
     .hero-contacto h1 {
-      font-size: 2.3rem;
+      font-size: 2.2rem;
       margin-bottom: 6px;
       font-weight: 700;
     }
@@ -52,7 +53,7 @@
       line-height: 1.6;
     }
 
-    /* ======== SECCIÓN FORMULARIO ======== */
+    /* ======== FORMULARIO ======== */
     .section-contacto {
       padding: 60px 0 80px;
       background-color: #fff;
@@ -135,58 +136,40 @@
       text-align: center;
     }
 
+    /* ======== FOOTER ======== */
     footer {
-      text-align: center;
       background-color: #0c2d57;
       color: #fff;
-      padding: 28px 10px;
-      margin-top: 60px;
+      text-align: center;
+      padding: 40px 10px;
+      margin-top: 40px;
+    }
+
+    footer img.footer-logo {
+      height: 60px;
+      margin-bottom: 10px;
+    }
+
+    .social-icons {
+      margin: 15px 0;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin: 0 8px;
+      transition: transform 0.2s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.1);
     }
 
     footer p {
-      margin: 6px 0;
-      font-size: 0.9rem;
+      margin: 5px 0;
+      font-size: 0.95rem;
     }
 
-    /* ======== MENÚ SUPERIOR ======== */
-    header {
-      background-color: #0c2d57;
-      padding: 10px 0;
-    }
-
-    header .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo img {
-      height: 44px;
-    }
-
-    nav ul {
-      display: flex;
-      gap: 20px;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    nav ul li a:hover,
-    nav ul li a.active {
-      color: #ffd700;
-    }
-
+    /* ======== RESPONSIVE ======== */
     @media (max-width: 768px) {
       .hero-contacto {
         height: 55vh;
@@ -199,7 +182,7 @@
       }
 
       .hero-contacto h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
 
       header .container {
@@ -275,13 +258,20 @@
     </div>
   </section>
 
-  <footer style="background-color: #0c2d57; color: #fff; text-align: center; padding: 40px 10px; margin-top: 40px;">
-  <img src="images/logos/en-logo.svg" alt="Logo Emiliano Naranjo" class="footer-logo" style="height: 60px; margin-bottom: 10px;">
-  <p>Educación inclusiva | Derechos Humanos | Anticapacitismo</p>
-  <p>© 2025 Emiliano Naranjo — Todos los derechos reservados.</p>
-</footer>
+  <!-- FOOTER RESTAURADO -->
+  <footer>
+    <img src="images/logos/en-logo.svg" alt="Logo Emiliano Naranjo" class="footer-logo">
+    <div class="social-icons">
+      <a href="https://www.instagram.com/epnnaranjo/" target="_blank"><img src="images/icons/instagram.svg" alt="Instagram" width="26" height="26"></a>
+      <a href="https://www.facebook.com/emiliano.naranjo" target="_blank"><img src="images/icons/facebook.svg" alt="Facebook" width="26" height="26"></a>
+      <a href="https://www.linkedin.com/feed/" target="_blank"><img src="images/icons/linkedin.svg" alt="LinkedIn" width="26" height="26"></a>
+      <a href="https://www.youtube.com/@proyectoddef" target="_blank"><img src="images/icons/youtube.svg" alt="YouTube" width="26" height="26"></a>
+    </div>
+    <p>Educación inclusiva | Derechos Humanos | Anticapacitismo</p>
+    <p>© 2025 Emiliano Naranjo — Todos los derechos reservados.</p>
+  </footer>
 
-
+  <!-- SCRIPT FORMULARIO -->
   <script>
     const form = document.getElementById("contact-form");
     const successMessage = document.getElementById("success-message");
