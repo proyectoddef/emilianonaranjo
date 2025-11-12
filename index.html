@@ -6,13 +6,13 @@
   <meta name="description" content="Sitio web oficial de Emiliano Naranjo, educador especializado en educación inclusiva y derechos humanos.">
   <title>Emiliano Naranjo – Educador</title>
 
-  <!-- Vinculación correcta del CSS -->
+  <!-- Vinculación de estilos -->
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="responsive.css" media="(max-width: 1024px)" />
 </head>
 
 <body>
-
-  <!-- ======= HEADER / MENÚ SUPERIOR ======= -->
+  <!-- ======= ENCABEZADO ======= -->
   <header>
     <div class="container">
       <div class="logo">
@@ -20,50 +20,63 @@
       </div>
       <nav>
         <ul>
-          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html" class="active">Inicio</a></li>
           <li><a href="sobre.html">Sobre mí</a></li>
           <li><a href="publicaciones.html">Publicaciones</a></li>
           <li><a href="talleres.html">Talleres y capacitaciones</a></li>
           <li><a href="entrevistas.html">Entrevistas</a></li>
           <li><a href="contacto.html">Contacto</a></li>
-          <!-- BOTÓN DE IDIOMA -->
-          <li><a href="en/index.html">🇬🇧 English</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- ======= SECCIÓN PRINCIPAL / HERO ======= -->
-  <section id="hero">
-    <div class="hero-container">
-      <div class="hero-text">
+  <!-- ======= SECCIÓN PRINCIPAL ======= -->
+  <section id="hero" style="position: relative; background: url('images/hero/hero-bg.jpg') center center / cover no-repeat; height: 90vh;">
+    <div style="
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 10%, rgba(0, 0, 0, 0.55) 40%, rgba(0, 0, 0, 0.25) 80%);
+      z-index: 1;">
+    </div>
+
+    <div class="hero-container" style="position: relative; z-index: 2; display: flex; align-items: flex-end; justify-content: flex-start; padding-left: 8%; padding-bottom: 8%;">
+      <div class="hero-text" style="background: rgba(0, 0, 0, 0.45); padding: 18px 28px; border-radius: 8px; color: #fff; max-width: 600px;">
         <h1>EMILIANO NARANJO</h1>
         <h2>EDUCADOR | EDUCACIÓN INCLUSIVA &amp; DERECHOS HUMANOS</h2>
       </div>
     </div>
   </section>
 
-  <!-- ======= SECCIÓN DE CONTACTO ======= -->
-  <section id="contacto">
+  <!-- ======= SECCIÓN CONTACTO ======= -->
+  <section id="contacto" style="text-align: center; padding: 60px 0;">
     <div class="container">
-      <h3>Contacto</h3>
-      <p>
-        Podés escribirme a 
-        <a href="mailto:emiliano.naranjo@unahur.edu.ar">emiliano.naranjo@unahur.edu.ar</a>
+      <h3 style="color: #0c2d57;">Contacto</h3>
+      <p>Podés escribirme a 
+        <a href="mailto:emiliano.naranjo@unahur.edu.ar">emiliano.naranjo@unahur.edu.ar</a> 
         o seguir mis publicaciones en redes sociales:
       </p>
-      <div class="social-links">
-        <a href="https://www.instagram.com/epnnaranjo/" aria-label="Instagram">📷 Instagram</a>
-        <a href="https://www.facebook.com/emiliano.naranjo" aria-label="Facebook">📘 Facebook</a>
-        <a href="https://www.linkedin.com/feed/" aria-label="LinkedIn">💼 LinkedIn</a>
-        <a href="https://www.youtube.com/@proyectoddef" aria-label="YouTube">▶️ YouTube</a>
+
+      <div class="social-links" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 15px;">
+        <a href="https://www.instagram.com/epnnaranjo/" target="_blank" aria-label="Instagram">
+          <img src="images/icons/instagram.svg" alt="Instagram" width="28" height="28" />
+        </a>
+        <a href="https://www.facebook.com/emiliano.naranjo" target="_blank" aria-label="Facebook">
+          <img src="images/icons/facebook.svg" alt="Facebook" width="28" height="28" />
+        </a>
+        <a href="https://www.linkedin.com/feed/" target="_blank" aria-label="LinkedIn">
+          <img src="images/icons/linkedin.svg" alt="LinkedIn" width="28" height="28" />
+        </a>
+        <a href="https://www.youtube.com/@proyectoddef" target="_blank" aria-label="YouTube">
+          <img src="images/icons/youtube.svg" alt="YouTube" width="28" height="28" />
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- ======= FOOTER ======= -->
-  <footer>
-    <img src="images/logos/en-logo.svg" alt="Logo Emiliano Naranjo" class="footer-logo" />
+  <!-- ======= PIE DE PÁGINA ======= -->
+  <footer style="background-color: #0c2d57; color: #fff; text-align: center; padding: 40px 10px; margin-top: 40px;">
+    <img src="images/logos/en-logo.svg" alt="Logo Emiliano Naranjo" class="footer-logo" style="height: 60px; margin-bottom: 10px;">
     <p>Educación inclusiva | Derechos Humanos | Anticapacitismo</p>
     <p>© 2025 Emiliano Naranjo — Todos los derechos reservados.</p>
   </footer>
