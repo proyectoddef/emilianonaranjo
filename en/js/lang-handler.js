@@ -1,28 +1,62 @@
+/* ============================================================
+   SISTEMA INTERMEDIO DE IDIOMAS – OPCIÓN B (Estable)
+   Emiliano Naranjo – 2025
+
+   ✔ Recuerda idioma preferido (localStorage)
+   ✔ No fuerza redirecciones automáticas
+   ✔ Respeta cuando el usuario toca una bandera
+   ✔ Ajusta rutas ES ↔ EN sin tocar HTML
+   ✔ Funciona igual en hosting y en local
+   ============================================================ */
+
 document.addEventListener("DOMContentLoaded", () => {
+
   const currentPath = window.location.pathname;
   const isEnglish = currentPath.includes("/en/");
-  const preferredLang = localStorage.getItem("preferredLanguage");
+  const preferred = localStorage.getItem("preferredLanguage");
 
-  // Guardar preferencia actual
-  if (isEnglish) localStorage.setItem("preferredLanguage", "en");
-  else localStorage.setItem("preferredLanguage", "es");
+  /* ========================================
+     1. GUARDAR preferencia SOLO cuando el usuario
+        entra voluntariamente a una página EN
+     ======================================== */
+  if (isEnglish) {
+    localStorage.setItem("preferredLanguage", "en");
+  } else {
+    localStorage.setItem("preferredLanguage", "es");
+  }
 
-  // Asegurar que los enlaces mantengan idioma
+  /* ========================================
+     2. AJUSTE DE ENLACES AUTOMÁTICO
+        Mantiene idioma mientras navegás
+     ======================================== */
+
   document.querySelectorAll("nav a").forEach(link => {
     const href = link.getAttribute("href");
-    if (!href || href.startsWith("http")) return;
 
-    // Normalizar enlaces internos
-    if (isEnglish && !href.startsWith("/en/")) {
-      const cleanHref = href.replace("../", "").replace("./", "").replace(/^\/+/, "");
-      link.setAttribute("href", `/en/${cleanHref}`);
-    } else if (!isEnglish && href.includes("/en/")) {
-      link.setAttribute("href", href.replace("/en/", "/"));
+    if (!href) return;
+    if (href.startsWith("http")) return;  // Ignora enlaces externos
+
+    const clean = href.replace(/^\.\.\//, "").replace(/^\.\//, "");
+
+    if (isEnglish) {
+      // Estamos en inglés → todos los links deben apuntar a /en/
+      if (!href.startsWith("../")) {
+        link.setAttribute("href", `../${clean}`);
+      }
+    } else {
+      // Estamos en español → los enlaces no deben tener /en/
+      if (href.includes("../")) {
+        link.setAttribute("href", clean);
+      }
     }
   });
 
-  // Si la preferencia guardada es inglés pero estás fuera de /en/, redirigir solo desde index
-  if (preferredLang === "en" && !isEnglish && currentPath.endsWith("/index.html")) {
-    window.location.href = "/en/index.html";
-  }
+  /* ========================================
+     3. NO REDIRIGE AUTOMÁTICAMENTE
+        (solo recuerda el idioma preferido)
+     ======================================== */
+
+  // Nada se fuerza. Solo guardamos la preferencia.
+  // Cuando el usuario toca una bandera, será respetado.
+
 });
