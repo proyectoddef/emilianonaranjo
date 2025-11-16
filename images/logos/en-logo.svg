@@ -1,6 +1,0 @@
-<svg width="70" height="48" viewBox="0 0 70 48" xmlns="http://www.w3.org/2000/svg">
-  <rect width="70" height="48" rx="10" fill="#00264D"></rect>
-  <text x="17" y="30" font-family="Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="700" fill="white">EN</text>
-  <!-- Subrayado exacto ajustado al ancho de las letras -->
-  <rect x="17" y="33" width="33" height="3" rx="1.5" fill="#E5332A"></rect>
-</svg>
