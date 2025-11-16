@@ -60,3 +60,37 @@ document.addEventListener("DOMContentLoaded", () => {
   // Cuando el usuario toca una bandera, será respetado.
 
 });
+
+
+/* ========================================
+   4. INSERCIÓN ÚNICA Y CONTROLADA DE BANDERA
+   ======================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const navList = document.querySelector("nav ul");
+  if (!navList) return;
+
+  const currentPath = window.location.pathname;
+  const isEnglish = currentPath.includes("/en/");
+
+  // Eliminamos botones previos por seguridad
+  navList.querySelectorAll(".lang-switch").forEach(e => e.remove());
+
+  // Creamos el botón nuevo
+  const li = document.createElement("li");
+  li.classList.add("lang-switch");
+
+  // Definimos destino
+  const target = isEnglish ? "../index.html" : "en/index.html";
+
+  // Bandera según idioma contrario
+  li.innerHTML = `
+    <a href="${target}" class="lang-btn" aria-label="Cambiar idioma">
+      ${isEnglish ? "🇪🇸 Español" : "🇬🇧 English"}
+    </a>
+  `;
+
+  // Insertar SOLO al final del menú
+  navList.appendChild(li);
+});
