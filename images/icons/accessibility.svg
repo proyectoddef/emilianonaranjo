@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="#0C2D57" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Cabeza -->
+  <circle cx="32" cy="10" r="5"></circle>
+  
+  <!-- Cuerpo y brazos -->
+  <path d="M32 15v10l10 3"></path>
+  
+  <!-- Asiento -->
+  <path d="M32 25l-6 12"></path>
+  
+  <!-- Rueda -->
+  <circle cx="26" cy="46" r="10"></circle>
+  
+  <!-- Pierna -->
+  <path d="M26 36l12 2 4 8"></path>
+</svg>
