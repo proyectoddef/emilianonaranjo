@@ -5,7 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Workshops and training by Emiliano Naranjo on inclusive education, disability, and human rights.">
   <title>Workshops and Training – Emiliano Naranjo</title>
-  <link rel="stylesheet" href="../style.css" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="../style.css?v=20251110">
+  <link rel="stylesheet" href="../responsive.css?v=20251110">
+
+  <!-- Meta social -->
+  <script src="../js/social/meta-common.js"></script>
+  <script src="../js/social/meta-facebook.js"></script>
+  <script src="../js/social/meta-twitter.js"></script>
+  <script src="../js/social/meta-linkedin.js"></script>
 
   <style>
     /* ======= HERO WORKSHOPS ======= */
@@ -292,13 +301,6 @@
       padding: 0 14px 12px;
     }
   </style>
-  <script src="js/social/meta-common.js"></script>
-<script src="js/social/meta-facebook.js"></script>
-<script src="js/social/meta-twitter.js"></script>
-<script src="js/social/meta-linkedin.js"></script>
-<link rel="stylesheet" href="../style.css?v=20251110">
-<link rel="stylesheet" href="../responsive.css?v=20251110">
-
 </head>
 
 <body>
@@ -315,7 +317,8 @@
           <li><a href="workshops.html" class="active">Workshops & Training</a></li>
           <li><a href="interviews.html">Interviews</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <!-- LANGUAGE FLAGS -->
+
+          <!-- LANGUAGE FLAG CORRECTA -->
           <li class="lang-switch"><a href="../talleres.html">🇦🇷 Español</a></li>
         </ul>
       </nav>
@@ -412,29 +415,14 @@
     <p>Inclusive Education | Human Rights | Anti-ableism</p>
     <p>© 2025 Emiliano Naranjo — All rights reserved.</p>
   </footer>
+
+  <!-- Scripts correctos -->
   <script src="../js/header-en.js"></script>
-<script src="../js/footer-en.js"></script>
-<script src="../js/responsive.js"></script>
-<script>
-  // Guarda la preferencia de idioma en localStorage
-  localStorage.setItem('preferredLanguage', 'en');
+  <script src="../js/footer-en.js"></script>
+  <script src="../js/responsive.js"></script>
 
-  // Si el usuario vuelve al español manualmente, se borra
-  const flagEs = document.querySelector('a[href*="index.html"]');
-  if (flagEs) {
-    flagEs.addEventListener('click', () => {
-      localStorage.removeItem('preferredLanguage');
-    });
-  }
+  <!-- Sistema correcto de idioma -->
+  <script src="js/master.js"></script>
 
-  // Redirige automáticamente al idioma correcto si ya había elegido inglés
-  document.addEventListener('DOMContentLoaded', () => {
-    const preferredLang = localStorage.getItem('preferredLanguage');
-    if (preferredLang === 'en' && !window.location.pathname.includes('/en/')) {
-      window.location.href = '/en/index.html';
-    }
-  });
-</script>
-<script src="js/lang-master.js?v=1"></script>
 </body>
 </html>

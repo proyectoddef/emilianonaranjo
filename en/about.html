@@ -5,10 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Learn more about Emiliano Naranjo’s background and work in inclusive education and human rights.">
   <title>About me – Emiliano Naranjo</title>
-  <link rel="stylesheet" href="../style.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../style.css?v=20251110">
+  <link rel="stylesheet" href="../responsive.css?v=20251110">
+
+  <!-- SOCIAL META -->
+  <script src="../js/social/meta-common.js"></script>
+  <script src="../js/social/meta-facebook.js"></script>
+  <script src="../js/social/meta-twitter.js"></script>
+  <script src="../js/social/meta-linkedin.js"></script>
 
   <style>
-    /* ======= HERO ======= */
+    /* ===== HERO ===== */
     #hero-sobre {
       position: relative;
       background: url("../images/hero/hero-sobre.jpeg") center 30% / contain no-repeat;
@@ -30,8 +39,8 @@
       inset: 0;
       background: linear-gradient(
         to right,
-        rgba(0, 0, 0, 0.45) 18%,
-        rgba(0, 0, 0, 0.18) 70%
+        rgba(0,0,0,0.45) 18%,
+        rgba(0,0,0,0.18) 70%
       );
       z-index: 1;
     }
@@ -45,9 +54,9 @@
       height: 100%;
       background: radial-gradient(
         circle at 8% 50%,
-        rgba(0, 0, 0, 0.55) 0%,
-        rgba(0, 0, 0, 0.2) 55%,
-        rgba(0, 0, 0, 0) 100%
+        rgba(0,0,0,0.55) 0%,
+        rgba(0,0,0,0.2) 55%,
+        rgba(0,0,0,0) 100%
       );
       z-index: 2;
       pointer-events: none;
@@ -62,10 +71,10 @@
     }
 
     #hero-sobre .hero-text {
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0,0,0,0.5);
       padding: 18px 28px;
       border-radius: 8px;
-      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 3px 12px rgba(0,0,0,0.35);
       backdrop-filter: blur(2px);
     }
 
@@ -82,7 +91,7 @@
       font-weight: 400;
     }
 
-    /* ======= BUTTONS ======= */
+    /* ===== CV BUTTONS ===== */
     .cv-links {
       display: flex;
       justify-content: center;
@@ -139,17 +148,12 @@
       }
     }
   </style>
-  <script src="js/social/meta-common.js"></script>
-<script src="js/social/meta-facebook.js"></script>
-<script src="js/social/meta-twitter.js"></script>
-<script src="js/social/meta-linkedin.js"></script>
-<link rel="stylesheet" href="../style.css?v=20251110">
-<link rel="stylesheet" href="../responsive.css?v=20251110">
 
 </head>
 
 <body>
-  <!-- ======= HEADER ======= -->
+
+  <!-- ===== HEADER ===== -->
   <header>
     <div class="container">
       <div class="logo">
@@ -163,101 +167,65 @@
           <li><a href="workshops.html">Workshops & Training</a></li>
           <li><a href="interviews.html">Interviews</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <!-- LANGUAGE FLAG -->
-          <li><a href="../sobre.html">🇦🇷 Español</a></li>
+
+          <!-- LANGUAGE FLAG (correcta) -->
+          <li class="lang-switch"><a href="../sobre.html">🇦🇷 Español</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- ======= HERO SECTION ======= -->
+  <!-- ===== HERO ===== -->
   <section id="hero-sobre">
     <div class="hero-container">
       <div class="hero-text">
         <h1>ABOUT ME</h1>
-        <h2>Experience in inclusive education &amp; human rights</h2>
+        <h2>Experience in inclusive education & human rights</h2>
       </div>
     </div>
   </section>
 
-  <!-- ======= BIOGRAPHIC SECTION ======= -->
+  <!-- ===== BIO ===== -->
   <section id="bio">
     <div class="bio-inner">
       <h3>About me</h3>
 
       <p>
-        I am a university professor specialized in Physical Education, with postgraduate degrees in
-        Education and Educational Management. My work focuses on inclusive education and human rights,
-        particularly on physical education for people with disabilities from an anti-ableist perspective.
+        I am a university professor specialized in Physical Education, with postgraduate degrees in Education and Educational Management. My work focuses on inclusive education and human rights, particularly from an anti-ableist perspective.
       </p>
 
       <p>
-        I have developed experience in teaching, research, academic management, and teacher training,
-        accompanying institutional processes aimed at ensuring accessibility, participation, and social
-        justice within the educational system.
+        I have developed experience in teaching, research, academic management, and teacher training, accompanying institutional processes aimed at ensuring accessibility, participation, and social justice.
       </p>
 
       <ul class="bio-lista">
-        <li>
-          PhD candidate in Education (UNTREF/UNSAM/UNLa). Bachelor in Physical Education (UNLaM).
-          Specialist in Educational Management and Master in Education (UdeSA).
-        </li>
-        <li>
-          Lecturer at the National University of Hurlingham in the Physical Education Teaching Degree
-          and in postgraduate programs related to inclusive education and disability.
-        </li>
-        <li>
-          Representative of civil society before the United Nations Committee on the Rights of Persons
-          with Disabilities.
-        </li>
-        <li>
-          Recognized by UNESCO as a defender of Education and Inclusion for Latin America and the Caribbean.
-        </li>
+        <li>PhD candidate in Education (UNTREF/UNSAM/UNLa).</li>
+        <li>Lecturer at the National University of Hurlingham.</li>
+        <li>Representative before the UN Committee on the Rights of Persons with Disabilities.</li>
+        <li>Recognized by UNESCO as a defender of education and inclusion.</li>
       </ul>
 
-      <!-- ===== DOWNLOAD BUTTONS ===== -->
       <div class="cv-links">
-        <a href="../docs/EmilianoNaranjo_English_Summary.pdf" class="btn" target="_blank" rel="noopener">
-          🌐 Download English summary
-        </a>
-        <a href="../docs/EmilianoNaranjo_CV_Resumen.pdf" class="btn btn-alt" target="_blank" rel="noopener">
-          📄 Download Spanish summary
-        </a>
-        <a href="../docs/EmilianoNaranjo_CV_Completo.pdf" class="btn" target="_blank" rel="noopener">
-          📘 Full CV
-        </a>
+        <a href="../docs/EmilianoNaranjo_English_Summary.pdf" class="btn" target="_blank">🌐 English summary</a>
+        <a href="../docs/EmilianoNaranjo_CV_Resumen.pdf" class="btn btn-alt" target="_blank">📄 Spanish summary</a>
+        <a href="../docs/EmilianoNaranjo_CV_Completo.pdf" class="btn" target="_blank">📘 Full CV</a>
       </div>
+
     </div>
   </section>
 
-  <!-- ======= FOOTER ======= -->
+  <!-- ===== FOOTER ===== -->
   <footer>
     <img src="../images/logos/en-logo.svg" alt="Logo Emiliano Naranjo" class="footer-logo" />
     <p>Inclusive Education | Human Rights | Anti-Ableism</p>
     <p>© 2025 Emiliano Naranjo — All rights reserved.</p>
   </footer>
+
+  <!-- JS -->
   <script src="../js/header-en.js"></script>
-<script src="../js/footer-en.js"></script>
-<script>
-  // Guarda la preferencia de idioma en localStorage
-  localStorage.setItem('preferredLanguage', 'en');
+  <script src="../js/footer-en.js"></script>
+  <script src="../js/responsive.js"></script>
+  <script src="../js/master.js"></script>
 
-  // Si el usuario vuelve al español manualmente, se borra
-  const flagEs = document.querySelector('a[href*="index.html"]');
-  if (flagEs) {
-    flagEs.addEventListener('click', () => {
-      localStorage.removeItem('preferredLanguage');
-    });
-  }
-
-  // Redirige automáticamente al idioma correcto si ya había elegido inglés
-  document.addEventListener('DOMContentLoaded', () => {
-    const preferredLang = localStorage.getItem('preferredLanguage');
-    if (preferredLang === 'en' && !window.location.pathname.includes('/en/')) {
-      window.location.href = '/en/index.html';
-    }
-  });
-</script>
-<script src="js/lang-master.js?v=1"></script>
 </body>
-
+</html>

@@ -4,7 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact – Emiliano Naranjo</title>
-  <link rel="stylesheet" href="../style.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../style.css?v=20251110" />
+  <link rel="stylesheet" href="../responsive.css?v=20251110" />
+
+  <!-- SOCIAL META -->
+  <script src="../js/social/meta-common.js"></script>
+  <script src="../js/social/meta-facebook.js"></script>
+  <script src="../js/social/meta-twitter.js"></script>
+  <script src="../js/social/meta-linkedin.js"></script>
 
   <style>
     /* ======== HERO CONTACT ======== */
@@ -25,7 +34,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(to right, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.10));
+      background: linear-gradient(to right, rgba(0,0,0,0.45), rgba(0,0,0,0.10));
       z-index: 1;
     }
 
@@ -33,11 +42,11 @@
       position: relative;
       z-index: 2;
       margin-left: 8%;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0,0,0,0.5);
       padding: 26px 32px;
       border-radius: 14px;
       max-width: 420px;
-      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.35);
     }
 
     .hero-contacto h1 {
@@ -45,14 +54,13 @@
       margin-bottom: 6px;
       font-weight: 700;
     }
-
     .hero-contacto p {
       font-size: 1rem;
       color: #f1f1f1;
       line-height: 1.6;
     }
 
-    /* ======== CONTACT FORM SECTION ======== */
+    /* SECTION */
     .section-contacto {
       padding: 60px 0 80px;
       background-color: #fff;
@@ -94,12 +102,6 @@
       font-size: 1rem;
       border-radius: 8px;
       border: 1px solid #ccc;
-      transition: border-color 0.2s ease;
-    }
-
-    input:focus, textarea:focus {
-      border-color: #0c2d57;
-      outline: none;
     }
 
     textarea {
@@ -116,23 +118,6 @@
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #143b77;
-    }
-
-    .success-message {
-      display: none;
-      margin-top: 18px;
-      background: #e0f7ea;
-      color: #0a4d2c;
-      border: 1px solid #a3e4b6;
-      padding: 14px;
-      border-radius: 8px;
-      font-weight: 600;
-      text-align: center;
     }
 
     footer {
@@ -143,88 +128,15 @@
       margin-top: 60px;
     }
 
-    footer p {
-      margin: 6px 0;
-      font-size: 0.9rem;
-    }
-
-    /* ======== NAVBAR ======== */
-    header {
-      background-color: #0c2d57;
-      padding: 10px 0;
-    }
-
-    header .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo img {
-      height: 44px;
-    }
-
-    nav ul {
-      display: flex;
-      gap: 20px;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    nav ul li a:hover,
-    nav ul li a.active {
-      color: #ffd700;
-    }
-
-    @media (max-width: 768px) {
-      .hero-contacto {
-        height: 55vh;
-        background-position: center top;
-      }
-
-      .hero-contacto .hero-content {
-        margin-left: 5%;
-        max-width: 90%;
-      }
-
-      .hero-contacto h1 {
-        font-size: 2rem;
-      }
-
-      header .container {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
+    .footer-logo {
+      height: 60px;
+      margin-bottom: 10px;
     }
   </style>
-
-  <!-- Metadatos sociales -->
-  <script src="../js/social/meta-common.js"></script>
-  <script src="../js/social/meta-facebook.js"></script>
-  <script src="../js/social/meta-twitter.js"></script>
-  <script src="../js/social/meta-linkedin.js"></script>
-  <link rel="stylesheet" href="../style.css?v=20251110">
-<link rel="stylesheet" href="../responsive.css?v=20251110">
-
 </head>
 
 <body>
+
   <!-- NAVBAR -->
   <header>
     <div class="container">
@@ -239,7 +151,9 @@
           <li><a href="workshops.html">Workshops & Training</a></li>
           <li><a href="interviews.html">Interviews</a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
-          <li><a href="https://emilianonaranjo3.netlify.app/contacto.html">🇦🇷 Español</a></li>
+
+          <!-- FIXED FLAG -->
+          <li class="lang-switch"><a href="../contacto.html">🇦🇷 Español</a></li>
         </ul>
       </nav>
     </div>
@@ -249,10 +163,7 @@
   <section class="hero-contacto">
     <div class="hero-content">
       <h1>Contact</h1>
-      <p>
-        You can write to me for interviews, projects or collaborations related to
-        inclusive education, disability, and human rights.
-      </p>
+      <p>You can write for interviews, projects or collaborations on inclusive education and human rights.</p>
     </div>
   </section>
 
@@ -260,10 +171,7 @@
   <section class="section-contacto">
     <div class="contact-container">
       <h2>Write to me</h2>
-      <p>
-        Complete the form below and your message will be sent directly to my email.
-        I will reply as soon as possible.
-      </p>
+      <p>Complete the form below and your message will arrive directly to my email.</p>
 
       <form id="contact-form" action="https://formspree.io/f/mwpwgylk" method="POST">
         <label for="name">Full name</label>
@@ -291,50 +199,11 @@
     <p>© 2025 Emiliano Naranjo — All rights reserved.</p>
   </footer>
 
-  <!-- Scripts -->
-  <script>
-    const form = document.getElementById("contact-form");
-    const successMessage = document.getElementById("success-message");
-
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const formData = new FormData(form);
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: { Accept: "application/json" },
-      });
-      if (response.ok) {
-        form.reset();
-        successMessage.style.display = "block";
-        setTimeout(() => (successMessage.style.display = "none"), 6000);
-      }
-    });
-  </script>
-
+  <!-- SCRIPTS -->
   <script src="../js/header-en.js"></script>
   <script src="../js/footer-en.js"></script>
   <script src="../js/responsive.js"></script>
-  <script>
-  // Guarda la preferencia de idioma en localStorage
-  localStorage.setItem('preferredLanguage', 'en');
+  <script src="../js/master.js"></script>
 
-  // Si el usuario vuelve al español manualmente, se borra
-  const flagEs = document.querySelector('a[href*="index.html"]');
-  if (flagEs) {
-    flagEs.addEventListener('click', () => {
-      localStorage.removeItem('preferredLanguage');
-    });
-  }
-
-  // Redirige automáticamente al idioma correcto si ya había elegido inglés
-  document.addEventListener('DOMContentLoaded', () => {
-    const preferredLang = localStorage.getItem('preferredLanguage');
-    if (preferredLang === 'en' && !window.location.pathname.includes('/en/')) {
-      window.location.href = '/en/index.html';
-    }
-  });
-</script>
-<script src="js/lang-master.js?v=1"></script>
 </body>
 </html>

@@ -6,49 +6,53 @@
   <meta name="description" content="Official website of Emiliano Naranjo, educator specialized in inclusive education and human rights.">
   <title>Emiliano Naranjo – Educator</title>
 
-  <!-- Correct CSS link -->
-  <link rel="stylesheet" href="../style.css" />
-  <script src="js/social/meta-common.js"></script>
-<script src="js/social/meta-facebook.js"></script>
-<script src="js/social/meta-twitter.js"></script>
-<script src="js/social/meta-linkedin.js"></script>
-<link rel="stylesheet" href="../style.css?v=20251110">
-<link rel="stylesheet" href="../responsive.css?v=20251110">
+  <!-- CSS -->
+  <link rel="stylesheet" href="../style.css?v=20251110">
+  <link rel="stylesheet" href="../responsive.css?v=20251110">
 
+  <!-- SOCIAL META -->
+  <script src="../js/social/meta-common.js"></script>
+  <script src="../js/social/meta-facebook.js"></script>
+  <script src="../js/social/meta-twitter.js"></script>
+  <script src="../js/social/meta-linkedin.js"></script>
 </head>
 
 <body>
 
-  <!-- ======= HEADER / TOP MENU ======= -->
+  <!-- ======= HEADER ======= -->
   <header>
     <div class="container">
       <div class="logo">
         <img src="../images/logos/en-logo.svg" alt="Emiliano Naranjo Logo" />
       </div>
+
       <nav>
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About me</a></li>
           <li><a href="publications.html">Publications</a></li>
-          <li><a href="workshops.html">Workshops &amp; Training</a></li>
+          <li><a href="workshops.html">Workshops & Training</a></li>
           <li><a href="interviews.html">Interviews</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <!-- LANGUAGE BUTTON BACK TO SPANISH -->
-          <li><a href="../index.html">🇦🇷 Español</a></li>
+
+          <!-- FLAG – FIXED -->
+          <li class="lang-switch"><a href="../index.html">🇦🇷 Español</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- ======= HERO SECTION ======= -->
+
+  <!-- ======= HERO ======= -->
   <section id="hero">
     <div class="hero-container">
       <div class="hero-text">
         <h1>EMILIANO NARANJO</h1>
-        <h2>EDUCATOR | INCLUSIVE EDUCATION &amp; HUMAN RIGHTS</h2>
+        <h2>EDUCATOR • INCLUSIVE EDUCATION & HUMAN RIGHTS</h2>
       </div>
     </div>
   </section>
+
 
   <!-- ======= CONTACT SECTION ======= -->
   <section id="contacto">
@@ -56,47 +60,34 @@
       <h3>Contact</h3>
       <p>
         You can write to 
-        <a href="mailto:emiliano.naranjo@unahur.edu.ar">emiliano.naranjo@unahur.edu.ar</a>
+        <a href="mailto:emiliano.naranjo@unahur.edu.ar">emiliano.naranjo@unahur.edu.ar</a>,
         or follow my work on social media:
       </p>
+
       <div class="social-links">
-        <a href="https://www.instagram.com/epnnaranjo/" aria-label="Instagram">📷 Instagram</a>
-        <a href="https://www.facebook.com/emiliano.naranjo" aria-label="Facebook">📘 Facebook</a>
-        <a href="https://www.linkedin.com/feed/" aria-label="LinkedIn">💼 LinkedIn</a>
-        <a href="https://www.youtube.com/@proyectoddef" aria-label="YouTube">▶️ YouTube</a>
+        <a href="https://www.instagram.com/epnnaranjo/">📷 Instagram</a>
+        <a href="https://www.facebook.com/emiliano.naranjo">📘 Facebook</a>
+        <a href="https://www.linkedin.com/in/emiliano-naranjo/">💼 LinkedIn</a>
+        <a href="https://www.youtube.com/@proyectoddef">▶️ YouTube</a>
       </div>
     </div>
   </section>
 
+
   <!-- ======= FOOTER ======= -->
   <footer>
-    <img src="../images/logos/en-logo.svg" alt="Emiliano Naranjo Logo" class="footer-logo" />
+    <img src="../images/logos/en-logo.svg" alt="Logo" class="footer-logo" />
     <p>Inclusive Education | Human Rights | Anti-ableism</p>
     <p>© 2025 Emiliano Naranjo — All rights reserved.</p>
   </footer>
-<script src="../js/header-en.js"></script>
-<script src="../js/footer-en.js"></script>
-<script src="../js/responsive.js"></script>
-<script>
-  // Guarda la preferencia de idioma en localStorage
-  localStorage.setItem('preferredLanguage', 'en');
 
-  // Si el usuario vuelve al español manualmente, se borra
-  const flagEs = document.querySelector('a[href*="index.html"]');
-  if (flagEs) {
-    flagEs.addEventListener('click', () => {
-      localStorage.removeItem('preferredLanguage');
-    });
-  }
+  <!-- JS -->
+  <script src="../js/header-en.js"></script>
+  <script src="../js/footer-en.js"></script>
+  <script src="../js/responsive.js"></script>
 
-  // Redirige automáticamente al idioma correcto si ya había elegido inglés
-  document.addEventListener('DOMContentLoaded', () => {
-    const preferredLang = localStorage.getItem('preferredLanguage');
-    if (preferredLang === 'en' && !window.location.pathname.includes('/en/')) {
-      window.location.href = '/en/index.html';
-    }
-  });
-</script>
-<script src="js/lang-master.js?v=1"></script>
+  <!-- UNIVERSAL LANGUAGE SCRIPT -->
+  <script src="../js/master.js"></script>
+
 </body>
 </html>
