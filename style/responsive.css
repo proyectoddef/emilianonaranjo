@@ -1,0 +1,42 @@
+/* ======= RESPONSIVE.CSS (versión estable final) ======= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  header .logo img { height: 38px; }
+  nav ul { flex-wrap: wrap; justify-content: center; }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+
+  /* Mantiene las proporciones originales */
+  [id^="hero-"] {
+    height: 65vh !important;
+    background-position: center top !important;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  [id^="hero-"] .hero-text {
+    width: 85%;
+    bottom: 5vh;
+    position: absolute;
+    background: rgba(0,0,0,0.55);
+    padding: 10px 14px;
+  }
+
+  [id^="hero-"] h1 { font-size: 1.3rem; margin-bottom: 4px; }
+  [id^="hero-"] h2 { font-size: 0.85rem; line-height: 1.25; }
+}
+
+/* Pantallas muy pequeñas */
+@media (max-width: 480px) {
+  [id^="hero-"] .hero-text {
+    width: 90%;
+    padding: 8px 12px;
+  }
+  [id^="hero-"] h1 { font-size: 1.1rem; }
+  [id^="hero-"] h2 { font-size: 0.8rem; }
+}
+
+/* ======= FIN RESPONSIVE.CSS ======= */
