@@ -1,96 +1,62 @@
 /* ============================================================
-   SISTEMA INTERMEDIO DE IDIOMAS – OPCIÓN B (Estable)
-   Emiliano Naranjo – 2025
+   SISTEMA INTERMEDIO DE IDIOMAS – ESTABLE 2025
+   Emiliano Naranjo
 
-   ✔ Recuerda idioma preferido (localStorage)
-   ✔ No fuerza redirecciones automáticas
-   ✔ Respeta cuando el usuario toca una bandera
-   ✔ Ajusta rutas ES ↔ EN sin tocar HTML
-   ✔ Funciona igual en hosting y en local
+   ✔ Mantiene navegación dentro del idioma actual
+   ✔ No redirige a hosts viejos
+   ✔ No cambia idioma por error
+   ✔ Respeta la ruta real del sitio
    ============================================================ */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  const currentPath = window.location.pathname;
-  const isEnglish = currentPath.includes("/en/");
-  const preferred = localStorage.getItem("preferredLanguage");
+  const path = window.location.pathname;
 
-  /* ========================================
-     1. GUARDAR preferencia SOLO cuando el usuario
-        entra voluntariamente a una página EN
-     ======================================== */
-  if (isEnglish) {
-    localStorage.setItem("preferredLanguage", "en");
-  } else {
-    localStorage.setItem("preferredLanguage", "es");
-  }
+  // Detectamos si estamos en /en/
+  const isEnglish = path.includes("/en/");
 
-  /* ========================================
-     2. AJUSTE DE ENLACES AUTOMÁTICO
-        Mantiene idioma mientras navegás
-     ======================================== */
+  // Guardamos preferencia SOLO según carpeta actual
+  localStorage.setItem("preferredLanguage", isEnglish ? "en" : "es");
 
+  /* ---------------------------------------------------------
+     AJUSTAR LOS ENLACES DEL MENÚ
+     --------------------------------------------------------- */
   document.querySelectorAll("nav a").forEach(link => {
+
     const href = link.getAttribute("href");
+    if (!href || href.startsWith("http")) return;
 
-    if (!href) return;
-    if (href.startsWith("http")) return;  // Ignora enlaces externos
-
-    const clean = href.replace(/^\.\.\//, "").replace(/^\.\//, "");
+    // Quitamos "./" y "../"
+    const clean = href.replace(/^\.\//, "").replace(/^\.\.\//, "");
 
     if (isEnglish) {
-      // Estamos en inglés → todos los links deben apuntar a /en/
-      if (!href.startsWith("../")) {
-        link.setAttribute("href", `../${clean}`);
-      }
+      link.href = "../" + clean;
     } else {
-      // Estamos en español → los enlaces no deben tener /en/
-      if (href.includes("../")) {
-        link.setAttribute("href", clean);
-      }
+      link.href = clean;
     }
   });
 
-  /* ========================================
-     3. NO REDIRIGE AUTOMÁTICAMENTE
-        (solo recuerda el idioma preferido)
-     ======================================== */
-
-  // Nada se fuerza. Solo guardamos la preferencia.
-  // Cuando el usuario toca una bandera, será respetado.
-
-});
-
-
-/* ========================================
-   4. INSERCIÓN ÚNICA Y CONTROLADA DE BANDERA
-   ======================================== */
-
-document.addEventListener("DOMContentLoaded", () => {
-
+  /* ---------------------------------------------------------
+     INSERTAR BOTÓN DE IDIOMA
+     --------------------------------------------------------- */
   const navList = document.querySelector("nav ul");
   if (!navList) return;
 
-  const currentPath = window.location.pathname;
-  const isEnglish = currentPath.includes("/en/");
-
-  // Eliminamos botones previos por seguridad
+  // Eliminar cualquier botón previo
   navList.querySelectorAll(".lang-switch").forEach(e => e.remove());
 
-  // Creamos el botón nuevo
   const li = document.createElement("li");
   li.classList.add("lang-switch");
 
-  // Definimos destino
+  // Si estoy en ingles → ir a español
+  // Si estoy en español → ir a ingles
   const target = isEnglish ? "../index.html" : "en/index.html";
 
-  // Bandera según idioma contrario
   li.innerHTML = `
-    <a href="${target}" class="lang-btn" aria-label="Cambiar idioma">
-      ${isEnglish ? "🇪🇸 Español" : "🇬🇧 English"}
+    <a href="${target}" aria-label="Cambiar idioma">
+      ${isEnglish ? "🇦🇷 Español" : "🇬🇧 English"}
     </a>
   `;
 
-  // Insertar SOLO al final del menú
   navList.appendChild(li);
 });
