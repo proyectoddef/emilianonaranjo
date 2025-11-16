@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Emiliano Naranjo</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../style.css?v=20251110" />
+  <link rel="stylesheet" href="../responsive.css?v=20251110" />
+
+  <!-- SOCIAL META -->
+  <script src="../js/social/meta-common.js"></script>
+  <script src="../js/social/meta-facebook.js"></script>
+  <script src="../js/social/meta-twitter.js"></script>
+  <script src="../js/social/meta-linkedin.js"></script>
+
+  <style>
+    /* ======== HERO CONTACT ======== */
+    .hero-contacto {
+      position: relative;
+      height: 65vh;
+      min-height: 420px;
+      background: url("../images/headers/contacto-header.jpg") center 38% / cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      color: #fff;
+      overflow: hidden;
+      filter: brightness(1.15) contrast(1.05);
+    }
+
+    .hero-contacto::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0,0,0,0.45), rgba(0,0,0,0.10));
+      z-index: 1;
+    }
+
+    .hero-contacto .hero-content {
+      position: relative;
+      z-index: 2;
+      margin-left: 8%;
+      background: rgba(0,0,0,0.5);
+      padding: 26px 32px;
+      border-radius: 14px;
+      max-width: 420px;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.35);
+    }
+
+    .hero-contacto h1 {
+      font-size: 2.3rem;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+    .hero-contacto p {
+      font-size: 1rem;
+      color: #f1f1f1;
+      line-height: 1.6;
+    }
+
+    /* SECTION */
+    .section-contacto {
+      padding: 60px 0 80px;
+      background-color: #fff;
+    }
+
+    .contact-container {
+      width: 90%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-contacto h2 {
+      color: #0c2d57;
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+      text-align: left;
+    }
+
+    .section-contacto p {
+      color: #333;
+      margin-bottom: 28px;
+      text-align: left;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    label {
+      font-weight: 600;
+      color: #0c2d57;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      align-self: flex-start;
+      background-color: #0c2d57;
+      color: #fff;
+      font-weight: 600;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #0c2d57;
+      color: #fff;
+      padding: 28px 10px;
+      margin-top: 60px;
+    }
+
+    .footer-logo {
+      height: 60px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="../images/logos/en-logo.svg" alt="Logo Emiliano Naranjo" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="workshops.html">Workshops & Training</a></li>
+          <li><a href="interviews.html">Interviews</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+
+          <!-- FIXED FLAG -->
+          <li class="lang-switch"><a href="../contacto.html">🇦🇷 Español</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-contacto">
+    <div class="hero-content">
+      <h1>Contact</h1>
+      <p>You can write for interviews, projects or collaborations on inclusive education and human rights.</p>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="section-contacto">
+    <div class="contact-container">
+      <h2>Write to me</h2>
+      <p>Complete the form below and your message will arrive directly to my email.</p>
+
+      <form id="contact-form" action="https://formspree.io/f/mwpwgylk" method="POST">
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="_replyto" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send message</button>
+      </form>
+
+      <div id="success-message" class="success-message">
+        Thank you for your message! I’ll reply soon.
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <img src="../images/logos/en-logo.svg" alt="Emiliano Naranjo Logo" class="footer-logo" />
+    <p>Inclusive Education | Human Rights | Anti-ableism</p>
+    <p>© 2025 Emiliano Naranjo — All rights reserved.</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="../js/header-en.js"></script>
+  <script src="../js/footer-en.js"></script>
+  <script src="../js/responsive.js"></script>
+  <script src="../js/master.js"></script>
+
+</body>
+</html>

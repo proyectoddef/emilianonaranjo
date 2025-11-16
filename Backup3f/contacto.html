@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto – Emiliano Naranjo</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ======== HERO CONTACTO ======== */
+    .hero-contacto {
+      position: relative;
+      height: 65vh;
+      min-height: 420px;
+      background: url("images/headers/contacto-header.jpg") center 38% / cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      color: #fff;
+      overflow: hidden;
+      filter: brightness(1.15) contrast(1.05);
+    }
+
+    .hero-contacto::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.10));
+      z-index: 1;
+    }
+
+    .hero-contacto .hero-content {
+      position: relative;
+      z-index: 2;
+      margin-left: 8%;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 26px 32px;
+      border-radius: 14px;
+      max-width: 420px;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.35);
+    }
+
+    .hero-contacto h1 {
+      font-size: 2.3rem;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    .hero-contacto p {
+      font-size: 1rem;
+      color: #f1f1f1;
+      line-height: 1.6;
+    }
+
+    /* ======== SECCIÓN FORMULARIO ======== */
+    .section-contacto {
+      padding: 60px 0 80px;
+      background-color: #fff;
+    }
+
+    .contact-container {
+      width: 90%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-contacto h2 {
+      color: #0c2d57;
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+      text-align: left;
+    }
+
+    .section-contacto p {
+      color: #333;
+      margin-bottom: 28px;
+      text-align: left;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    label {
+      font-weight: 600;
+      color: #0c2d57;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      transition: border-color 0.2s ease;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #0c2d57;
+      outline: none;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      align-self: flex-start;
+      background-color: #0c2d57;
+      color: #fff;
+      font-weight: 600;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #143b77;
+    }
+
+    .success-message {
+      display: none;
+      margin-top: 18px;
+      background: #e0f7ea;
+      color: #0a4d2c;
+      border: 1px solid #a3e4b6;
+      padding: 14px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #0c2d57;
+      color: #fff;
+      padding: 28px 10px;
+      margin-top: 60px;
+    }
+
+    footer p {
+      margin: 6px 0;
+      font-size: 0.9rem;
+    }
+
+    /* ======== MENÚ SUPERIOR ======== */
+    header {
+      background-color: #0c2d57;
+      padding: 10px 0;
+    }
+
+    header .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 44px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #ffd700;
+    }
+
+    @media (max-width: 768px) {
+      .hero-contacto {
+        height: 55vh;
+        background-position: center top;
+      }
+
+      .hero-contacto .hero-content {
+        margin-left: 5%;
+        max-width: 90%;
+      }
+
+      .hero-contacto h1 {
+        font-size: 2rem;
+      }
+
+      header .container {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+  <script src="js/social/meta-common.js"></script>
+<script src="js/social/meta-facebook.js"></script>
+<script src="js/social/meta-twitter.js"></script>
+<script src="js/social/meta-linkedin.js"></script>
+
+</head>
+
+<body>
+  <!-- NAVBAR UNIFICADO -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="images/logos/en-logo.svg" alt="Logo Emiliano Naranjo">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="sobre.html">Sobre mí</a></li>
+          <li><a href="publicaciones.html">Publicaciones</a></li>
+          <li><a href="talleres.html">Talleres y capacitaciones</a></li>
+          <li><a href="entrevistas.html">Entrevistas</a></li>
+          <li><a href="contacto.html" class="active">Contacto</a></li>
+          <li><a href="en/contact.html">🇬🇧 English</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-contacto">
+    <div class="hero-content">
+      <h1>Contacto</h1>
+      <p>
+        Podés escribirme para entrevistas, proyectos o colaboraciones sobre
+        educación inclusiva, discapacidad y derechos humanos.
+      </p>
+    </div>
+  </section>
+
+  <!-- FORMULARIO -->
+  <section class="section-contacto">
+    <div class="contact-container">
+      <h2>Escribime</h2>
+      <p>
+        Completá el siguiente formulario y tu mensaje llegará directamente a mi
+        correo. Te responderé a la brevedad.
+      </p>
+
+      <form id="contact-form" action="https://formspree.io/f/mwpwgylk" method="POST">
+        <label for="name">Nombre completo</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="_replyto" required>
+
+        <label for="message">Mensaje</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
+
+      <div id="success-message" class="success-message">
+        ¡Gracias por tu mensaje! Te responderé pronto.
+      </div>
+    </div>
+  </section>
+
+  <footer>
+ <img src="images/logos/en-logo.svg" alt="Logo Emiliano Naranjo" class="footer-logo" />
+  <p>Educación inclusiva | Derechos Humanos | Anticapacitismo</p>
+  <p>© 2025 Emiliano Naranjo — Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById("contact-form");
+    const successMessage = document.getElementById("success-message");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+      if (response.ok) {
+        form.reset();
+        successMessage.style.display = "block";
+        setTimeout(() => (successMessage.style.display = "none"), 6000);
+      }
+    });
+  </script>
+  <script src="js/header.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/lang-handler.js"></script>
+</body>
+<script src="js/responsive.js"></script>
+</html>

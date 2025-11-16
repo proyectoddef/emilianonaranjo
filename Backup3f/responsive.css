@@ -1,0 +1,70 @@
+/* ======= RESPONSIVE.CSS (versión estable 2025-11) ======= */
+/* Ajustes específicos para móviles y tablets */
+
+/* ======= GENERAL ======= */
+@media (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header .logo img {
+    height: 38px;
+  }
+}
+
+/* ======= AJUSTES PARA MÓVILES PEQUEÑOS ======= */
+@media (max-width: 768px) {
+  #hero-talleres,
+  #hero-entrevistas {
+    align-items: flex-end;
+    padding-bottom: 5vh;
+  }
+
+  #hero-talleres .hero-text,
+  #hero-entrevistas .hero-text {
+    width: 88%;
+    bottom: 5vh;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 10px 14px;
+  }
+
+  #hero-talleres h1,
+  #hero-entrevistas h1 {
+    font-size: 1.3rem;
+    margin-bottom: 4px;
+  }
+
+  #hero-talleres h2,
+  #hero-entrevistas h2 {
+    font-size: 0.85rem;
+    line-height: 1.25;
+  }
+}
+
+/* ======= MICROAJUSTES EXTRA ======= */
+@media (max-width: 480px) {
+  #hero-talleres .hero-text,
+  #hero-entrevistas .hero-text {
+    width: 90%;
+    padding: 8px 12px;
+    bottom: 4vh;
+  }
+
+  #hero-talleres h1,
+  #hero-entrevistas h1 {
+    font-size: 1.1rem;
+  }
+
+  #hero-talleres h2,
+  #hero-entrevistas h2 {
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+}
+
+/* ======= FIN RESPONSIVE.CSS ======= */
