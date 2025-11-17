@@ -1,53 +1,55 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto | Emiliano Naranjo</title>
-  <meta name="description" content="Contactá a Emiliano Naranjo para entrevistas, proyectos y colaboraciones sobre educación inclusiva y derechos humanos." />
-  <meta name="keywords" content="contacto Emiliano Naranjo, educación inclusiva, derechos humanos, proyectos educativos, entrevistas" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato | Emiliano Naranjo</title>
+  <meta name="description" content="Entre em contato com Emiliano Naranjo para entrevistas, projetos ou colaborações sobre educação inclusiva e direitos humanos." />
+  <meta name="keywords" content="contato Emiliano Naranjo, educação inclusiva, direitos humanos, projetos educativos, entrevistas" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://emilianonaranjo.com/contacto.html" />
-  <meta property="og:title" content="Contacto | Emiliano Naranjo" />
-  <meta property="og:description" content="Escribí a Emiliano Naranjo para colaborar en educación inclusiva y derechos humanos." />
+  <link rel="canonical" href="https://emilianonaranjo.com/pt/contact.html" />
+  <meta property="og:title" content="Contato | Emiliano Naranjo" />
+  <meta property="og:description" content="Escreva para Emiliano Naranjo sobre educação inclusiva e direitos humanos." />
   <meta property="og:image" content="https://emilianonaranjo.com/images/headers/contacto-header.jpg" />
-  <meta property="og:url" content="https://emilianonaranjo.com/contacto.html" />
+  <meta property="og:url" content="https://emilianonaranjo.com/pt/contact.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Contacto | Emiliano Naranjo" />
-  <meta name="twitter:description" content="Escribí a Emiliano Naranjo para colaborar en educación inclusiva y derechos humanos." />
+  <meta name="twitter:title" content="Contato | Emiliano Naranjo" />
+  <meta name="twitter:description" content="Escreva para Emiliano Naranjo sobre educação inclusiva e direitos humanos." />
   <meta name="twitter:image" content="https://emilianonaranjo.com/images/headers/contacto-header.jpg" />
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="responsive.css" media="(max-width:1024px)" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../style.css?v=20251110" />
+  <link rel="stylesheet" href="../responsive.css?v=20251110" />
 
   <style>
-    /* ======== HERO CONTACTO ======== */
+    /* ======== HERO CONTACT ======== */
     .hero-contacto {
       position: relative;
       min-height: 70vh;
       height: clamp(70vh, 82vh, 90vh);
-      background: url("images/headers/contacto-header.jpg") center 38% / cover no-repeat;
+      background: url("../images/headers/contacto-header.jpg") center 38% / cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: flex-start;
       padding: clamp(18px, 4vw, 60px);
       color: #fff;
       overflow: hidden;
-      filter: brightness(1.22) contrast(1.09);
+      filter: brightness(1.15) contrast(1.05);
     }
 
     .hero-contacto::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(to right, rgba(0,0,0,0.55), rgba(0,0,0,0.18));
+      background: linear-gradient(to right, rgba(0,0,0,0.45), rgba(0,0,0,0.10));
       z-index: 1;
     }
 
     .hero-contacto .hero-content {
       position: relative;
       z-index: 2;
-      background: rgba(0, 0, 0, 0.50);
+      background: rgba(0,0,0,0.5);
       padding: clamp(18px, 2.8vw, 32px);
       border-radius: 14px;
       max-width: min(520px, 78vw);
@@ -60,7 +62,6 @@
       margin-bottom: 8px;
       font-weight: 750;
     }
-
     .hero-contacto p {
       font-size: clamp(1rem, 2.1vw, 1.2rem);
       color: #f1f1f1;
@@ -68,7 +69,7 @@
       margin: 0;
     }
 
-    /* ======== SECCIÓN FORMULARIO ======== */
+    /* SECTION */
     .section-contacto {
       padding: 60px 0 80px;
       background-color: #fff;
@@ -110,12 +111,6 @@
       font-size: 1rem;
       border-radius: 8px;
       border: 1px solid #ccc;
-      transition: border-color 0.2s ease;
-    }
-
-    input:focus, textarea:focus {
-      border-color: #0c2d57;
-      outline: none;
     }
 
     textarea {
@@ -132,32 +127,14 @@
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
     }
 
-    button:hover {
-      background-color: #143b77;
-    }
-
-    .success-message {
-      display: none;
-      margin-top: 18px;
-      background: #e0f7ea;
-      color: #0a4d2c;
-      border: 1px solid #a3e4b6;
-      padding: 14px;
-      border-radius: 8px;
-      font-weight: 600;
-      text-align: center;
-    }
-
-    /* ===== FOOTER ===== */
     footer {
+      text-align: center;
       background-color: #0c2d57;
       color: #fff;
-      text-align: center;
-      padding: 40px 10px;
-      margin-top: 40px;
+      padding: 28px 10px;
+      margin-top: 60px;
     }
 
     .footer-logo {
@@ -165,49 +142,6 @@
       margin-bottom: 10px;
     }
 
-    .social-links {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 26px;
-      flex-wrap: wrap;
-      margin: 20px 0;
-    }
-
-    .social-links a {
-      width: 56px;
-      height: 56px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      transition: transform 0.25s ease, background-color 0.3s ease;
-      background: #ffffff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    }
-
-    .social-links svg {
-      width: 30px;
-      height: 30px;
-      fill: #0c2d57;
-      transition: fill 0.3s ease, transform 0.3s ease;
-    }
-
-    .social-links a:hover {
-      background: #0c2d57;
-      transform: scale(1.08);
-    }
-
-    .social-links a:hover svg {
-      fill: #fff;
-    }
-
-    footer p {
-      margin: 6px 0;
-      font-size: 0.95rem;
-    }
-
-    /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) and (orientation: portrait) {
       .hero-contacto {
         align-items: flex-end;
@@ -235,27 +169,29 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="hero.css" />
+  <link rel="stylesheet" href="../hero.css" />
 </head>
 
 <body>
-  <!-- NAVBAR UNIFICADO -->
+
+  <!-- NAVBAR -->
   <header>
     <div class="container">
       <div class="logo">
-        <img src="images/logos/en-logo.svg" alt="Logo Emiliano Naranjo">
+        <img src="../images/logos/en-logo.svg" alt="Logo Emiliano Naranjo" />
       </div>
       <nav>
         <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="sobre.html">Sobre mí</a></li>
-          <li><a href="publicaciones.html">Publicaciones</a></li>
-          <li><a href="talleres.html">Talleres y capacitaciones</a></li>
-          <li><a href="entrevistas.html">Entrevistas</a></li>
-          <li><a href="contacto.html" class="active">Contacto</a></li>
-          <li class="lang-switch"><a href="contacto.html">🇦🇷 Español</a></li>
-          <li class="lang-switch"><a href="en/contact.html">🇺🇸 English</a></li>
-          <li class="lang-switch"><a href="pt/contact.html">🇧🇷 Português</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Sobre mim</a></li>
+          <li><a href="publications.html">Publicações</a></li>
+          <li><a href="workshops.html">Oficinas e formações</a></li>
+          <li><a href="interviews.html">Entrevistas</a></li>
+          <li><a href="contact.html" class="active">Contato</a></li>
+
+          <li class="lang-switch"><a href="contact.html">🇧🇷 Português</a></li>
+          <li class="lang-switch"><a href="../contacto.html">🇦🇷 Español</a></li>
+          <li class="lang-switch"><a href="../en/contact.html">🇺🇸 English</a></li>
         </ul>
       </nav>
     </div>
@@ -264,40 +200,39 @@
   <!-- HERO -->
   <section class="hero-contacto hero-dynamic">
     <div class="hero-content">
-      <h1>Contacto</h1>
-      <p>Podés escribirme para entrevistas, proyectos o colaboraciones sobre educación inclusiva, discapacidad y derechos humanos.</p>
+      <h1>Contato</h1>
+      <p>Você pode escrever para entrevistas, projetos ou colaborações sobre educação inclusiva e direitos humanos.</p>
     </div>
   </section>
 
-  <!-- FORMULARIO -->
+  <!-- FORM -->
   <section class="section-contacto">
     <div class="contact-container">
-      <h2>Escribime</h2>
-      <p>Completá el siguiente formulario y tu mensaje llegará directamente a mi correo. Te responderé a la brevedad.</p>
+      <h2>Escreva para mim</h2>
+      <p>Preencha o formulário e sua mensagem chegará diretamente ao meu e-mail.</p>
 
       <form id="contact-form" action="https://formspree.io/f/mwpwgylk" method="POST">
-        <label for="name">Nombre completo</label>
-        <input type="text" id="name" name="name" required>
+        <label for="name">Nome completo</label>
+        <input type="text" id="name" name="name" required />
 
-        <label for="email">Correo electrónico</label>
-        <input type="email" id="email" name="_replyto" required>
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="_replyto" required />
 
-        <label for="message">Mensaje</label>
+        <label for="message">Mensagem</label>
         <textarea id="message" name="message" required></textarea>
 
-        <button type="submit">Enviar mensaje</button>
+        <button type="submit">Enviar mensagem</button>
       </form>
 
       <div id="success-message" class="success-message">
-        ¡Gracias por tu mensaje! Te responderé pronto.
+        Obrigado pela mensagem! Responderei em breve.
       </div>
     </div>
   </section>
 
-  <!-- FOOTER UNIFICADO CON ÍCONOS DE INDEX -->
+  <!-- FOOTER -->
   <footer>
-    <img src="images/logos/en-logo.svg" alt="Logo Emiliano Naranjo" class="footer-logo">
-
+    <img src="../images/logos/en-logo.svg" alt="Emiliano Naranjo Logo" class="footer-logo" />
     <div class="social-links">
       <a href="https://www.instagram.com/epnnaranjo/" target="_blank" aria-label="Instagram">
         <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#fff"/><path d="M15.5 6h-7A2.5 2.5 0 0 0 6 8.5v7A2.5 2.5 0 0 0 8.5 18h7a2.5 2.5 0 0 0 2.5-2.5v-7A2.5 2.5 0 0 0 15.5 6zm-3.5 9a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm3.75-6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5z" fill="#0c2d57"/></svg>
@@ -312,31 +247,12 @@
         <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#fff"/><path d="M17.9 8.6c-.2-.8-.8-1.4-1.6-1.6C15 6.7 12 6.7 12 6.7s-3 0-4.3.3c-.8.2-1.4.8-1.6 1.6C5.8 9.9 5.8 12 5.8 12s0 2.1.3 3.4c.2.8.8 1.4 1.6 1.6 1.3.3 4.3.3 4.3.3s3 0 4.3-.3c.8-.2 1.4-.8 1.6-1.6.3-1.3.3-3.4.3-3.4s0-2.1-.3-3.4zM10.5 14.5v-5l4 2.5-4 2.5z" fill="#0c2d57"/></svg>
       </a>
     </div>
-
-    <p>Educación inclusiva | Derechos Humanos | Anticapacitismo</p>
-    <p>© 2025 Emiliano Naranjo — Todos los derechos reservados.</p>
+    <p>Educação inclusiva | Direitos humanos | Anticapacitismo</p>
+    <p>© 2025 Emiliano Naranjo — Todos os direitos reservados.</p>
   </footer>
 
-  <!-- SCRIPT FORMULARIO -->
-  <script>
-    const form = document.getElementById("contact-form");
-    const successMessage = document.getElementById("success-message");
+  <!-- SCRIPTS -->
+  <script src="../js/master.js"></script>
 
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const formData = new FormData(form);
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: { Accept: "application/json" },
-      });
-      if (response.ok) {
-        form.reset();
-        successMessage.style.display = "block";
-        setTimeout(() => (successMessage.style.display = "none"), 6000);
-      }
-    });
-  </script>
-<script src="js/master.js"></script>
 </body>
 </html>
