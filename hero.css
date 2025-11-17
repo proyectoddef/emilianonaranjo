@@ -16,6 +16,13 @@
   --hero-padding: clamp(18px, 4vw, 72px);
   --hero-padding-portrait: clamp(18px, 5vw, 38px);
   --hero-padding-landscape: clamp(20px, 6vw, 110px);
+  --hero-offset-x: 0px;
+  --hero-offset-y: 0px;
+  --hero-dynamic-scale: 1;
+  --hero-dynamic-max: var(--hero-box-max);
+  --hero-dynamic-justify: var(--hero-justify);
+  --hero-dynamic-align: var(--hero-align);
+  --hero-dynamic-padding: var(--hero-padding);
 }
 
 .hero-dynamic,
@@ -29,9 +36,9 @@
 .hero-contacto {
   position: relative;
   display: flex;
-  align-items: var(--hero-align);
-  justify-content: var(--hero-justify);
-  padding: var(--hero-padding);
+  align-items: var(--hero-dynamic-align);
+  justify-content: var(--hero-dynamic-justify);
+  padding: var(--hero-dynamic-padding);
   min-height: clamp(68vh, 80vh, 92vh);
   height: clamp(72vh, 86vh, 94vh);
   color: #fff;
@@ -105,7 +112,9 @@
   position: relative;
   z-index: 3;
   margin: 0;
-  max-width: var(--hero-box-max);
+  max-width: var(--hero-dynamic-max, var(--hero-box-max));
+  transform: translate(var(--hero-offset-x), var(--hero-offset-y));
+  transition: transform 320ms ease, max-width 320ms ease;
 }
 
 .hero-text,
@@ -122,7 +131,7 @@
 .hero-text h1,
 .hero-content h1 {
   color: #ffffff;
-  font-size: var(--hero-title-size);
+  font-size: calc(var(--hero-title-size) * var(--hero-dynamic-scale));
   font-weight: 760;
   letter-spacing: 0.6px;
   margin-bottom: 10px;
@@ -133,7 +142,7 @@
 .hero-content p {
   color: #e8e8e8;
   font-weight: 450;
-  font-size: var(--hero-subtitle-size);
+  font-size: calc(var(--hero-subtitle-size) * var(--hero-dynamic-scale));
   line-height: 1.42;
 }
 
@@ -191,6 +200,7 @@
   --hero-justify-portrait: center;
   --hero-align-portrait: flex-end;
   --hero-box-max: min(520px, 82vw);
+  --hero-offset-x: -2vw;
 }
 
 .hero-contacto {
@@ -215,8 +225,8 @@
   #hero-entrevistas,
   #hero-interviews,
   .hero-contacto {
-    justify-content: var(--hero-justify-landscape, var(--hero-justify));
-    align-items: var(--hero-align-landscape, var(--hero-align));
+    justify-content: var(--hero-dynamic-justify, var(--hero-justify-landscape, var(--hero-justify)));
+    align-items: var(--hero-dynamic-align, var(--hero-align-landscape, var(--hero-align)));
     padding-inline: var(--hero-padding-landscape);
   }
 
@@ -247,8 +257,8 @@
   #hero-entrevistas,
   #hero-interviews,
   .hero-contacto {
-    align-items: var(--hero-align-portrait, var(--hero-align));
-    justify-content: var(--hero-justify-portrait, var(--hero-justify));
+    align-items: var(--hero-dynamic-align, var(--hero-align-portrait, var(--hero-align)));
+    justify-content: var(--hero-dynamic-justify, var(--hero-justify-portrait, var(--hero-justify)));
     padding: var(--hero-padding-portrait);
     background-position: center top;
   }
@@ -284,11 +294,56 @@
   #hero-interviews,
   .hero-contacto {
     align-items: center;
-    justify-content: flex-end;
+    justify-content: var(--hero-dynamic-justify, flex-end);
   }
 
   .hero-container,
   .hero-content {
     max-width: 82%;
+  }
+}
+
+@media (max-width: 540px) {
+  .hero-dynamic,
+  .hero-section,
+  #hero,
+  #hero-sobre,
+  #hero-publicaciones,
+  #hero-talleres,
+  #hero-entrevistas,
+  #hero-interviews,
+  .hero-contacto {
+    padding: clamp(16px, 6vw, 28px);
+  }
+
+  .hero-container,
+  .hero-content {
+    max-width: 94vw;
+  }
+}
+
+@media (max-height: 760px) and (orientation: landscape) {
+  .hero-dynamic,
+  .hero-section,
+  #hero,
+  #hero-sobre,
+  #hero-publicaciones,
+  #hero-talleres,
+  #hero-entrevistas,
+  #hero-interviews,
+  .hero-contacto {
+    align-items: center;
+  }
+
+  .hero-container,
+  .hero-content {
+    transform: translate(var(--hero-offset-x), calc(var(--hero-offset-y) - 2vh));
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero-container,
+  .hero-content {
+    max-width: var(--hero-dynamic-max, min(720px, 60vw));
   }
 }
