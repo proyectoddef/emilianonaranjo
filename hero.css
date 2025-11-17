@@ -159,17 +159,27 @@
   --hero-bg: url("images/hero/hero-bg.jpg");
   --hero-bg-position: center 26%;
   --hero-focus-x: 18%;
+  --hero-title-size: clamp(1.62rem, 3vw, 2.55rem);
+  --hero-subtitle-size: clamp(0.92rem, 1.72vw, 1.16rem);
+  --hero-title-size-portrait: clamp(1.5rem, 5.4vw, 2.05rem);
+  --hero-subtitle-size-portrait: clamp(0.9rem, 3.1vw, 1.05rem);
   --hero-justify: flex-start;
   --hero-justify-landscape: flex-end;
   --hero-justify-portrait: center;
   --hero-align-portrait: flex-end;
-  --hero-offset-y: clamp(4.4rem, 9vh, 6.4rem);
-  --hero-offset-x: clamp(18px, 3vw, 30px);
-  --hero-box-max: min(620px, 72vw);
-  --hero-box-max-landscape: 62%;
-  --hero-box-max-portrait: 90%;
-  --hero-dynamic-max: min(600px, 70vw);
-  --hero-scale-adjust: 0.94;
+  --hero-offset-y: clamp(5rem, 10vh, 7.4rem);
+  --hero-offset-x: clamp(24px, 4vw, 42px);
+  --hero-box-max: min(560px, 68vw);
+  --hero-box-max-landscape: 58%;
+  --hero-box-max-portrait: 88%;
+  --hero-dynamic-max: min(520px, 64vw);
+  --hero-scale-adjust: 0.9;
+}
+
+#hero .hero-text,
+#hero .hero-content {
+  padding: clamp(12px, 2.1vw, 26px);
+  border-radius: 12px;
 }
 
 #hero-sobre {
