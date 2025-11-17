@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Emiliano Naranjo | Educador en educación inclusiva</title>
   <meta name="description" content="Conocé el trabajo de Emiliano Naranjo, educador especializado en educación inclusiva, derechos humanos y formación docente." />
+  <meta name="keywords" content="Emiliano Naranjo, educación inclusiva, derechos humanos, formación docente, educación física inclusiva" />
+  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://emilianonaranjo.com/" />
   <meta property="og:title" content="Emiliano Naranjo | Educador en educación inclusiva" />
   <meta property="og:description" content="Educación inclusiva, derechos humanos y formación docente con Emiliano Naranjo." />
@@ -26,39 +28,56 @@
 
     /* ===== Hero ===== */
     #hero {
-      position:relative;
-      width:100%;
-      height:90vh;
-      background:url("images/hero/hero-bg.jpg") center center/cover no-repeat;
-      display:flex;
-      align-items:flex-start;
-      justify-content:flex-start;
+      position: relative;
+      width: 100%;
+      min-height: 72vh;
+      height: clamp(72vh, 84vh, 92vh);
+      background: url("images/hero/hero-bg.jpg") center center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: clamp(18px, 4vw, 64px);
+      color: #fff;
+      overflow: hidden;
     }
     #hero::before {
-      content:"";
-      position:absolute;
-      inset:0;
-      background:linear-gradient(to right,
-        rgba(0,0,0,0.75) 10%,
-        rgba(0,0,0,0.55) 35%,
-        rgba(0,0,0,0.25) 70%,
-        rgba(0,0,0,0.05) 100%);
-      z-index:1;
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.7) 18%,
+        rgba(0, 0, 0, 0.28) 72%
+      );
+      z-index: 1;
+    }
+    #hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        circle at 10% 50%,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0.25) 62%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      z-index: 1;
+      pointer-events: none;
     }
     .hero-container {
-      position:absolute;
-      top:0;
-      left:0;
-      z-index:2;
-      color:#fff;
-      padding:26px 32px;
-      margin:0;
-      background:rgba(0,0,0,0.45);
-      border-radius:8px;
-      max-width:620px;
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      padding: clamp(16px, 2.8vw, 32px);
+      margin: 0;
+      background: rgba(0, 0, 0, 0.55);
+      border-radius: 12px;
+      max-width: min(640px, 75vw);
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.32);
+      backdrop-filter: blur(2px);
     }
-    .hero-container h1 { font-size:2.6rem; font-weight:800; margin:0 0 8px 0; }
-    .hero-container h2 { font-size:1.2rem; font-weight:500; margin:0; }
+    .hero-container h1 { font-size: clamp(1.8rem, 3.6vw, 2.8rem); font-weight: 800; margin: 0 0 10px 0; letter-spacing: 0.6px; }
+    .hero-container h2 { font-size: clamp(1rem, 2.1vw, 1.3rem); font-weight: 500; margin: 0; line-height: 1.35; color: #e8e8e8; }
 
     /* ===== Contacto ===== */
     #contacto { text-align:center; padding:60px 0; background:#fff; }
@@ -112,13 +131,15 @@
     footer p { margin:6px 0; font-size:.95rem; }
 
     /* ===== Responsive ===== */
-    @media (max-width:768px){
-      #hero{ height:75vh; background-position:center top; align-items:flex-start; }
-      .hero-container{ padding:18px 20px; max-width:90%; text-align:left; }
-      .hero-container h1{ font-size:2rem; }
-      .hero-container h2{ font-size:1rem; }
+    @media (max-width: 768px) and (orientation: portrait){
+      #hero{ background-position:center top; align-items:flex-end; justify-content:center; padding: clamp(18px, 5vw, 34px); }
+      .hero-container{ max-width:94%; margin-bottom: clamp(16px, 5vh, 36px); }
       .social-links a{ width:52px; height:52px; }
       .social-links svg{ width:28px; height:28px; }
+    }
+    @media (max-width: 1024px) and (orientation: landscape){
+      #hero{ align-items:center; justify-content:flex-end; padding-inline: clamp(20px, 6vw, 90px); }
+      .hero-container{ margin-right: clamp(16px, 6vw, 100px); }
     }
   </style>
 </head>
@@ -151,7 +172,7 @@
 </header>
 
 <!-- ===== Hero ===== -->
-<section id="hero">
+<section id="hero" class="hero-dynamic">
   <div class="hero-container">
     <h1>EMILIANO NARANJO</h1>
     <h2>EDUCADOR | EDUCACIÓN INCLUSIVA &amp; DERECHOS HUMANOS</h2>
@@ -186,6 +207,20 @@
 <!-- ===== Footer ===== -->
 <footer>
   <img src="images/logos/en-logo.svg" alt="Logo Emiliano Naranjo" class="footer-logo" />
+  <div class="social-links">
+    <a href="https://www.instagram.com/epnnaranjo/" target="_blank" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#fff"/><path d="M15.5 6h-7A2.5 2.5 0 0 0 6 8.5v7A2.5 2.5 0 0 0 8.5 18h7a2.5 2.5 0 0 0 2.5-2.5v-7A2.5 2.5 0 0 0 15.5 6zm-3.5 9a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm3.75-6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5z" fill="#0c2d57"/></svg>
+    </a>
+    <a href="https://www.facebook.com/emiliano.naranjo" target="_blank" aria-label="Facebook">
+      <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#fff"/><path d="M13.2 8.4V7.1c0-.6.2-1 .9-1h1V4h-1.7C11.5 4 10 5.3 10 7v1.4H8v2.5h2V20h2.8v-6.1h1.9l.3-2.5H12.8V8.4h.4z" fill="#0c2d57"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/emilianonaranjo/" target="_blank" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#fff"/><path d="M9.2 10.4V20H6.4v-9.6h2.8zM7.8 4.4a1.6 1.6 0 1 1 0 3.2 1.6 1.6 0 0 1 0-3.2zm3.2 6h2.7v1.3c.4-.9 1.3-1.5 2.8-1.5 2.1 0 3.1 1.1 3.1 3.6V20h-2.8v-5.4c0-1.2-.4-1.9-1.4-1.9-1 0-1.6.7-1.6 1.9V20H11V10.4z" fill="#0c2d57"/></svg>
+    </a>
+    <a href="https://www.youtube.com/@proyectoddef" target="_blank" aria-label="YouTube">
+      <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#fff"/><path d="M17.9 8.6c-.2-.8-.8-1.4-1.6-1.6C15 6.7 12 6.7 12 6.7s-3 0-4.3.3c-.8.2-1.4.8-1.6 1.6C5.8 9.9 5.8 12 5.8 12s0 2.1.3 3.4c.2.8.8 1.4 1.6 1.6 1.3.3 4.3.3 4.3.3s3 0 4.3-.3c.8-.2 1.4-.8 1.6-1.6.3-1.3.3-3.4.3-3.4s0-2.1-.3-3.4zM10.5 14.5v-5l4 2.5-4 2.5z" fill="#0c2d57"/></svg>
+    </a>
+  </div>
   <p>Educación inclusiva | Derechos Humanos | Anticapacitismo</p>
   <p>© 2025 Emiliano Naranjo — Todos los derechos reservados.</p>
 </footer>
