@@ -18,130 +18,8 @@
   <meta name="twitter:description" content="Educación inclusiva, derechos humanos y formación docente con Emiliano Naranjo." />
   <meta name="twitter:image" content="https://emilianonaranjo.com/images/hero/hero-bg.jpg" />
 
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="responsive.css" media="(max-width:1024px)" />
-
-  <style>
-    /* ===== Ajustes globales ===== */
-    html, body { margin:0; padding:0; overflow-x:hidden; }
-    * { box-sizing:border-box; }
-
-    /* ===== Hero ===== */
-    #hero {
-      position: relative;
-      width: 100%;
-      min-height: 72vh;
-      height: clamp(72vh, 84vh, 92vh);
-      background: url("images/hero/hero-bg.jpg") center center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      padding: clamp(18px, 4vw, 64px);
-      color: #fff;
-      overflow: hidden;
-    }
-    #hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.7) 18%,
-        rgba(0, 0, 0, 0.28) 72%
-      );
-      z-index: 1;
-    }
-    #hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(
-        circle at 10% 50%,
-        rgba(0, 0, 0, 0.7) 0%,
-        rgba(0, 0, 0, 0.25) 62%,
-        rgba(0, 0, 0, 0) 100%
-      );
-      z-index: 1;
-      pointer-events: none;
-    }
-    .hero-container {
-      position: relative;
-      z-index: 2;
-      color: #fff;
-      padding: clamp(16px, 2.8vw, 32px);
-      margin: 0;
-      background: rgba(0, 0, 0, 0.55);
-      border-radius: 12px;
-      max-width: min(640px, 75vw);
-      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.32);
-      backdrop-filter: blur(2px);
-    }
-    .hero-container h1 { font-size: clamp(1.8rem, 3.6vw, 2.8rem); font-weight: 800; margin: 0 0 10px 0; letter-spacing: 0.6px; }
-    .hero-container h2 { font-size: clamp(1rem, 2.1vw, 1.3rem); font-weight: 500; margin: 0; line-height: 1.35; color: #e8e8e8; }
-
-    /* ===== Contacto ===== */
-    #contacto { text-align:center; padding:60px 0; background:#fff; }
-    #contacto h3 { color:#0c2d57; font-size:1.8rem; margin-bottom:15px; }
-    #contacto p { color:#333; font-size:1rem; margin-bottom:25px; }
-
-    .social-links {
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      gap:26px;
-      flex-wrap:wrap;
-    }
-
-    .social-links a {
-      width:56px;
-      height:56px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border-radius:50%;
-      transition:transform 0.25s ease, background-color 0.3s ease;
-      background:#ffffff;
-      box-shadow:0 2px 6px rgba(0,0,0,0.08);
-    }
-
-    .social-links svg {
-      width:30px;
-      height:30px;
-      fill:#0c2d57;
-      transition:fill 0.3s ease, transform 0.3s ease;
-    }
-
-    .social-links a:hover {
-      background:#0c2d57;
-      transform:scale(1.08);
-    }
-    .social-links a:hover svg {
-      fill:#fff;
-    }
-
-    /* ===== Footer ===== */
-    footer {
-      background-color:#0c2d57;
-      color:#fff;
-      text-align:center;
-      padding:40px 10px;
-      margin-top:40px;
-    }
-    .footer-logo { height:60px; margin-bottom:10px; }
-    footer p { margin:6px 0; font-size:.95rem; }
-
-    /* ===== Responsive ===== */
-    @media (max-width: 768px) and (orientation: portrait){
-      #hero{ background-position:center top; align-items:flex-end; justify-content:center; padding: clamp(18px, 5vw, 34px); }
-      .hero-container{ max-width:94%; margin-bottom: clamp(16px, 5vh, 36px); }
-      .social-links a{ width:52px; height:52px; }
-      .social-links svg{ width:28px; height:28px; }
-    }
-    @media (max-width: 1024px) and (orientation: landscape){
-      #hero{ align-items:center; justify-content:flex-end; padding-inline: clamp(20px, 6vw, 90px); }
-      .hero-container{ margin-right: clamp(16px, 6vw, 100px); }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css?v=20251110" />
+  <link rel="stylesheet" href="responsive.css?v=20251110" />
   <link rel="stylesheet" href="hero.css" />
 </head>
 <body>
@@ -172,8 +50,10 @@
 <!-- ===== Hero ===== -->
 <section id="hero" class="hero-dynamic" data-hero-focus="18" data-hero-face="left" style="--hero-offset-y: 2.2rem; --hero-offset-x: 14px;">
   <div class="hero-container">
-    <h1>EMILIANO NARANJO</h1>
-    <h2>EDUCADOR | EDUCACIÓN INCLUSIVA &amp; DERECHOS HUMANOS</h2>
+    <div class="hero-text">
+      <h1>EMILIANO NARANJO</h1>
+      <h2>EDUCADOR • EDUCACIÓN INCLUSIVA &amp; DERECHOS HUMANOS</h2>
+    </div>
   </div>
 </section>
 
