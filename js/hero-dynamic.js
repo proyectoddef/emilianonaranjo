@@ -5,16 +5,81 @@
 
   if (!heroes.length || typeof ResizeObserver === "undefined") return;
 
-  const calcAlign = ({ focus = 50, orientation }) => {
-    if (orientation === "portrait") return "center";
-    return focus < 50 ? "flex-end" : "flex-start";
+  const calcFaceSide = (hero, focus = 50) => {
+    const hint = hero.dataset.heroFace;
+    if (hint === "left" || hint === "right" || hint === "center") return hint;
+    if (focus < 36) return "left";
+    if (focus > 64) return "right";
+    return "center";
   };
 
-  const calcMax = (vw) => {
-    if (vw < 540) return "92vw";
-    if (vw < 900) return "78vw";
-    if (vw < 1280) return "64vw";
-    return "58vw";
+  const calcMax = (vw, orientation) => {
+    if (orientation === "portrait") {
+      if (vw < 480) return "94vw";
+      if (vw < 760) return "88vw";
+      return "80vw";
+    }
+
+    if (vw < 720) return "78vw";
+    if (vw < 1024) return "68vw";
+    if (vw < 1440) return "60vw";
+    return "56vw";
+  };
+
+  const calcScale = ({ vw, vh, boxWidth, orientation }) => {
+    const base = Math.max(0.82, Math.min(1, vw / (Math.max(boxWidth, 1) * 2.2)));
+    const modifiers = [];
+
+    if (vw < 1220) modifiers.push(0.96);
+    if (vw < 900) modifiers.push(0.92);
+    if (vw < 720) modifiers.push(0.9);
+    if (vw < 540) modifiers.push(0.86);
+    if (orientation === "portrait") modifiers.push(0.94);
+    if (orientation === "landscape" && vh < 760) modifiers.push(0.92);
+
+    const scale = modifiers.reduce((acc, factor) => acc * factor, base);
+    return Math.max(0.74, Math.min(scale, 1)).toFixed(2);
+  };
+
+  const calcPlacement = ({
+    hero,
+    focus,
+    orientation,
+    anchor,
+    boxRect,
+    vw,
+    vh,
+  }) => {
+    const faceSide = calcFaceSide(hero, focus);
+    const isDesktop = vw >= 1024;
+    const reserveWidth = Math.min(vw * 0.44, (boxRect?.width || vw * 0.34) + vw * 0.08);
+    const overlapLeft = focus < (reserveWidth / vw) * 100;
+    const overlapRight = focus > 100 - (reserveWidth / vw) * 100;
+
+    const desktopDefault = "flex-start";
+    const mobileDefault = faceSide === "left" ? "flex-end" : faceSide === "right" ? "flex-start" : orientation === "landscape" ? "flex-start" : "center";
+
+    let justify = anchor === "center" ? "center" : isDesktop ? desktopDefault : mobileDefault;
+    let align = orientation === "portrait" ? "flex-end" : "center";
+
+    if (anchor !== "center") {
+      if (justify === "flex-start" && overlapLeft) justify = "flex-end";
+      else if (justify === "flex-end" && overlapRight) justify = "flex-start";
+      else if (faceSide === "center" && orientation === "landscape") justify = "center";
+    }
+
+    if (orientation === "landscape" && (overlapLeft || overlapRight || vh < 760)) {
+      align = "flex-start";
+    } else if (orientation === "portrait" && vh < 720) {
+      align = "center";
+    }
+
+    const shiftY = orientation === "landscape" ? "-3vh" : "-1.6vh";
+    const shiftX = justify === "center" ? "0px" : orientation === "landscape" ? justify === "flex-start" ? "1.2vw" : "-1.2vw" : "0px";
+
+    const paddingExtra = orientation === "portrait" ? "6px" : "10px";
+
+    return { justify, align, shiftX, shiftY, paddingExtra };
   };
 
   const updateHero = (hero, viewport) => {
@@ -23,20 +88,31 @@
     const box = hero.querySelector(".hero-container, .hero-content, .hero-text");
     const { vw, vh } = viewport;
     const orientation = vw > vh ? "landscape" : "portrait";
-    const justify = anchor === "center" ? "center" : calcAlign({ focus, orientation });
-    const align = orientation === "portrait" ? "flex-end" : "center";
+    const boxRect = box?.getBoundingClientRect();
+
+    const { justify, align, shiftX, shiftY, paddingExtra } = calcPlacement({
+      hero,
+      focus,
+      orientation,
+      anchor,
+      boxRect,
+      vw,
+      vh,
+    });
 
     hero.style.setProperty("--hero-dynamic-justify", justify);
     hero.style.setProperty("--hero-dynamic-align", align);
     hero.style.setProperty("--hero-dynamic-padding", orientation === "portrait" ? "var(--hero-padding-portrait)" : "var(--hero-padding)");
-    hero.style.setProperty("--hero-offset-x", orientation === "landscape" ? `${focus < 50 ? "-" : ""}1vw` : "0px");
-    hero.style.setProperty("--hero-offset-y", orientation === "portrait" ? "2vh" : "0px");
-    hero.style.setProperty("--hero-dynamic-max", calcMax(vw));
+    hero.style.setProperty("--hero-offset-x", "0px");
+    hero.style.setProperty("--hero-offset-y", "0px");
+    hero.style.setProperty("--hero-dynamic-max", calcMax(vw, orientation));
+    hero.style.setProperty("--hero-shift-x", shiftX);
+    hero.style.setProperty("--hero-shift-y", shiftY);
+    hero.style.setProperty("--hero-padding-extra", paddingExtra);
 
     if (box) {
-      const boxWidth = box.getBoundingClientRect().width || 1;
-      const scale = Math.max(0.86, Math.min(1, vw / (boxWidth * 2.2)));
-      hero.style.setProperty("--hero-dynamic-scale", scale.toFixed(2));
+      const scale = calcScale({ vw, vh, boxWidth: boxRect?.width || 1, orientation });
+      hero.style.setProperty("--hero-dynamic-scale", scale);
     }
   };
 
