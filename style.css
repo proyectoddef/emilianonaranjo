@@ -59,7 +59,7 @@ nav a:hover {
   background: url("images/hero/hero-bg.jpg") center center / cover no-repeat;
   height: 85vh;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: flex-start;
   text-align: left;
   color: #fff;
@@ -102,11 +102,12 @@ nav a:hover {
 
 /* Contenedor y texto del hero genérico */
 .hero-container {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 3;
-  padding-left: 8%;
-  padding-bottom: 8%;
-  max-width: 600px;
+  padding: 28px 32px;
+  max-width: 620px;
 }
 
 .hero-text {
@@ -116,6 +117,7 @@ nav a:hover {
   display: inline-block;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(2px);
+  margin: 0;
 }
 
 .hero-text h1 {
@@ -163,8 +165,36 @@ nav a:hover {
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  gap: 26px;
   flex-wrap: wrap;
+}
+
+.social-links a {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: transform 0.25s ease, background-color 0.3s ease;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.social-links svg {
+  width: 30px;
+  height: 30px;
+  fill: #0c2d57;
+  transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  background: #0c2d57;
+  transform: scale(1.08);
+}
+.social-links a:hover svg {
+  fill: #fff;
 }
 
 /* ======= FOOTER ======= */
@@ -379,27 +409,27 @@ footer p {
   #hero,
   #hero-sobre,
   #hero-publicaciones {
-    justify-content: center;
-    text-align: center;
-    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    align-items: flex-start;
     height: 70vh;
   }
 
   .hero-container {
-    padding-left: 0;
-    padding-bottom: 0;
+    padding: 18px 20px;
+    max-width: 90%;
   }
 
   .hero-text {
-    padding: 15px 22px;
+    padding: 14px 18px;
   }
 
   .hero-text h1 {
-    font-size: 2em;
+    font-size: 1.9em;
   }
 
   .hero-text h2 {
-    font-size: 0.9em;
+    font-size: 0.95em;
   }
 
   .cv-links {
