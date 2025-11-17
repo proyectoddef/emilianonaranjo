@@ -163,6 +163,13 @@
   --hero-justify-landscape: flex-end;
   --hero-justify-portrait: center;
   --hero-align-portrait: flex-end;
+  --hero-offset-y: clamp(4.4rem, 9vh, 6.4rem);
+  --hero-offset-x: clamp(18px, 3vw, 30px);
+  --hero-box-max: min(620px, 72vw);
+  --hero-box-max-landscape: 62%;
+  --hero-box-max-portrait: 90%;
+  --hero-dynamic-max: min(600px, 70vw);
+  --hero-scale-adjust: 0.94;
 }
 
 #hero-sobre {
