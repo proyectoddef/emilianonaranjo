@@ -19,10 +19,15 @@
   --hero-offset-x: 0px;
   --hero-offset-y: 0px;
   --hero-dynamic-scale: 1;
+  --hero-scale-adjust: 1;
   --hero-dynamic-max: var(--hero-box-max);
+  --hero-fit-max: 9999px;
   --hero-dynamic-justify: var(--hero-justify);
   --hero-dynamic-align: var(--hero-align);
   --hero-dynamic-padding: var(--hero-padding);
+  --hero-padding-extra: 0px;
+  --hero-shift-x: 0px;
+  --hero-shift-y: 0px;
 }
 
 .hero-dynamic,
@@ -38,7 +43,7 @@
   display: flex;
   align-items: var(--hero-dynamic-align);
   justify-content: var(--hero-dynamic-justify);
-  padding: var(--hero-dynamic-padding);
+  padding: calc(var(--hero-dynamic-padding) + var(--hero-padding-extra));
   min-height: clamp(68vh, 80vh, 92vh);
   height: clamp(72vh, 86vh, 94vh);
   color: #fff;
@@ -112,8 +117,11 @@
   position: relative;
   z-index: 3;
   margin: 0;
-  max-width: var(--hero-dynamic-max, var(--hero-box-max));
-  transform: translate(var(--hero-offset-x), var(--hero-offset-y));
+  max-width: min(var(--hero-dynamic-max, var(--hero-box-max)), var(--hero-fit-max));
+  transform: translate(
+    calc(var(--hero-offset-x) + var(--hero-shift-x)),
+    calc(var(--hero-offset-y) + var(--hero-shift-y))
+  );
   transition: transform 320ms ease, max-width 320ms ease;
 }
 
@@ -131,7 +139,7 @@
 .hero-text h1,
 .hero-content h1 {
   color: #ffffff;
-  font-size: calc(var(--hero-title-size) * var(--hero-dynamic-scale));
+  font-size: calc(var(--hero-title-size) * var(--hero-dynamic-scale) * var(--hero-scale-adjust));
   font-weight: 760;
   letter-spacing: 0.6px;
   margin-bottom: 10px;
@@ -142,7 +150,7 @@
 .hero-content p {
   color: #e8e8e8;
   font-weight: 450;
-  font-size: calc(var(--hero-subtitle-size) * var(--hero-dynamic-scale));
+  font-size: calc(var(--hero-subtitle-size) * var(--hero-dynamic-scale) * var(--hero-scale-adjust));
   line-height: 1.42;
 }
 
@@ -212,6 +220,40 @@
   --hero-justify-portrait: center;
   --hero-align-portrait: flex-end;
   --hero-box-max: min(620px, 80vw);
+}
+
+/* ===== Ajustes dinámicos para desktop (protección de rostros) ===== */
+@media (min-width: 800px) and (max-width: 1024px) {
+  #hero.hero-dynamic,
+  #hero-sobre.hero-dynamic {
+    --hero-fit-max: min(460px, 46vw);
+    --hero-scale-adjust: 0.94;
+    --hero-padding-extra: clamp(6px, 1.2vw, 14px);
+    --hero-shift-x: clamp(12px, 4vw, 42px);
+    --hero-shift-y: 3vh;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  #hero.hero-dynamic,
+  #hero-sobre.hero-dynamic {
+    --hero-fit-max: min(520px, 42vw);
+    --hero-scale-adjust: 0.96;
+    --hero-padding-extra: clamp(10px, 1.6vw, 20px);
+    --hero-shift-x: clamp(18px, 3vw, 56px);
+    --hero-shift-y: 2.6vh;
+  }
+}
+
+@media (min-width: 1440px) {
+  #hero.hero-dynamic,
+  #hero-sobre.hero-dynamic {
+    --hero-fit-max: min(560px, 38vw);
+    --hero-scale-adjust: 1;
+    --hero-padding-extra: clamp(12px, 1.8vw, 26px);
+    --hero-shift-x: clamp(22px, 3.4vw, 68px);
+    --hero-shift-y: 2.2vh;
+  }
 }
 
 /* ===== Ajustes responsivos ===== */
