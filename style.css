@@ -53,85 +53,138 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* ======= HERO INICIO ======= */
-#hero {
+/* ======= HERO DINÁMICO ======= */
+.hero-dynamic,
+#hero,
+#hero-sobre,
+#hero-publicaciones {
   position: relative;
-  background: url("images/hero/hero-bg.jpg") center center / cover no-repeat;
-  height: 85vh;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
-  text-align: left;
+  padding: clamp(18px, 4vw, 64px);
+  min-height: 70vh;
+  height: clamp(72vh, 84vh, 92vh);
   color: #fff;
   overflow: hidden;
 }
 
-/* Capa principal equilibrada */
-#hero::before {
+#hero {
+  background: url("images/hero/hero-bg.jpg") center center / cover no-repeat;
+  text-align: left;
+}
+
+#hero::before,
+#hero::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Capa principal equilibrada */
+#hero::before {
   background: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.6) 20%,
-    rgba(0, 0, 0, 0.25) 70%
+    rgba(0, 0, 0, 0.7) 18%,
+    rgba(0, 0, 0, 0.28) 72%
   );
   z-index: 1;
 }
 
 /* Capa secundaria: sombra localizada del contorno izquierdo */
 #hero::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 28%;
-  height: 100%;
+  width: 32%;
   background: radial-gradient(
-    circle at 8% 50%,
+    circle at 10% 50%,
     rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.25) 60%,
+    rgba(0, 0, 0, 0.25) 62%,
     rgba(0, 0, 0, 0) 100%
   );
   z-index: 2;
-  pointer-events: none;
 }
 
-/* Contenedor y texto del hero genérico */
-.hero-container {
-  position: absolute;
-  top: 0;
-  left: 0;
+.hero-container,
+.hero-content {
+  position: relative;
   z-index: 3;
-  padding: 28px 32px;
-  max-width: 620px;
-}
-
-.hero-text {
-  background: rgba(0, 0, 0, 0.45);
-  padding: 18px 28px;
-  border-radius: 8px;
-  display: inline-block;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(2px);
   margin: 0;
+  max-width: min(640px, 75vw);
 }
 
-.hero-text h1 {
+.hero-text,
+.hero-panel,
+.hero-content {
+  background: rgba(0, 0, 0, 0.55);
+  padding: clamp(16px, 2.8vw, 32px);
+  border-radius: 12px;
+  display: inline-block;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(2px);
+}
+
+.hero-text h1,
+.hero-content h1 {
   color: #ffffff;
-  font-size: 2.4em;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  margin-bottom: 6px;
+  font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+  font-weight: 750;
+  letter-spacing: 0.6px;
+  margin-bottom: 8px;
 }
 
-.hero-text h2 {
+.hero-text h2,
+.hero-content h2,
+.hero-content p {
   color: #e8e8e8;
-  font-weight: 400;
-  font-size: 1em;
+  font-weight: 450;
+  font-size: clamp(1rem, 2.1vw, 1.25rem);
+  line-height: 1.35;
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+  .hero-dynamic,
+  #hero,
+  #hero-sobre,
+  #hero-publicaciones {
+    align-items: flex-end;
+    justify-content: center;
+    padding: clamp(18px, 5vw, 34px);
+    background-position: center top;
+  }
+
+  .hero-container,
+  .hero-content {
+    max-width: 94%;
+    text-align: left;
+    margin-bottom: clamp(16px, 5vh, 36px);
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .hero-dynamic,
+  #hero,
+  #hero-sobre,
+  #hero-publicaciones {
+    align-items: center;
+    justify-content: flex-end;
+    padding-inline: clamp(20px, 6vw, 90px);
+  }
+
+  .hero-container,
+  .hero-content {
+    margin-right: clamp(16px, 6vw, 100px);
+  }
+}
+
+@media (min-width: 1025px) {
+  .hero-dynamic,
+  #hero,
+  #hero-sobre,
+  #hero-publicaciones {
+    align-items: center;
+    justify-content: flex-start;
+    padding-inline-start: clamp(42px, 7vw, 168px);
+  }
 }
 
 /* ======= SECCIÓN CONTACTO ======= */

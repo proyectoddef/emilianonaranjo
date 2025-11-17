@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Emiliano Naranjo</title>
   <meta name="description" content="Contact Emiliano Naranjo for interviews, projects or collaborations on inclusive education and human rights." />
+  <meta name="keywords" content="contact Emiliano Naranjo, inclusive education, human rights, educational projects, interviews" />
+  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://emilianonaranjo.com/en/contact.html" />
   <meta property="og:title" content="Contact | Emiliano Naranjo" />
   <meta property="og:description" content="Reach out to Emiliano Naranjo for inclusive education and human rights collaborations." />
@@ -24,12 +26,13 @@
     /* ======== HERO CONTACT ======== */
     .hero-contacto {
       position: relative;
-      height: 65vh;
-      min-height: 420px;
+      min-height: 70vh;
+      height: clamp(70vh, 82vh, 90vh);
       background: url("../images/headers/contacto-header.jpg") center 38% / cover no-repeat;
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       justify-content: flex-start;
+      padding: clamp(18px, 4vw, 60px);
       color: #fff;
       overflow: hidden;
       filter: brightness(1.15) contrast(1.05);
@@ -44,25 +47,23 @@
     }
 
     .hero-contacto .hero-content {
-      position: absolute;
-      top: 0;
-      left: 0;
+      position: relative;
       z-index: 2;
       background: rgba(0,0,0,0.5);
-      padding: 24px 28px;
+      padding: clamp(18px, 2.8vw, 32px);
       border-radius: 14px;
-      max-width: 420px;
+      max-width: min(520px, 78vw);
       box-shadow: 0 8px 28px rgba(0,0,0,0.35);
       margin: 0;
     }
 
     .hero-contacto h1 {
-      font-size: 2.2rem;
-      margin-bottom: 6px;
-      font-weight: 700;
+      font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+      margin-bottom: 8px;
+      font-weight: 750;
     }
     .hero-contacto p {
-      font-size: 1rem;
+      font-size: clamp(1rem, 2.1vw, 1.2rem);
       color: #f1f1f1;
       line-height: 1.6;
       margin: 0;
@@ -141,24 +142,30 @@
       margin-bottom: 10px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 768px) and (orientation: portrait) {
       .hero-contacto {
-        height: 55vh;
+        align-items: flex-end;
+        justify-content: center;
+        height: 60vh;
         background-position: center top;
-        align-items: flex-start;
+        padding: clamp(18px, 5vw, 32px);
       }
 
       .hero-contacto .hero-content {
-        padding: 16px 18px;
-        max-width: 92%;
+        max-width: 94%;
+        margin-bottom: clamp(16px, 5vh, 34px);
+      }
+    }
+
+    @media (max-width: 1024px) and (orientation: landscape) {
+      .hero-contacto {
+        align-items: center;
+        justify-content: flex-end;
+        padding-inline: clamp(20px, 6vw, 90px);
       }
 
-      .hero-contacto h1 {
-        font-size: 1.9rem;
-      }
-
-      .hero-contacto p {
-        font-size: 0.95rem;
+      .hero-contacto .hero-content {
+        margin-right: clamp(16px, 6vw, 96px);
       }
     }
   </style>
@@ -189,7 +196,7 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero-contacto">
+  <section class="hero-contacto hero-dynamic">
     <div class="hero-content">
       <h1>Contact</h1>
       <p>You can write for interviews, projects or collaborations on inclusive education and human rights.</p>
