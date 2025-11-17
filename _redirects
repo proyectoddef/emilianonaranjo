@@ -1,3 +1,7 @@
+# Mantiene el fallback de SPA para las rutas principales en español.
+/*    /index.html   200
+# Redirección dedicada para las rutas en inglés y evitar 404 al recargar dentro de /en/.
+/en/* /en/index.html 200
 /*                /index.html          200
 /publications.html /en/publications.html 301
 /workshops.html    /en/workshops.html    301
