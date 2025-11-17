@@ -7,69 +7,6 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* ===== HERO ===== */
-    #hero-entrevistas {
-      position: relative;
-      height: clamp(72vh, 86vh, 94vh);
-      min-height: clamp(68vh, 80vh, 92vh);
-      background: url("images/headers/entrevistas-header.jpg") center 70% / cover no-repeat;
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-      color: #fff;
-      overflow: hidden;
-    }
-
-    #hero-entrevistas::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at 85% 50%, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 20%, rgba(0,0,0,0) 45%),
-        linear-gradient(to right, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 90%);
-      z-index: 1;
-    }
-
-    #hero-entrevistas::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(
-        circle at 18% 50%,
-        rgba(0, 0, 0, 0.6) 0%,
-        rgba(0, 0, 0, 0.3) 52%,
-        rgba(0, 0, 0, 0) 100%
-      );
-      z-index: 2;
-    }
-
-    #hero-entrevistas .hero-container {
-      position: relative;
-      z-index: 2;
-      padding: 40px;
-    }
-
-    #hero-entrevistas .hero-text {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 18px 26px;
-      border-radius: 10px;
-      max-width: 420px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-      margin-left: 2%;
-      margin-top: 3%;
-      backdrop-filter: blur(2px);
-    }
-
-    #hero-entrevistas h1 {
-      font-size: 2.2rem;
-      margin-bottom: 8px;
-    }
-
-    #hero-entrevistas p {
-      font-size: 1rem;
-      color: #e9e9e9;
-    }
-
     main {
       background: #fff;
     }
@@ -183,24 +120,8 @@
       text-decoration: underline;
     }
 
-    @media (max-width: 768px) {
-      #hero-entrevistas .hero-text {
-        max-width: 100%;
-        margin: 20px;
-      }
-    }
   </style>
   <link rel="stylesheet" href="hero.css" />
-
-  <style>
-    /* Ajuste de oscurecimiento para igualar la versión en inglés */
-    #hero-entrevistas.hero-dynamic::before {
-      background:
-        radial-gradient(circle at 85% 50%, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 20%, rgba(0, 0, 0, 0) 45%),
-        linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 90%);
-      z-index: 1;
-    }
-  </style>
 </head>
 
 <body>
