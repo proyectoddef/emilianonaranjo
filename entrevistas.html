@@ -191,57 +191,30 @@
     }
 
     /* Recuadro del hero en móviles */
-    @media (max-width: 1024px) {
-      #hero-entrevistas .hero-container,
-      #hero-interviews .hero-container {
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
-        padding: clamp(18px, 4vw, 32px);
-      }
-
-      #hero-entrevistas .hero-box,
-      #hero-interviews .hero-box {
+    @media (max-width: 768px) {
+      .hero-box {
         position: absolute;
+        bottom: 10%;
+        right: 5%;
         left: auto;
-        right: clamp(14px, 4vw, 28px);
-        bottom: clamp(14px, 4vw, 28px);
-        top: auto;
-        width: min(82vw, 520px);
-        max-width: 86vw;
-        padding: clamp(14px, 4vw, 22px);
-        border-radius: 16px;
+        transform: none;
+        max-width: 70%;
+        width: auto;
+        padding: 12px 16px;
+        font-size: 1rem;
+        text-align: left;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
-        text-align: right;
-        background: rgba(0, 0, 0, 0.6);
-        margin: 0;
-        gap: 6px;
+        background: rgba(0, 0, 0, 0.55);
+        border-radius: 12px;
       }
 
-      #hero-entrevistas .hero-box h1,
-      #hero-interviews .hero-box h1 {
-        font-size: clamp(1.6rem, 4.6vw, 2.1rem);
-        width: 100%;
-        text-align: right;
-        margin-bottom: 6px;
-      }
-
-      #hero-entrevistas .hero-box p,
-      #hero-interviews .hero-box p {
-        font-size: clamp(0.86rem, 2.8vw, 1.02rem);
-        width: 100%;
-        text-align: right;
-        line-height: 1.32;
-      }
-    }
-
-    @media (orientation: landscape) and (max-width: 1024px) {
-      #hero-entrevistas .hero-box,
-      #hero-interviews .hero-box {
-        width: min(68vw, 540px);
-        max-width: 72vw;
+      .hero-box h1,
+      .hero-box h2,
+      .hero-box p {
+        font-size: 1rem;
+        line-height: 1.25;
+        margin: 0 0 6px 0;
       }
     }
   </style>
