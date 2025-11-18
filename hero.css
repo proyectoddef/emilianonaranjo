@@ -230,13 +230,14 @@
   --hero-align-portrait: flex-end;
   --hero-box-max: min(520px, 82vw);
   --hero-offset-x: -2vw;
+  --hero-fit-max: min(520px, 74vw);
 }
 
 /* ===== Hero Entrevistas (aplicado en todos los idiomas) ===== */
 #hero-entrevistas,
 #hero-interviews {
-  height: clamp(72vh, 86vh, 94vh);
-  min-height: clamp(68vh, 80vh, 92vh);
+  height: clamp(76vh, 86vh, 94vh);
+  min-height: clamp(72vh, 82vh, 92vh);
   background: url("images/headers/entrevistas-header.jpg") center 70% / cover no-repeat;
   align-items: flex-start;
   justify-content: flex-start;
@@ -245,8 +246,8 @@
 #hero-entrevistas::before,
 #hero-interviews::before {
   background:
-    radial-gradient(circle at 85% 50%, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 20%, rgba(0, 0, 0, 0) 45%),
-    linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 90%);
+    radial-gradient(circle at 85% 50%, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.46) 26%, rgba(0, 0, 0, 0) 50%),
+    linear-gradient(to right, rgba(0, 0, 0, 0.26) 0%, rgba(0, 0, 0, 0.64) 92%);
   z-index: 1;
 }
 

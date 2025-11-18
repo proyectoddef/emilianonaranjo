@@ -17,8 +17,7 @@ header {
   background-color: #0c2d57;
   color: #fff;
   padding: 10px 0;
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 1000;
 }
 
