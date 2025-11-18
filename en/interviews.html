@@ -79,67 +79,69 @@
     /* Hero box on mobile */
     @media (max-width: 1024px) {
       #hero-interviews .hero-container {
-        --hero-box-side: clamp(12px, 3.8vw, 26px);
-        --hero-box-bottom: clamp(14px, 4.8vh, 30px);
+        --hero-box-gap: clamp(14px, 4.6vw, 28px);
+        --hero-box-floor: clamp(16px, 5vh, 32px);
         position: relative;
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
-        padding: var(--hero-box-side);
+        padding: var(--hero-box-gap);
+        min-height: 100%;
       }
 
       #hero-interviews .hero-box {
         position: absolute;
-        inset-inline-end: var(--hero-box-side);
+        inset-inline-end: var(--hero-box-gap);
         inset-inline-start: auto;
-        inset-block-end: var(--hero-box-bottom);
-        width: min(84vw, 480px);
-        max-width: calc(100% - (var(--hero-box-side) * 2));
-        min-width: clamp(180px, 52vw, 420px);
-        max-height: calc(100% - var(--hero-box-bottom) - var(--hero-box-side));
+        inset-block-end: var(--hero-box-floor);
+        width: min(82vw, 480px);
+        max-width: calc(100% - (var(--hero-box-gap) * 2));
+        min-width: clamp(170px, 52vw, 420px);
+        max-height: calc(100% - var(--hero-box-floor) - var(--hero-box-gap));
         display: flex;
         flex-direction: column;
         align-items: flex-end;
         justify-content: flex-end;
         text-align: right;
-        background: rgba(0, 0, 0, 0.68);
-        padding: clamp(12px, 3.6vw, 22px) clamp(14px, 4vw, 24px);
-        border-radius: 12px;
-        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+        background: rgba(0, 0, 0, 0.74);
+        padding: clamp(12px, 3.8vw, 22px) clamp(14px, 4.8vw, 24px);
+        border-radius: 14px;
+        box-shadow: 0 10px 32px rgba(0, 0, 0, 0.45);
         transform: none !important;
-        gap: clamp(8px, 2.6vw, 14px);
-        word-break: break-word;
-        overflow: hidden;
+        gap: clamp(8px, 2.8vw, 14px);
+        word-break: normal;
+        overflow-wrap: break-word;
         backdrop-filter: blur(2px);
+        margin: 0;
       }
 
       #hero-interviews .hero-box h1,
       #hero-interviews .hero-box h2 {
-        font-size: clamp(1.58rem, 4.4vw, 2.12rem);
+        font-size: clamp(1.48rem, 4.6vw, 2.08rem);
         margin: 0;
         line-height: 1.14;
       }
 
       #hero-interviews .hero-box p {
-        font-size: clamp(0.98rem, 3.2vw, 1.16rem);
+        font-size: clamp(0.98rem, 3.4vw, 1.18rem);
         margin: 0;
-        line-height: 1.26;
+        line-height: 1.28;
       }
     }
 
     @media (orientation: landscape) and (max-width: 1024px) {
-      #hero-interviews .hero-box {
-        width: min(72vw, 420px);
-        max-width: calc(100% - (var(--hero-box-side) * 2));
-        min-width: clamp(180px, 50vw, 380px);
-        inset-inline-end: clamp(14px, 5vw, 30px);
-        inset-block-end: clamp(14px, 6vh, 30px);
-        padding: clamp(11px, 3vw, 18px) clamp(13px, 3.6vw, 20px);
-        max-height: calc(100% - clamp(14px, 6vh, 30px) - clamp(12px, 3.8vw, 26px));
+      #hero-interviews .hero-container {
+        padding: clamp(12px, 3.8vw, 22px);
       }
 
-      #hero-interviews .hero-box h1 {
-        font-size: clamp(1.5rem, 3.6vw, 1.98rem);
+      #hero-interviews .hero-box {
+        width: min(70vw, 420px);
+        max-width: calc(100% - (clamp(16px, 5vw, 34px) * 2));
+        min-width: clamp(200px, 48vw, 380px);
+        inset-inline-end: clamp(16px, 5vw, 34px);
+        inset-block-end: clamp(14px, 6vh, 30px);
+        padding: clamp(11px, 3vw, 18px) clamp(13px, 3.6vw, 20px);
+        max-height: calc(100% - clamp(14px, 6vh, 30px) - clamp(12px, 3.6vw, 22px));
       }
     }
   </style>
