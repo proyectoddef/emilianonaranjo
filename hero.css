@@ -301,6 +301,32 @@
   }
 }
 
+@media (max-width: 768px) {
+  #hero-interviews .hero-box,
+  #hero-entrevistas .hero-box {
+    position: absolute;
+    bottom: 2rem;
+    right: 1.5rem;
+    left: auto;
+    max-width: 75%;
+    padding: 1rem 1.2rem;
+    font-size: 0.95rem;
+    backdrop-filter: blur(6px);
+    background: rgba(0, 0, 0, 0.48);
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  #hero-interviews .hero-box,
+  #hero-entrevistas .hero-box {
+    bottom: 1.5rem;
+    right: 2rem;
+    max-width: 60%;
+    font-size: 0.9rem;
+  }
+}
+
 .hero-contacto {
   --hero-bg: url("images/headers/contacto-header.jpg");
   --hero-bg-position: center 42%;
