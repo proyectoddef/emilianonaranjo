@@ -194,27 +194,31 @@
     @media (max-width: 768px) {
       .hero-box {
         position: absolute;
-        bottom: 10%;
+        bottom: 8%;
         right: 5%;
         left: auto;
-        transform: none;
-        max-width: 70%;
+        transform: none !important;
         width: auto;
-        padding: 12px 16px;
-        font-size: 1rem;
-        text-align: left;
+        max-width: 65%;
+        background: rgba(0,0,0,0.55);
+        padding: 10px 14px;
+        border-radius: 12px;
         display: flex;
         flex-direction: column;
-        background: rgba(0, 0, 0, 0.55);
-        border-radius: 12px;
+        text-align: left;
       }
 
       .hero-box h1,
-      .hero-box h2,
-      .hero-box p {
-        font-size: 1rem;
-        line-height: 1.25;
+      .hero-box h2 {
+        font-size: 1.1rem;
         margin: 0 0 6px 0;
+        line-height: 1.25;
+      }
+
+      .hero-box p {
+        font-size: 0.9rem;
+        margin: 0;
+        line-height: 1.25;
       }
     }
   </style>
