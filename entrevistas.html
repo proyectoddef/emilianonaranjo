@@ -203,20 +203,22 @@
       #hero-entrevistas .hero-box,
       #hero-interviews .hero-box {
         position: absolute;
-        inset: auto clamp(14px, 4vw, 26px) clamp(14px, 4vw, 26px);
+        inset-inline-end: clamp(14px, 6vw, 44px);
+        inset-inline-start: auto;
+        inset-block-end: clamp(12px, 5vh, 38px);
         width: auto;
-        min-width: clamp(220px, 58vw, 480px);
-        max-width: min(84vw, 520px);
+        min-width: clamp(240px, 62vw, 560px);
+        max-width: min(88vw, 560px);
         margin: 0;
-        padding: clamp(12px, 3vw, 20px) clamp(14px, 4vw, 22px);
+        padding: clamp(16px, 4.6vw, 26px) clamp(18px, 5vw, 28px);
         display: flex;
         flex-direction: column;
         align-items: flex-end;
         justify-content: flex-end;
-        background: rgba(0, 0, 0, 0.74);
-        border-radius: 16px;
-        box-shadow: 0 10px 32px rgba(0, 0, 0, 0.35);
-        gap: clamp(6px, 1.8vw, 12px);
+        background: rgba(0, 0, 0, 0.55);
+        border-radius: 12px;
+        box-shadow: 0 6px 22px rgba(0, 0, 0, 0.4);
+        gap: clamp(8px, 2.2vw, 14px);
         text-align: right;
       }
 
@@ -225,8 +227,17 @@
       #hero-entrevistas .hero-box p,
       #hero-interviews .hero-box p {
         margin: 0;
-        font-size: clamp(0.9rem, 2.8vw, 1.08rem);
-        line-height: 1.32;
+        font-size: clamp(1rem, 3.4vw, 1.22rem);
+        line-height: 1.28;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      #hero-entrevistas .hero-box h1,
+      #hero-interviews .hero-box h1 {
+        font-size: clamp(1.68rem, 5vw, 2.32rem);
+        line-height: 1.16;
+        letter-spacing: 0.2px;
       }
     }
   </style>

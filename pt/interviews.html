@@ -78,34 +78,51 @@
     }
 
     /* Caixa do hero em dispositivos móveis */
-    @media (max-width: 768px) {
-      .hero-box {
+    @media (max-width: 1024px) {
+      #hero-entrevistas .hero-container,
+      #hero-interviews .hero-container {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+
+      #hero-entrevistas .hero-box,
+      #hero-interviews .hero-box {
         position: absolute;
-        bottom: 8%;
-        right: 5%;
-        left: auto;
-        transform: none !important;
+        inset-inline-end: clamp(14px, 6vw, 44px);
+        inset-inline-start: auto;
+        inset-block-end: clamp(12px, 5vh, 38px);
         width: auto;
-        max-width: 65%;
-        background: rgba(0,0,0,0.55);
-        padding: 10px 14px;
+        min-width: clamp(240px, 62vw, 560px);
+        max-width: min(88vw, 560px);
+        transform: none !important;
+        background: rgba(0, 0, 0, 0.55);
+        padding: clamp(16px, 4.6vw, 26px) clamp(18px, 5vw, 28px);
         border-radius: 12px;
         display: flex;
         flex-direction: column;
-        text-align: left;
+        text-align: right;
+        align-items: flex-end;
+        justify-content: flex-end;
+        gap: clamp(8px, 2.2vw, 14px);
+        box-shadow: 0 6px 22px rgba(0, 0, 0, 0.4);
       }
 
-      .hero-box h1,
-      .hero-box h2 {
-        font-size: 1.1rem;
-        margin: 0 0 6px 0;
-        line-height: 1.25;
-      }
-
-      .hero-box p {
-        font-size: 0.9rem;
+      #hero-entrevistas .hero-box h1,
+      #hero-interviews .hero-box h1 {
+        font-size: clamp(1.68rem, 5vw, 2.32rem);
         margin: 0;
-        line-height: 1.25;
+        line-height: 1.16;
+      }
+
+      #hero-entrevistas .hero-box p,
+      #hero-interviews .hero-box p,
+      #hero-entrevistas .hero-box h2,
+      #hero-interviews .hero-box h2 {
+        font-size: clamp(1rem, 3.4vw, 1.22rem);
+        margin: 0;
+        line-height: 1.28;
       }
     }
   </style>
