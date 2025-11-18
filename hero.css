@@ -301,31 +301,49 @@
   }
 }
 
+/* Versión móvil vertical */
 @media (max-width: 768px) {
   #hero-interviews .hero-box,
   #hero-entrevistas .hero-box {
     position: absolute;
-    bottom: 1.8rem;
-    right: 1.2rem;
-    left: auto;
-    width: auto;
-    max-width: 78%;
-    padding: 1.2rem 1.3rem;
-    border-radius: 14px;
+    bottom: 1.5rem;
+    right: 1rem;
+    left: auto !important;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: flex-start;
+    align-items: center;
+    width: 82% !important;
+    max-width: 82% !important;
+    padding: 1rem 1.2rem;
     background: rgba(0, 0, 0, 0.48);
+    border-radius: 14px;
     backdrop-filter: blur(6px);
-    font-size: 1rem;
-    text-align: left;
+    text-align: left !important;
+    font-size: 1.1rem;
+    line-height: 1.25;
+    flex-wrap: wrap;
+    white-space: normal !important;
+  }
+
+  #hero-interviews .hero-box h1,
+  #hero-interviews .hero-box p,
+  #hero-entrevistas .hero-box h1,
+  #hero-entrevistas .hero-box p {
+    width: 100% !important;
+    text-align: left !important;
   }
 }
 
+/* Móvil horizontal / landscape */
 @media (orientation: landscape) and (max-width: 1024px) {
   #hero-interviews .hero-box,
   #hero-entrevistas .hero-box {
-    bottom: 1.2rem;
-    right: 1.5rem;
-    max-width: 60%;
-    font-size: 0.9rem;
+    bottom: 1rem;
+    right: 1.2rem;
+    width: 60% !important;
+    max-width: 60% !important;
+    font-size: 0.95rem;
   }
 }
 
