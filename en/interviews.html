@@ -77,34 +77,44 @@
     }
 
     /* Hero box on mobile */
-    @media (max-width: 768px) {
-      .hero-box {
+    @media (max-width: 1024px) {
+      #hero-interviews .hero-container {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+
+      #hero-interviews .hero-box {
         position: absolute;
-        bottom: 8%;
-        right: 5%;
-        left: auto;
-        transform: none !important;
+        inset: auto clamp(14px, 4vw, 26px) clamp(14px, 4vw, 26px);
         width: auto;
-        max-width: 65%;
-        background: rgba(0,0,0,0.55);
-        padding: 10px 14px;
-        border-radius: 12px;
+        min-width: clamp(220px, 58vw, 480px);
+        max-width: min(84vw, 520px);
         display: flex;
         flex-direction: column;
-        text-align: left;
+        align-items: flex-end;
+        justify-content: flex-end;
+        text-align: right;
+        background: rgba(0, 0, 0, 0.74);
+        padding: clamp(12px, 3vw, 20px) clamp(14px, 4vw, 22px);
+        border-radius: 16px;
+        box-shadow: 0 10px 32px rgba(0, 0, 0, 0.35);
+        transform: none !important;
+        gap: clamp(6px, 1.8vw, 12px);
       }
 
-      .hero-box h1,
-      .hero-box h2 {
-        font-size: 1.1rem;
-        margin: 0 0 6px 0;
-        line-height: 1.25;
-      }
-
-      .hero-box p {
-        font-size: 0.9rem;
+      #hero-interviews .hero-box h1,
+      #hero-interviews .hero-box h2 {
+        font-size: clamp(1.52rem, 4.4vw, 2.08rem);
         margin: 0;
-        line-height: 1.25;
+        line-height: 1.18;
+      }
+
+      #hero-interviews .hero-box p {
+        font-size: clamp(0.9rem, 2.8vw, 1.08rem);
+        margin: 0;
+        line-height: 1.32;
       }
     }
   </style>

@@ -191,32 +191,33 @@
     }
 
     /* Recuadro del hero en móviles */
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
       #hero-entrevistas .hero-container,
       #hero-interviews .hero-container {
         position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
       }
 
       #hero-entrevistas .hero-box,
       #hero-interviews .hero-box {
         position: absolute;
-        right: 1rem;
-        bottom: 1rem;
-        left: auto;
-        width: clamp(45%, 55%, 60%);
-        max-width: 60%;
+        inset: auto clamp(14px, 4vw, 26px) clamp(14px, 4vw, 26px);
+        width: auto;
+        min-width: clamp(220px, 58vw, 480px);
+        max-width: min(84vw, 520px);
         margin: 0;
-        padding: clamp(0.6rem, 2.4vw, 0.8rem) clamp(0.8rem, 3vw, 1rem);
-        font-size: 0.9rem;
-        line-height: 1.1;
+        padding: clamp(12px, 3vw, 20px) clamp(14px, 4vw, 22px);
         display: flex;
         flex-direction: column;
+        align-items: flex-end;
         justify-content: flex-end;
-        background: rgba(0,0,0,0.45);
-        border-radius: 12px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
-        gap: 0.35rem;
-        text-align: left;
+        background: rgba(0, 0, 0, 0.74);
+        border-radius: 16px;
+        box-shadow: 0 10px 32px rgba(0, 0, 0, 0.35);
+        gap: clamp(6px, 1.8vw, 12px);
+        text-align: right;
       }
 
       #hero-entrevistas .hero-box h1,
@@ -224,13 +225,8 @@
       #hero-entrevistas .hero-box p,
       #hero-interviews .hero-box p {
         margin: 0;
-        font-size: clamp(0.85rem, 3vw, 0.95rem);
-        line-height: 1.2;
-      }
-
-      #hero-entrevistas .hero-container img,
-      #hero-interviews .hero-container img {
-        object-fit: cover;
+        font-size: clamp(0.9rem, 2.8vw, 1.08rem);
+        line-height: 1.32;
       }
     }
   </style>
