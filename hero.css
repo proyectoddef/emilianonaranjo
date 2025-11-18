@@ -305,23 +305,25 @@
   #hero-interviews .hero-box,
   #hero-entrevistas .hero-box {
     position: absolute;
-    bottom: 2rem;
-    right: 1.5rem;
+    bottom: 1.8rem;
+    right: 1.2rem;
     left: auto;
-    max-width: 75%;
-    padding: 1rem 1.2rem;
-    font-size: 0.95rem;
-    backdrop-filter: blur(6px);
-    background: rgba(0, 0, 0, 0.48);
+    width: auto;
+    max-width: 78%;
+    padding: 1.2rem 1.3rem;
     border-radius: 14px;
+    background: rgba(0, 0, 0, 0.48);
+    backdrop-filter: blur(6px);
+    font-size: 1rem;
+    text-align: left;
   }
 }
 
-@media (max-width: 1024px) and (orientation: landscape) {
+@media (orientation: landscape) and (max-width: 1024px) {
   #hero-interviews .hero-box,
   #hero-entrevistas .hero-box {
-    bottom: 1.5rem;
-    right: 2rem;
+    bottom: 1.2rem;
+    right: 1.5rem;
     max-width: 60%;
     font-size: 0.9rem;
   }
