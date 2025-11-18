@@ -315,23 +315,23 @@
   #hero-entrevistas .hero-box,
   #hero-interviews .hero-box {
     position: absolute;
-    inset-inline-end: clamp(14px, 6vw, 44px);
+    inset-inline-end: clamp(12px, 4vw, 28px);
     inset-inline-start: auto;
-    inset-block-end: clamp(12px, 5vh, 38px);
+    inset-block-end: clamp(12px, 4.6vh, 28px);
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
     text-align: right;
-    inline-size: min(88vw, 560px);
-    max-inline-size: calc(100% - (clamp(14px, 6vw, 44px) + clamp(12px, 6vw, 44px)));
-    min-inline-size: clamp(240px, 62vw, 560px);
-    padding: clamp(16px, 4.6vw, 26px) clamp(18px, 5vw, 28px);
+    inline-size: min(82vw, 480px);
+    max-inline-size: calc(100% - (clamp(12px, 4vw, 28px) + clamp(12px, 4vw, 28px)));
+    min-inline-size: clamp(220px, 58vw, 460px);
+    padding: clamp(14px, 4.2vw, 24px) clamp(16px, 4.6vw, 26px);
     background: rgba(0, 0, 0, 0.55);
     border-radius: 12px;
     box-shadow: 0 6px 22px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(2px);
-    gap: clamp(8px, 2.2vw, 14px);
+    gap: clamp(10px, 2.6vw, 16px);
     transform: none;
     overflow: visible;
     word-break: break-word;
@@ -347,7 +347,7 @@
 
   #hero-entrevistas .hero-box h1,
   #hero-interviews .hero-box h1 {
-    font-size: clamp(1.68rem, 5vw, 2.32rem);
+    font-size: clamp(1.72rem, 4.6vw, 2.28rem);
     margin: 0;
     line-height: 1.16;
     letter-spacing: 0.2px;
@@ -355,8 +355,8 @@
 
   #hero-entrevistas .hero-box p,
   #hero-interviews .hero-box p {
-    font-size: clamp(1rem, 3.4vw, 1.22rem);
-    line-height: 1.28;
+    font-size: clamp(1.02rem, 3.4vw, 1.2rem);
+    line-height: 1.26;
     margin: 0;
     color: #f1f1f1;
   }
@@ -366,10 +366,12 @@
 @media (orientation: landscape) and (max-width: 1024px) {
   #hero-interviews .hero-box,
   #hero-entrevistas .hero-box {
-    inline-size: min(76vw, 540px) !important;
-    max-inline-size: calc(100% - 2 * clamp(14px, 4vw, 28px));
-    inset-block-end: clamp(14px, 6vh, 34px);
-    padding: clamp(14px, 3.2vw, 22px) clamp(16px, 3.8vw, 24px);
+    inline-size: min(72vw, 420px) !important;
+    max-inline-size: calc(100% - 2 * clamp(12px, 4vw, 28px));
+    min-inline-size: clamp(220px, 54vw, 420px);
+    inset-inline-end: clamp(14px, 5vw, 30px);
+    inset-block-end: clamp(14px, 6.2vh, 30px);
+    padding: clamp(13px, 3.2vw, 20px) clamp(15px, 3.8vw, 22px);
   }
 }
 

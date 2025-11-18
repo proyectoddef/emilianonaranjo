@@ -90,28 +90,28 @@
       #hero-entrevistas .hero-box,
       #hero-interviews .hero-box {
         position: absolute;
-        inset-inline-end: clamp(14px, 6vw, 44px);
+        inset-inline-end: clamp(12px, 4vw, 28px);
         inset-inline-start: auto;
-        inset-block-end: clamp(12px, 5vh, 38px);
+        inset-block-end: clamp(12px, 4.6vh, 28px);
         width: auto;
-        min-width: clamp(240px, 62vw, 560px);
-        max-width: min(88vw, 560px);
+        min-width: clamp(220px, 58vw, 460px);
+        max-width: min(82vw, 480px);
         transform: none !important;
         background: rgba(0, 0, 0, 0.55);
-        padding: clamp(16px, 4.6vw, 26px) clamp(18px, 5vw, 28px);
+        padding: clamp(14px, 4.2vw, 24px) clamp(16px, 4.6vw, 26px);
         border-radius: 12px;
         display: flex;
         flex-direction: column;
         text-align: right;
         align-items: flex-end;
         justify-content: flex-end;
-        gap: clamp(8px, 2.2vw, 14px);
+        gap: clamp(10px, 2.6vw, 16px);
         box-shadow: 0 6px 22px rgba(0, 0, 0, 0.4);
       }
 
       #hero-entrevistas .hero-box h1,
       #hero-interviews .hero-box h1 {
-        font-size: clamp(1.68rem, 5vw, 2.32rem);
+        font-size: clamp(1.72rem, 4.6vw, 2.28rem);
         margin: 0;
         line-height: 1.16;
       }
@@ -120,9 +120,21 @@
       #hero-interviews .hero-box p,
       #hero-entrevistas .hero-box h2,
       #hero-interviews .hero-box h2 {
-        font-size: clamp(1rem, 3.4vw, 1.22rem);
+        font-size: clamp(1.02rem, 3.4vw, 1.2rem);
         margin: 0;
-        line-height: 1.28;
+        line-height: 1.26;
+      }
+    }
+
+    @media (orientation: landscape) and (max-width: 1024px) {
+      #hero-entrevistas .hero-box,
+      #hero-interviews .hero-box {
+        inline-size: min(72vw, 420px);
+        max-inline-size: calc(100% - 2 * clamp(12px, 4vw, 28px));
+        min-inline-size: clamp(220px, 54vw, 420px);
+        inset-inline-end: clamp(14px, 5vw, 30px);
+        inset-block-end: clamp(14px, 6.2vh, 30px);
+        padding: clamp(13px, 3.2vw, 20px) clamp(15px, 3.8vw, 22px);
       }
     }
   </style>
