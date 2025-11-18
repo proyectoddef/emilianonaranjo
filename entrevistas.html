@@ -78,7 +78,8 @@
     .media-card__image {
       position: relative;
       overflow: hidden;
-      height: 210px;
+      aspect-ratio: 16 / 9;
+      height: auto;
     }
 
     .media-card__img {
@@ -137,6 +138,94 @@
 
   </style>
   <link rel="stylesheet" href="hero.css" />
+
+  <style>
+    /* Ajustes específicos de la página de entrevistas */
+    #hero-entrevistas,
+    #hero-interviews {
+      min-height: clamp(72vh, 82vh, 92vh);
+      height: clamp(76vh, 86vh, 94vh);
+      background-position: center 70%;
+      background-size: cover;
+    }
+
+    #hero-entrevistas .hero-container,
+    #hero-interviews .hero-container {
+      height: 100%;
+    }
+
+    .media-card__title,
+    .media-card__meta,
+    .media-card__text {
+      word-break: break-word;
+    }
+
+    /* Tarjetas responsivas */
+    @media (max-width: 768px) {
+      .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .media-card {
+        width: 100%;
+      }
+
+      .media-card__image {
+        aspect-ratio: 16 / 9;
+        height: auto;
+      }
+    }
+
+    @media (orientation: landscape) and (max-width: 1024px) {
+      .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+    }
+
+    /* Recuadro del hero en móviles */
+    @media (max-width: 768px) {
+      #hero-entrevistas .hero-box,
+      #hero-interviews .hero-box {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        left: auto;
+        top: auto;
+        width: 85%;
+        max-width: 85%;
+        padding: 14px 18px;
+        border-radius: 14px;
+        writing-mode: horizontal-tb;
+        text-orientation: mixed;
+        flex-direction: column;
+        align-items: flex-start;
+        background: rgba(0, 0, 0, 0.58);
+        margin: 0;
+      }
+
+      #hero-entrevistas .hero-box h1,
+      #hero-interviews .hero-box h1 {
+        font-size: 1.87rem;
+      }
+
+      #hero-entrevistas .hero-box p,
+      #hero-interviews .hero-box p {
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (orientation: landscape) and (max-width: 1024px) {
+      #hero-entrevistas .hero-box,
+      #hero-interviews .hero-box {
+        width: 70%;
+        max-width: 70%;
+        bottom: 20px;
+        right: 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
