@@ -27,52 +27,6 @@
   <link rel="stylesheet" href="../responsive.css?v=20251110" />
 
   <style>
-    /* ======== HERO CONTACT ======== */
-    .hero-contacto {
-      position: relative;
-      min-height: 70vh;
-      height: clamp(70vh, 82vh, 90vh);
-      background: url("../images/headers/contacto-header.jpg") center 38% / cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      padding: clamp(18px, 4vw, 60px);
-      color: #fff;
-      overflow: hidden;
-      filter: brightness(1.15) contrast(1.05);
-    }
-
-    .hero-contacto::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to right, rgba(0,0,0,0.45), rgba(0,0,0,0.10));
-      z-index: 1;
-    }
-
-    .hero-contacto .hero-content {
-      position: relative;
-      z-index: 2;
-      background: rgba(0,0,0,0.5);
-      padding: clamp(18px, 2.8vw, 32px);
-      border-radius: 14px;
-      max-width: min(520px, 78vw);
-      box-shadow: 0 8px 28px rgba(0,0,0,0.35);
-      margin: 0;
-    }
-
-    .hero-contacto h1 {
-      font-size: clamp(1.8rem, 3.6vw, 2.6rem);
-      margin-bottom: 8px;
-      font-weight: 750;
-    }
-    .hero-contacto p {
-      font-size: clamp(1rem, 2.1vw, 1.2rem);
-      color: #f1f1f1;
-      line-height: 1.6;
-      margin: 0;
-    }
-
     /* SECTION */
     .section-contacto {
       padding: 60px 0 80px;
@@ -144,33 +98,6 @@
     .footer-logo {
       height: 60px;
       margin-bottom: 10px;
-    }
-
-    @media (max-width: 768px) and (orientation: portrait) {
-      .hero-contacto {
-        align-items: flex-end;
-        justify-content: center;
-        height: 60vh;
-        background-position: center top;
-        padding: clamp(18px, 5vw, 32px);
-      }
-
-      .hero-contacto .hero-content {
-        max-width: 94%;
-        margin-bottom: clamp(16px, 5vh, 34px);
-      }
-    }
-
-    @media (max-width: 1024px) and (orientation: landscape) {
-      .hero-contacto {
-        align-items: center;
-        justify-content: flex-end;
-        padding-inline: clamp(20px, 6vw, 90px);
-      }
-
-      .hero-contacto .hero-content {
-        margin-right: clamp(16px, 6vw, 96px);
-      }
     }
   </style>
   <link rel="stylesheet" href="../hero.css" />

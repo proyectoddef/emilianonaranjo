@@ -32,80 +32,6 @@
   <script src="../js/social/meta-linkedin.js"></script>
 
   <style>
-    /* ===== HERO ===== */
-    #hero-sobre {
-      position: relative;
-      background: url("../images/hero/hero-sobre.jpeg") center 30% / contain no-repeat;
-      height: 95vh;
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-      text-align: left;
-      color: #fff;
-      overflow: hidden;
-      background-color: #000;
-      image-rendering: -webkit-optimize-contrast;
-      filter: brightness(1.15) contrast(1.08) saturate(1.08);
-    }
-
-    #hero-sobre::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to right,
-        rgba(0,0,0,0.45) 18%,
-        rgba(0,0,0,0.18) 70%
-      );
-      z-index: 1;
-    }
-
-    #hero-sobre::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 22%;
-      height: 100%;
-      background: radial-gradient(
-        circle at 8% 50%,
-        rgba(0,0,0,0.55) 0%,
-        rgba(0,0,0,0.2) 55%,
-        rgba(0,0,0,0) 100%
-      );
-      z-index: 2;
-      pointer-events: none;
-    }
-
-    #hero-sobre .hero-container {
-      position: relative;
-      z-index: 3;
-      padding-left: 6%;
-      padding-top: 5%;
-      max-width: 650px;
-    }
-
-    #hero-sobre .hero-text {
-      background: rgba(0,0,0,0.5);
-      padding: 18px 28px;
-      border-radius: 8px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.35);
-      backdrop-filter: blur(2px);
-    }
-
-    #hero-sobre .hero-text h1 {
-      font-size: 2.4em;
-      color: #fff;
-      margin-bottom: 6px;
-      letter-spacing: 1px;
-    }
-
-    #hero-sobre .hero-text h2 {
-      font-size: 1em;
-      color: #e8e8e8;
-      font-weight: 400;
-    }
-
     /* ===== CV BUTTONS ===== */
     .cv-links {
       display: flex;
@@ -143,24 +69,6 @@
         gap: 10px;
       }
 
-      #hero-sobre {
-        background: url("../images/hero/hero-sobre.jpeg") center center / cover no-repeat;
-        height: 70vh;
-      }
-
-      #hero-sobre .hero-container {
-        padding-top: 18%;
-        text-align: center;
-        padding-left: 0;
-      }
-
-      #hero-sobre .hero-text {
-        padding: 16px 22px;
-      }
-
-      #hero-sobre .hero-text h1 {
-        font-size: 2em;
-      }
     }
   </style>
 
