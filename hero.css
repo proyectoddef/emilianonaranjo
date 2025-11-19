@@ -726,9 +726,22 @@
 }
 
 @media (min-width: 1024px) {
+  .hero-dynamic,
+  .hero-section,
+  #hero,
+  #hero-sobre,
+  #hero-publicaciones,
+  #hero-talleres,
+  #hero-entrevistas,
+  #hero-interviews,
+  .hero-contacto {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
   .hero-container {
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-end;
     padding-right: clamp(18px, 6vw, 78px);
   }
 
@@ -742,6 +755,31 @@
     width: auto;
     min-width: auto;
     text-align: justify;
-    align-items: stretch;
+    align-items: flex-end;
+    justify-content: flex-end;
+    transform: none;
+    text-justify: inter-word;
+    letter-spacing: normal;
+    word-spacing: 0.12em;
+    hyphens: auto;
+  }
+
+  .hero-text h1,
+  .hero-content h1 {
+    width: 100%;
+    text-align: inherit;
+    text-align-last: right;
+    line-height: 1.1;
+    margin-bottom: 0.35em;
+  }
+
+  .hero-text h2,
+  .hero-content h2,
+  .hero-content p {
+    width: 100%;
+    text-align: inherit;
+    text-align-last: right;
+    line-height: 1.1;
+    margin-top: 0;
   }
 }
