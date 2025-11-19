@@ -269,6 +269,13 @@
   #hero-interviews::after {
     background:
       radial-gradient(
+        circle at 86% 26%,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.76) 16%,
+        rgba(0, 0, 0, 0.38) 34%,
+        rgba(0, 0, 0, 0) 54%
+      ),
+      radial-gradient(
         circle at 94% 56%,
         rgba(0, 0, 0, 0.88) 0%,
         rgba(0, 0, 0, 0.52) 34%,
@@ -281,8 +288,6 @@
         rgba(0, 0, 0, 0.6) 78%,
         rgba(0, 0, 0, 0.92) 100%
       );
-    -webkit-backdrop-filter: blur(6px);
-    backdrop-filter: blur(6px);
   }
 }
 
@@ -309,6 +314,13 @@
   #hero-entrevistas::after,
   #hero-interviews::after {
     background:
+      radial-gradient(
+        circle at 88% 26%,
+        rgba(0, 0, 0, 0.88) 0%,
+        rgba(0, 0, 0, 0.7) 18%,
+        rgba(0, 0, 0, 0.34) 36%,
+        rgba(0, 0, 0, 0) 56%
+      ),
       radial-gradient(
         circle at 90% 58%,
         rgba(0, 0, 0, 0.86) 0%,
