@@ -260,11 +260,12 @@
 #hero-interviews::before {
   background: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.06) 40%,
-    rgba(0, 0, 0, 0.26) 64%,
-    rgba(0, 0, 0, 0.56) 86%,
-    rgba(0, 0, 0, 0.7) 100%
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0.06) 18%,
+    rgba(0, 0, 0, 0.1) 46%,
+    rgba(0, 0, 0, 0.34) 64%,
+    rgba(0, 0, 0, 0.58) 82%,
+    rgba(0, 0, 0, 0.75) 100%
   );
   z-index: 1;
 }
@@ -274,16 +275,17 @@
   background:
     radial-gradient(
       circle at 82% 50%,
-      rgba(0, 0, 0, 0.62) 0%,
-      rgba(0, 0, 0, 0.42) 28%,
-      rgba(0, 0, 0, 0.16) 54%,
+      rgba(0, 0, 0, 0.68) 0%,
+      rgba(0, 0, 0, 0.46) 28%,
+      rgba(0, 0, 0, 0.18) 52%,
       rgba(0, 0, 0, 0) 72%
     ),
     radial-gradient(
       circle at 18% 50%,
-      rgba(0, 0, 0, 0.14) 0%,
-      rgba(0, 0, 0, 0.06) 34%,
-      rgba(0, 0, 0, 0) 58%
+      rgba(255, 255, 255, 0.12) 0%,
+      rgba(255, 255, 255, 0.08) 30%,
+      rgba(255, 255, 255, 0.02) 54%,
+      rgba(0, 0, 0, 0) 70%
     );
   z-index: 2;
 }
@@ -391,8 +393,8 @@
   #hero-interviews {
     --hero-overlay-gap: clamp(16px, 5vw, 34px);
     --hero-overlay-floor: clamp(14px, 6vh, 30px);
-    --hero-overlay-width: min(72vw, 440px);
-    --hero-overlay-min: clamp(200px, 48vw, 380px);
+    --hero-overlay-width: min(60vw, 400px);
+    --hero-overlay-min: clamp(200px, 40vw, 360px);
   }
 
   #hero-entrevistas .hero-text,
@@ -401,7 +403,23 @@
   #hero-interviews .hero-text,
   #hero-interviews .hero-box,
   #hero-interviews .hero-interviews-overlay {
+    right: max(var(--hero-overlay-gap), 6vw);
     padding: clamp(11px, 3vw, 18px) clamp(13px, 3.6vw, 20px);
+  }
+
+  #hero-entrevistas .hero-box h1,
+  #hero-entrevistas .hero-text h1,
+  #hero-interviews .hero-box h1,
+  #hero-interviews .hero-text h1 {
+    font-size: clamp(1.3rem, 2.8vw, 1.84rem);
+    line-height: 1.1;
+  }
+
+  #hero-entrevistas .hero-box p,
+  #hero-entrevistas .hero-text p,
+  #hero-interviews .hero-box p,
+  #hero-interviews .hero-text p {
+    font-size: clamp(0.94rem, 2.4vw, 1.08rem);
   }
 }
 
