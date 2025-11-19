@@ -147,10 +147,13 @@
       height: clamp(76vh, 86vh, 94vh);
       background-position: center 70%;
       background-size: cover;
-      --hero-overlay-gap: clamp(18px, 5vw, 42px);
+      --hero-overlay-gap: clamp(18px, 4.6vw, 34px);
       --hero-overlay-floor: clamp(22px, 6vh, 46px);
-      --hero-overlay-width: min(520px, 78vw);
-      --hero-overlay-min: clamp(220px, 48vw, 480px);
+      --hero-overlay-width: min(500px, 76vw);
+      --hero-overlay-min: clamp(220px, 50vw, 480px);
+      --hero-overlay-landscape-gap: clamp(22px, 5vw, 42px);
+      --hero-overlay-landscape-width: min(460px, 70vw);
+      --hero-overlay-landscape-min: clamp(210px, 48vw, 420px);
     }
 
     #hero-entrevistas .hero-container,
@@ -165,6 +168,35 @@
       justify-content: flex-end;
       padding: var(--hero-overlay-gap);
       z-index: 3;
+    }
+
+    /* Capas de brillo y lectura específicas del hero de entrevistas */
+    #hero-entrevistas::before,
+    #hero-interviews::before {
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.18) 0%,
+        rgba(0, 0, 0, 0.12) 22%,
+        rgba(0, 0, 0, 0.04) 46%,
+        rgba(0, 0, 0, 0) 60%
+      );
+    }
+
+    #hero-entrevistas::after,
+    #hero-interviews::after {
+      background: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0) 42%,
+          rgba(0, 0, 0, 0.3) 66%,
+          rgba(0, 0, 0, 0.55) 86%,
+          rgba(0, 0, 0, 0.68) 100%
+        ),
+        radial-gradient(
+          circle at 18% 50%,
+          rgba(0, 0, 0, 0.3) 0%,
+          rgba(0, 0, 0, 0.14) 34%,
+          rgba(0, 0, 0, 0) 58%
+        );
     }
 
     .media-card__title,
@@ -276,10 +308,10 @@
     @media (orientation: landscape) and (max-width: 1024px) {
       #hero-entrevistas,
       #hero-interviews {
-        --hero-overlay-gap: clamp(16px, 5vw, 34px);
-        --hero-overlay-floor: clamp(14px, 6vh, 30px);
-        --hero-overlay-width: min(72vw, 440px);
-        --hero-overlay-min: clamp(200px, 48vw, 380px);
+        --hero-overlay-gap: var(--hero-overlay-landscape-gap);
+        --hero-overlay-floor: clamp(16px, 6vh, 32px);
+        --hero-overlay-width: var(--hero-overlay-landscape-width);
+        --hero-overlay-min: var(--hero-overlay-landscape-min);
       }
 
       #hero-entrevistas .hero-container,
@@ -291,10 +323,11 @@
       #hero-entrevistas .hero-interviews-overlay,
       #hero-interviews .hero-box,
       #hero-interviews .hero-interviews-overlay {
-        width: min(72vw, 440px);
+        right: var(--hero-overlay-gap);
+        width: var(--hero-overlay-width);
         max-width: calc(100% - (var(--hero-overlay-gap) * 2));
-        min-width: clamp(200px, 48vw, 380px);
-        padding: clamp(11px, 3vw, 18px) clamp(13px, 3.6vw, 20px);
+        min-width: var(--hero-overlay-min);
+        padding: clamp(12px, 3vw, 18px) clamp(14px, 3.8vw, 20px);
         max-height: calc(100% - var(--hero-overlay-gap) - var(--hero-overlay-floor));
       }
     }
