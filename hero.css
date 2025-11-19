@@ -846,25 +846,26 @@
     transform: none;
     text-justify: inter-word;
     letter-spacing: normal;
-    word-spacing: 0.12em;
+    word-spacing: normal;
     hyphens: auto;
+    gap: clamp(4px, 0.8vw, 10px);
   }
 
   .hero-text h1,
   .hero-content h1 {
     width: 100%;
-    text-align: center;
-    text-align-last: center;
+    text-align: inherit;
+    text-align-last: right;
     line-height: 1.1;
-    margin: 0 0 clamp(4px, 0.5vw, 12px);
+    margin: 0;
   }
 
   .hero-text h2,
   .hero-content h2,
   .hero-content p {
     width: 100%;
-    text-align: justify;
-    text-align-last: justify;
+    text-align: inherit;
+    text-align-last: right;
     line-height: 1.1;
     margin: 0;
   }
