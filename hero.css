@@ -166,6 +166,16 @@
   }
 }
 
+/* Restore full brightness on desktop heroes for About/Sobre mí and Publications */
+@media (min-width: 1025px) {
+  #hero-sobre::before,
+  #hero-sobre::after,
+  #hero-publicaciones::before,
+  #hero-publicaciones::after {
+    background: none;
+  }
+}
+
 #hero::before {
   background:
     linear-gradient(
