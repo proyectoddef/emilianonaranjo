@@ -43,7 +43,6 @@
   --hero-text-align: right;
   --hero-box-min-width: clamp(160px, 46vw, 420px);
 }
-
 .hero-dynamic,
 .hero-section,
 #hero,
@@ -138,6 +137,43 @@
       rgba(0, 0, 0, 0) 72%
     );
   z-index: 2;
+}
+
+
+/* Remove left-side darkening on non-home heroes for mobile orientations */
+@media (max-width: 768px), (max-width: 1024px) and (orientation: landscape) {
+  :is(
+      .hero-dynamic,
+      .hero-section,
+      #hero-sobre,
+      #hero-publicaciones,
+      #hero-talleres,
+      #hero-entrevistas,
+      #hero-interviews,
+      .hero-contacto
+    ):not(#hero)::before,
+  :is(
+      .hero-dynamic,
+      .hero-section,
+      #hero-sobre,
+      #hero-publicaciones,
+      #hero-talleres,
+      #hero-entrevistas,
+      #hero-interviews,
+      .hero-contacto
+    ):not(#hero)::after {
+    background: none;
+  }
+}
+
+/* Restore full brightness on desktop heroes for About/Sobre mí and Publications */
+@media (min-width: 1025px) {
+  #hero-sobre::before,
+  #hero-sobre::after,
+  #hero-publicaciones::before,
+  #hero-publicaciones::after {
+    background: none;
+  }
 }
 
 #hero::before {
