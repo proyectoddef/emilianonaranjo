@@ -147,13 +147,13 @@
       height: clamp(76vh, 86vh, 94vh);
       background-position: center 70%;
       background-size: cover;
-      --hero-overlay-gap: clamp(18px, 4.6vw, 34px);
+      --hero-overlay-gap: clamp(18px, 5vw, 42px);
       --hero-overlay-floor: clamp(22px, 6vh, 46px);
-      --hero-overlay-width: min(500px, 76vw);
-      --hero-overlay-min: clamp(220px, 50vw, 480px);
-      --hero-overlay-landscape-gap: clamp(22px, 5vw, 42px);
-      --hero-overlay-landscape-width: min(460px, 70vw);
-      --hero-overlay-landscape-min: clamp(210px, 48vw, 420px);
+      --hero-overlay-width: min(520px, 78vw);
+      --hero-overlay-min: clamp(220px, 48vw, 480px);
+      --hero-overlay-landscape-gap: clamp(16px, 5vw, 34px);
+      --hero-overlay-landscape-width: min(420px, 68vw);
+      --hero-overlay-landscape-min: clamp(200px, 44vw, 380px);
     }
 
     #hero-entrevistas .hero-container,
@@ -175,26 +175,28 @@
     #hero-interviews::before {
       background: linear-gradient(
         90deg,
-        rgba(0, 0, 0, 0.18) 0%,
-        rgba(0, 0, 0, 0.12) 22%,
-        rgba(0, 0, 0, 0.04) 46%,
-        rgba(0, 0, 0, 0) 60%
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.06) 40%,
+        rgba(0, 0, 0, 0.26) 64%,
+        rgba(0, 0, 0, 0.56) 86%,
+        rgba(0, 0, 0, 0.7) 100%
       );
     }
 
     #hero-entrevistas::after,
     #hero-interviews::after {
-      background: linear-gradient(
-          90deg,
-          rgba(0, 0, 0, 0) 42%,
-          rgba(0, 0, 0, 0.3) 66%,
-          rgba(0, 0, 0, 0.55) 86%,
-          rgba(0, 0, 0, 0.68) 100%
+      background:
+        radial-gradient(
+          circle at 82% 50%,
+          rgba(0, 0, 0, 0.62) 0%,
+          rgba(0, 0, 0, 0.42) 28%,
+          rgba(0, 0, 0, 0.16) 54%,
+          rgba(0, 0, 0, 0) 72%
         ),
         radial-gradient(
           circle at 18% 50%,
-          rgba(0, 0, 0, 0.3) 0%,
-          rgba(0, 0, 0, 0.14) 34%,
+          rgba(0, 0, 0, 0.14) 0%,
+          rgba(0, 0, 0, 0.06) 34%,
           rgba(0, 0, 0, 0) 58%
         );
     }
@@ -261,6 +263,8 @@
       word-break: normal;
       overflow-wrap: break-word;
       backdrop-filter: blur(2px);
+      color: #f9fafb;
+      text-shadow: 0 4px 14px rgba(0, 0, 0, 0.55);
     }
 
     #hero-entrevistas .hero-box h1,
@@ -276,6 +280,7 @@
       margin: 0;
       font-size: clamp(1rem, 3.2vw, 1.2rem);
       line-height: 1.28;
+      color: #f3f3f3;
     }
 
     @media (max-width: 1024px) {
