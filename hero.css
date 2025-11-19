@@ -853,19 +853,19 @@
   .hero-text h1,
   .hero-content h1 {
     width: 100%;
-    text-align: inherit;
-    text-align-last: right;
+    text-align: center;
+    text-align-last: center;
     line-height: 1.1;
-    margin-bottom: 0.35em;
+    margin: 0 0 clamp(4px, 0.5vw, 12px);
   }
 
   .hero-text h2,
   .hero-content h2,
   .hero-content p {
     width: 100%;
-    text-align: inherit;
-    text-align-last: right;
+    text-align: justify;
+    text-align-last: justify;
     line-height: 1.1;
-    margin-top: 0;
+    margin: 0;
   }
 }
