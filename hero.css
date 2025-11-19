@@ -724,3 +724,24 @@
     max-width: var(--hero-dynamic-max, min(720px, 60vw));
   }
 }
+
+@media (min-width: 1024px) {
+  .hero-container {
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: clamp(18px, 6vw, 78px);
+  }
+
+  .hero-text,
+  .hero-panel,
+  .hero-content,
+  .hero-box {
+    margin-left: auto;
+    margin-right: clamp(18px, 6vw, 96px);
+    max-width: min(500px, 42vw);
+    width: auto;
+    min-width: auto;
+    text-align: justify;
+    align-items: stretch;
+  }
+}
