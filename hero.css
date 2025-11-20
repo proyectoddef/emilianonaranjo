@@ -1135,12 +1135,9 @@
   #hero-entrevistas .hero-container,
   #hero-publicaciones .hero-container,
   #hero-sobre .hero-container,
-  .hero-contacto .hero-container,
   .hero-contacto .hero-content {
-    justify-content: flex-end !important;
     margin-left: auto !important;
     margin-right: 5vw !important;
-    align-items: flex-end !important;
   }
 
   #hero .hero-text h1,
@@ -1155,7 +1152,6 @@
   #hero-sobre .hero-text h2,
   .hero-contacto h1 {
     text-align: center !important;
-    text-align-last: center !important;
   }
 
   #hero .hero-text p,
@@ -1164,8 +1160,6 @@
   #hero-publicaciones .hero-text p,
   #hero-sobre .hero-text p,
   .hero-contacto p {
-    text-align: left !important;
-    text-align-last: left !important;
-    line-height: 1.2 !important;
+    text-align: justify !important;
   }
 }
