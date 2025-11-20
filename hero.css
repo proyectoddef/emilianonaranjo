@@ -1135,7 +1135,9 @@
   #hero-entrevistas .hero-container,
   #hero-publicaciones .hero-container,
   #hero-sobre .hero-container,
+  .hero-contacto .hero-container,
   .hero-contacto .hero-content {
+    justify-content: flex-end !important;
     margin-left: auto !important;
     margin-right: 5vw !important;
   }
@@ -1161,5 +1163,6 @@
   #hero-sobre .hero-text p,
   .hero-contacto p {
     text-align: justify !important;
+    line-height: 1.2 !important;
   }
 }
