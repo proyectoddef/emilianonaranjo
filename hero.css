@@ -1128,3 +1128,44 @@
     margin: 0;
   }
 }
+
+@media (min-width: 1025px) {
+  #hero .hero-container,
+  #hero-talleres .hero-container,
+  #hero-entrevistas .hero-container,
+  #hero-publicaciones .hero-container,
+  #hero-sobre .hero-container,
+  .hero-contacto .hero-container,
+  .hero-contacto .hero-content {
+    justify-content: flex-end !important;
+    margin-left: auto !important;
+    margin-right: 5vw !important;
+    align-items: flex-end !important;
+  }
+
+  #hero .hero-text h1,
+  #hero .hero-text h2,
+  #hero-talleres .hero-text h1,
+  #hero-talleres .hero-text h2,
+  #hero-entrevistas .hero-text h1,
+  #hero-entrevistas .hero-text h2,
+  #hero-publicaciones .hero-text h1,
+  #hero-publicaciones .hero-text h2,
+  #hero-sobre .hero-text h1,
+  #hero-sobre .hero-text h2,
+  .hero-contacto h1 {
+    text-align: center !important;
+    text-align-last: center !important;
+  }
+
+  #hero .hero-text p,
+  #hero-talleres .hero-text p,
+  #hero-entrevistas .hero-text p,
+  #hero-publicaciones .hero-text p,
+  #hero-sobre .hero-text p,
+  .hero-contacto p {
+    text-align: left !important;
+    text-align-last: left !important;
+    line-height: 1.2 !important;
+  }
+}
