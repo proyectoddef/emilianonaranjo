@@ -249,19 +249,17 @@
   #hero-entrevistas::before,
   #hero-interviews::before {
     background:
-      linear-gradient(
-        112deg,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.16) 44%,
-        rgba(0, 0, 0, 0.48) 64%,
-        rgba(0, 0, 0, 0.86) 84%,
-        rgba(0, 0, 0, 0.94) 100%
-      ),
       radial-gradient(
-        circle at 92% 42%,
+        circle at 88% 50%,
         rgba(0, 0, 0, 0.95) 0%,
-        rgba(0, 0, 0, 0.72) 32%,
-        rgba(0, 0, 0, 0.12) 70%
+        rgba(0, 0, 0, 0.9) 22%,
+        rgba(0, 0, 0, 0.75) 35%,
+        rgba(0, 0, 0, 0) 55%
+      ),
+      linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.45) 0%,
+        rgba(0, 0, 0, 0.85) 80%
       );
   }
 
@@ -458,6 +456,26 @@
         rgba(0, 0, 0, 0.08) 42%,
         rgba(0, 0, 0, 0.45) 70%,
         rgba(0, 0, 0, 0.88) 100%
+      );
+  }
+}
+
+/* Refuerza el oscurecimiento del lado derecho en móviles pequeños */
+@media (max-width: 768px) {
+  #hero-entrevistas::before,
+  #hero-interviews::before {
+    background:
+      radial-gradient(
+        circle at 88% 50%,
+        rgba(0, 0, 0, 0.95) 0%,
+        rgba(0, 0, 0, 0.9) 22%,
+        rgba(0, 0, 0, 0.75) 35%,
+        rgba(0, 0, 0, 0) 55%
+      ),
+      linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.45) 0%,
+        rgba(0, 0, 0, 0.85) 80%
       );
   }
 }
