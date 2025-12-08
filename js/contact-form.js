@@ -11,11 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const response = await fetch(form.action, {
         method: form.method || "POST",
         body: formData,
-        headers: { Accept: "application/json" },
       });
 
-      if (!response.ok) {
-        console.error("Formsubmit error:", response.status);
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok || data.success === false) {
+        console.error("Web3Forms error:", response.status, data);
         return;
       }
 
