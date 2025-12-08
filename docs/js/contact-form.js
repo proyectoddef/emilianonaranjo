@@ -7,8 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
 
     const formData = new FormData(form);
-    const plainData = Object.fromEntries(formData.entries());
-
     const ajaxUrl = form.action.replace(
       "formsubmit.co/",
       "formsubmit.co/ajax/"
@@ -18,10 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const response = await fetch(ajaxUrl, {
         method: form.method || "POST",
         headers: {
-          "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify(plainData),
+        body: formData,
       });
 
       if (!response.ok) {
