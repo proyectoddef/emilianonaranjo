@@ -5,13 +5,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
+
     const formData = new FormData(form);
+    const plainData = Object.fromEntries(formData.entries());
+
+    const ajaxUrl = form.action.replace(
+      "formsubmit.co/",
+      "formsubmit.co/ajax/"
+    );
 
     try {
-      const response = await fetch(form.action, {
+      const response = await fetch(ajaxUrl, {
         method: form.method || "POST",
-        body: formData,
-        headers: { Accept: "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(plainData),
       });
 
       if (!response.ok) {
@@ -34,7 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
       if (successMessage) {
         successMessage.textContent = text;
         successMessage.style.display = "block";
-        setTimeout(() => { successMessage.style.display = "none"; }, 6000);
+        setTimeout(() => {
+          successMessage.style.display = "none";
+        }, 6000);
       }
     } catch (error) {
       console.error("Network error sending form:", error);
