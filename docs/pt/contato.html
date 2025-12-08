@@ -87,6 +87,18 @@
       cursor: pointer;
     }
 
+    .success-message {
+      display: none;
+      margin-top: 18px;
+      background: #e0f7ea;
+      color: #0a4d2c;
+      border: 1px solid #a3e4b6;
+      padding: 14px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-align: center;
+    }
+
     footer {
       text-align: center;
       background-color: #0c2d57;
@@ -144,7 +156,7 @@
       <h2>Escreva para mim</h2>
       <p>Preencha o formulário e sua mensagem chegará diretamente ao meu e-mail.</p>
 
-      <form id="contact-form" action="https://formsubmit.co/ajax/emiliano.naranjo@unahur.edu.ar" method="POST">
+      <form id="contact-form" action="https://formsubmit.co/emiliano.naranjo@unahur.edu.ar" method="POST">
         <input type="hidden" name="_autoresponse" value="Obrigado pela sua mensagem! Vou responder em breve.">
         <label for="name">Nome completo</label>
         <input type="text" id="name" name="name" required />

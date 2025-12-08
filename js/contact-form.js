@@ -3,22 +3,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const successMessage = document.getElementById("success-message");
   if (!form) return;
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
     const formData = new FormData(form);
-    const ajaxUrl = form.action.replace(
-      "formsubmit.co/",
-      "formsubmit.co/ajax/"
-    );
 
     try {
-      const response = await fetch(ajaxUrl, {
+      // IMPORTANT: use form.action EXACTLY as it is, without adding any extra "ajax/" segments.
+      const response = await fetch(form.action, {
         method: form.method || "POST",
-        headers: {
-          Accept: "application/json",
-        },
         body: formData,
+        headers: { Accept: "application/json" },
       });
 
       if (!response.ok) {
