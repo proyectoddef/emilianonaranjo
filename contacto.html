@@ -265,6 +265,15 @@
       });
       if (response.ok) {
         form.reset();
+        // Localiza el mensaje de éxito según el atributo lang de <html>
+        const pageLang = (document.documentElement.lang || "").toLowerCase();
+        if (pageLang.startsWith("en")) {
+          successMessage.textContent = "Thank you for your message! I will get back to you soon.";
+        } else if (pageLang.startsWith("pt")) {
+          successMessage.textContent = "Obrigado pela sua mensagem! Vou responder em breve.";
+        } else {
+          successMessage.textContent = "¡Gracias por tu mensaje! Te responderé pronto.";
+        }
         successMessage.style.display = "block";
         setTimeout(() => (successMessage.style.display = "none"), 6000);
       }
