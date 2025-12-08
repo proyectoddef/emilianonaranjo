@@ -3,12 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const successMessage = document.getElementById("success-message");
   if (!form) return;
 
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
     const formData = new FormData(form);
 
     try {
-      // IMPORTANT: use form.action EXACTLY as it is, without adding any extra "ajax/" segments.
       const response = await fetch(form.action, {
         method: form.method || "POST",
         body: formData,
