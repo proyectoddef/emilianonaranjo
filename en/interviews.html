@@ -1,60 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Emiliano Naranjo – Educador | Interviews</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Interviews with Emiliano Naranjo on inclusive education, disability, and human rights." />
-  <!-- Open Graph / Twitter Cards -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interviews | Inclusive physical education, disability and human rights conversations</title>
+  <meta name="description" content="Interviews and talks featuring Emiliano Naranjo discussing inclusive physical education, disability studies and human rights across international forums." />
+  <meta name="keywords" content="interviews, inclusive physical education, disability studies, human rights, academic outreach, Emiliano Naranjo" />
+  <meta name="robots" content="index, follow" />
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
-  <meta property="og:title" content="Emiliano Naranjo – Educador | Interviews">
-  <meta property="og:description" content="Interviews with Emiliano Naranjo on inclusive education, disability, and human rights.">
+  <meta property="og:title" content="Interviews | Inclusive physical education, disability and human rights conversations">
+  <meta property="og:description" content="Dialogues and media coverage with Emiliano Naranjo on inclusive physical education, disability and human rights." />
   <meta property="og:image" content="https://emilianonaranjo.com.ar/images/logos/en-logo-og.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Emiliano Naranjo – Educador | Interviews">
-  <meta name="twitter:description" content="Interviews with Emiliano Naranjo on inclusive education, disability, and human rights.">
+  <meta name="twitter:title" content="Interviews | Inclusive physical education, disability and human rights conversations">
+  <meta name="twitter:description" content="Dialogues and media coverage with Emiliano Naranjo on inclusive physical education, disability and human rights." />
   <meta name="twitter:image" content="https://emilianonaranjo.com.ar/images/logos/en-logo-og.png">
-  <link rel="canonical" href="https://emilianonaranjo.com/en/interviews.html" />
+  <link rel="canonical" href="https://emilianonaranjo.com.ar/en/interviews.html" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Emiliano Naranjo",
+      "description": "International academic specializing in inclusive physical education, disability, and human rights.",
+      "url": "https://emilianonaranjo.com.ar",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Universidad Nacional de Hurlingham (UNAHUR)"
+      },
+      "knowsAbout": [
+        "Education",
+        "Physical Education",
+        "Disability Studies",
+        "Human Rights"
+      ],
+      "sameAs": [
+        "https://www.instagram.com/epnnaranjo/",
+        "https://www.facebook.com/emiliano.naranjo",
+        "https://www.linkedin.com/in/emilianonaranjo/",
+        "https://www.youtube.com/@proyectoddef"
+      ]
+    }
+  </script>
 
-  <!-- Estilos -->
   <link rel="stylesheet" href="../style.css?v=20251110">
   <link rel="icon" href="/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.svg" />
   <link rel="apple-touch-icon" href="/favicon.svg" />
   <link rel="stylesheet" href="../responsive.css?v=20251110">
   <link rel="stylesheet" href="../hero.css">
-
   <style>
     .media-card__title,
     .media-card__meta,
     .media-card__text {
       word-break: break-word;
     }
-
     /* Responsive cards */
     @media (max-width: 768px) {
       .cards-grid {
         grid-template-columns: 1fr;
         gap: 20px;
       }
-
       .media-card {
         width: 100%;
         max-width: none;
       }
-
       .cards-grid .media-card[style*="grid-column"] {
         grid-column: auto !important;
         max-width: none !important;
       }
-
       .media-card__image {
         aspect-ratio: 16 / 9;
         height: auto;
       }
     }
-
     @media (orientation: landscape) and (max-width: 1024px) {
       .cards-grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -62,52 +81,38 @@
       }
     }
   </style>
-
-  <!-- Meta social -->
-  <script src="../js/social/meta-common.js"></script>
-  <script src="../js/social/meta-facebook.js"></script>
-  <script src="../js/social/meta-twitter.js"></script>
-  <script src="../js/social/meta-linkedin.js"></script>
-
   <style>
     main {
       background: #fff;
     }
-
     .section {
       padding: 60px 0;
     }
-
     .section-inner {
       width: 90%;
       max-width: 1200px;
       margin: 0 auto;
     }
-
     .section h2 {
       font-size: 1.9rem;
       color: #0c2d57;
       margin-bottom: 12px;
     }
-
     .section h2::before {
       content: "— ";
       color: #0c2d57;
     }
-
     .section-intro {
       font-size: 0.98rem;
       color: #444;
       margin-bottom: 28px;
       max-width: 800px;
     }
-
     .cards-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 24px;
     }
-
     .media-card {
       background: #fff;
       border-radius: 16px;
@@ -117,19 +122,16 @@
       flex-direction: column;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
     .media-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
     }
-
     .media-card__image {
       position: relative;
       overflow: hidden;
       aspect-ratio: 16 / 9;
       height: auto;
     }
-
     .media-card__img {
       width: 100%;
       height: 100%;
@@ -138,48 +140,40 @@
       transition: transform 5s ease;
       animation: cardPan 20s ease-in-out infinite alternate;
     }
-
     @keyframes cardPan {
       0% { transform: scale(1.08) translateY(-3%); }
       100% { transform: scale(1.08) translateY(3%); }
     }
-
     .media-card:hover .media-card__img {
       animation: none;
       transform: scale(1.15);
     }
-
     .media-card__body {
       padding: 18px 20px;
       display: flex;
       flex-direction: column;
       gap: 6px;
     }
-
     .media-card__title {
       font-weight: 700;
       color: #0c2d57;
       font-size: 1rem;
     }
-
     .media-card__meta {
       font-size: 0.85rem;
       color: #777;
     }
-
     .media-card__text {
       font-size: 0.9rem;
       color: #444;
       flex: 1;
     }
-
     .media-card__link {
       font-weight: 600;
       color: #0c2d57;
       text-decoration: none;
       margin-top: 4px;
     }
-
     .media-card__link:hover {
       text-decoration: underline;
     }

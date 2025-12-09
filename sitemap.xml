@@ -1,19 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://emilianonaranjo.com/</loc>
+    <loc>https://emilianonaranjo.com.ar/</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://emilianonaranjo.com/contacto.html</loc>
+    <loc>https://emilianonaranjo.com.ar/sobre.html</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://emilianonaranjo.com/en/index.html</loc>
+    <loc>https://emilianonaranjo.com.ar/publicaciones.html</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://emilianonaranjo.com/en/contact.html</loc>
+    <loc>https://emilianonaranjo.com.ar/talleres.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://emilianonaranjo.com.ar/entrevistas.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://emilianonaranjo.com.ar/contacto.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://emilianonaranjo.com.ar/en/index.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://emilianonaranjo.com.ar/en/about.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://emilianonaranjo.com.ar/en/publications.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://emilianonaranjo.com.ar/en/workshops.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://emilianonaranjo.com.ar/en/interviews.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://emilianonaranjo.com.ar/en/contact.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://emilianonaranjo.com.ar/pt/index.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://emilianonaranjo.com.ar/pt/about.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://emilianonaranjo.com.ar/pt/publications.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://emilianonaranjo.com.ar/pt/workshops.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://emilianonaranjo.com.ar/pt/interviews.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://emilianonaranjo.com.ar/pt/contact.html</loc>
     <changefreq>monthly</changefreq>
   </url>
 </urlset>

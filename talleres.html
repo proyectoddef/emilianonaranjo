@@ -3,24 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Talleres y capacitaciones de Emiliano Naranjo sobre educación inclusiva, discapacidad y derechos humanos." />
-  <title>Emiliano Naranjo – Educador | Talleres y capacitaciones</title>
-  <!-- Open Graph / Twitter Cards -->
+  <title>Talleres y capacitaciones | Educación física inclusiva y derechos humanos</title>
+  <meta name="description" content="Propuestas de formación y asesoramiento de Emiliano Naranjo en educación física inclusiva, discapacidad y derechos humanos para equipos docentes y organizaciones." />
+  <meta name="keywords" content="talleres, capacitaciones, educación física inclusiva, discapacidad, derechos humanos, formación docente, asesoramiento institucional, Emiliano Naranjo" />
+  <meta name="robots" content="index, follow" />
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
-  <meta property="og:title" content="Emiliano Naranjo – Educador | Talleres y capacitaciones">
-  <meta property="og:description" content="Talleres y capacitaciones de Emiliano Naranjo sobre educación inclusiva, discapacidad y derechos humanos.">
+  <meta property="og:title" content="Talleres y capacitaciones | Educación física inclusiva y derechos humanos">
+  <meta property="og:description" content="Capacitaciones profesionales en educación física inclusiva, discapacidad y derechos humanos coordinadas por Emiliano Naranjo con enfoque anticapacitista." />
   <meta property="og:image" content="https://emilianonaranjo.com.ar/images/logos/en-logo-og.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Emiliano Naranjo – Educador | Talleres y capacitaciones">
-  <meta name="twitter:description" content="Talleres y capacitaciones de Emiliano Naranjo sobre educación inclusiva, discapacidad y derechos humanos.">
+  <meta name="twitter:title" content="Talleres y capacitaciones | Educación física inclusiva y derechos humanos">
+  <meta name="twitter:description" content="Capacitaciones profesionales en educación física inclusiva, discapacidad y derechos humanos coordinadas por Emiliano Naranjo con enfoque anticapacitista." />
   <meta name="twitter:image" content="https://emilianonaranjo.com.ar/images/logos/en-logo-og.png">
-  <link rel="canonical" href="https://emilianonaranjo.com/talleres.html" />
+  <link rel="canonical" href="https://emilianonaranjo.com.ar/talleres.html" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Emiliano Naranjo",
+      "description": "International academic specializing in inclusive physical education, disability, and human rights.",
+      "url": "https://emilianonaranjo.com.ar",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Universidad Nacional de Hurlingham (UNAHUR)"
+      },
+      "knowsAbout": [
+        "Education",
+        "Physical Education",
+        "Disability Studies",
+        "Human Rights"
+      ],
+      "sameAs": [
+        "https://www.instagram.com/epnnaranjo/",
+        "https://www.facebook.com/emiliano.naranjo",
+        "https://www.linkedin.com/in/emilianonaranjo/",
+        "https://www.youtube.com/@proyectoddef"
+      ]
+    }
+  </script>
+
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="/images/logos/en-logo.svg" />
   <link rel="shortcut icon" href="/images/logos/en-logo.svg" />
   <link rel="apple-touch-icon" href="/images/logos/en-logo.svg" />
-
   <style>
     /* ======= CONTENIDO ======= */
     .talleres-section {
@@ -28,7 +54,6 @@
       margin: 60px auto;
       padding: 0 20px;
     }
-
     .talleres-section h3 {
       color: #002855;
       border-left: 4px solid #002855;
@@ -36,12 +61,10 @@
       font-size: 1.6em;
       margin-bottom: 20px;
     }
-
     .talleres-section p.intro {
       margin-bottom: 35px;
       font-size: 1rem;
     }
-
     /* ======= BLOQUE DESTACADO ======= */
     .talleres-destacado {
       display: grid;
@@ -50,7 +73,6 @@
       align-items: stretch;
       margin-bottom: 48px;
     }
-
     .taller-info {
       background: #f8f9fb;
       border-radius: 10px;
@@ -58,26 +80,21 @@
       border-left: 4px solid #003366;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
-
     .taller-info h4 {
       font-size: 1.25rem;
       margin-bottom: 10px;
       color: #003366;
     }
-
     .taller-info ul {
       margin: 10px 0 18px 18px;
     }
-
     .taller-info ul li {
       margin-bottom: 6px;
     }
-
     .taller-info .btn {
       margin-top: 4px;
       display: inline-block;
     }
-
     /* ======= BLOQUE VIDEO ======= */
     .taller-video {
       border-radius: 10px;
@@ -86,7 +103,6 @@
       background: #000;
       position: relative;
     }
-
     .video-wrapper {
       position: relative;
       padding-top: 56.25%;
@@ -94,7 +110,6 @@
       overflow: hidden;
       border-radius: 10px;
     }
-
     .video-link {
       position: absolute;
       inset: 0;
@@ -106,7 +121,6 @@
       cursor: pointer;
       overflow: hidden;
     }
-
     .video-thumb {
       position: absolute;
       inset: 0;
@@ -116,7 +130,6 @@
       filter: brightness(0.9);
       transition: transform 0.5s ease, filter 0.3s ease;
     }
-
     .video-play {
       position: relative;
       z-index: 2;
@@ -131,27 +144,22 @@
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
       transition: transform 0.3s ease, background 0.3s ease;
     }
-
     .video-play span {
       margin-left: 4px;
     }
-
     .video-link:hover .video-thumb {
       transform: scale(1.1);
       filter: brightness(1.05);
     }
-
     .video-link:hover .video-play {
       background: rgba(0, 0, 0, 0.8);
       transform: scale(1.1);
     }
-
     @media (max-width: 900px) {
       .talleres-destacado {
         grid-template-columns: 1fr;
       }
     }
-
     /* ======= FORMATOS ======= */
     .talleres-formatos {
       display: grid;
@@ -159,7 +167,6 @@
       gap: 24px;
       margin-bottom: 50px;
     }
-
     .taller-card {
       background: #ffffff;
       border-radius: 12px;
@@ -167,23 +174,19 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
       border-top: 4px solid #003366;
     }
-
     .taller-card h4 {
       margin-bottom: 8px;
       color: #003366;
       font-size: 1.1rem;
     }
-
     .taller-card p {
       font-size: 0.95rem;
     }
-
     /* ======= GALERÍA ======= */
     .talleres-section h3 + p.galeria-intro {
       margin-bottom: 12px;
       font-size: 0.95rem;
     }
-
     .talleres-galeria {
       display: flex;
       gap: 16px;
@@ -191,16 +194,13 @@
       padding: 10px 4px 14px;
       scroll-snap-type: x mandatory;
     }
-
     .talleres-galeria::-webkit-scrollbar {
       height: 6px;
     }
-
     .talleres-galeria::-webkit-scrollbar-thumb {
       background: #b1bfd8;
       border-radius: 10px;
     }
-
     .galeria-item {
       min-width: 260px;
       max-width: 320px;
@@ -212,29 +212,24 @@
       flex-shrink: 0;
       transition: box-shadow 0.3s ease;
     }
-
     .galeria-item img {
       width: 100%;
       height: 180px;
       object-fit: cover;
       transition: transform 0.6s ease, filter 0.4s ease;
     }
-
     .galeria-item:hover img {
       transform: scale(1.08);
       filter: brightness(1.05);
     }
-
     .galeria-item:hover {
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
     }
-
     .galeria-item h4 {
       font-size: 0.98rem;
       padding: 10px 14px 4px;
       color: #003366;
     }
-
     .galeria-item p {
       font-size: 0.9rem;
       padding: 0 14px 12px;
