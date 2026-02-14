@@ -641,3 +641,50 @@ footer p {
   }
 }
 
+
+/* ===== Sobre bio trayectoria: layout restore (scoped) ===== */
+.bio-card--trayectoria .bio-card__layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.bio-card--trayectoria .bio-card__aside {
+  align-self: start;
+}
+
+.bio-card--trayectoria .bio-card__content {
+  min-width: 0;
+}
+
+.bio-card--trayectoria .bio-card__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+}
+
+.bio-card--trayectoria .bio-card__actions .btn {
+  width: 100%;
+  text-align: left;
+}
+
+.btn-alt {
+  background-color: #143b77;
+}
+
+@media (min-width: 992px) {
+  .bio-card--trayectoria .bio-card__aside .bio-card__actions {
+    position: sticky;
+    top: 120px;
+  }
+}
+
+@media (max-width: 991px) {
+  .bio-card--trayectoria .bio-card__layout {
+    grid-template-columns: 1fr;
+  }
+}
