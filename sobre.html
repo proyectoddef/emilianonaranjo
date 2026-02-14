@@ -11,11 +11,6 @@
   <link rel="stylesheet" href="style.css?v=20251110" />
   <link rel="stylesheet" href="responsive.css?v=20251110" />
   <link rel="stylesheet" href="hero.css" />
-  <style>
-    .bio-block { max-width: 980px; margin: 48px auto; padding: 0 20px; }
-    .bio-card { background: #f8f9fb; border-left: 5px solid #003366; padding: 18px; margin-bottom: 22px; border-radius: 8px; }
-    .bio-card h3 { margin: 0 0 10px; color: #002855; }
-  </style>
 </head>
 <body>
 <header>
@@ -48,12 +43,22 @@
   </div>
 </section>
 
-<section class="bio-block">
-  <div class="bio-card">
-    <h3>Trayectoria académica</h3>
-    <p>
-      Emiliano Naranjo es Licenciado en Educación Física, Magíster en Educación y Especialista en Gestión Educativa, con formación de posgrado orientada a las políticas de inclusión educativa en Argentina. Su recorrido académico integra investigación aplicada en discapacidad, pedagogía crítica y derechos humanos, con foco en las desigualdades estructurales que atraviesan la educación física escolar y universitaria. Desde una perspectiva anticapacitista, su trabajo aporta marcos conceptuales y metodológicos para diseñar prácticas accesibles que reconozcan la diversidad corporal y garanticen el derecho a la educación inclusiva.
-    </p>
+<section id="bio" class="bio-block">
+  <div class="bio-card bio-card--trayectoria">
+    <div class="bio-card__content">
+      <h3>Trayectoria académica</h3>
+      <p>
+        Emiliano Naranjo es Licenciado en Educación Física, Magíster en Educación y Especialista en Gestión Educativa, con formación de posgrado orientada a las políticas de inclusión educativa en Argentina. Su recorrido académico integra investigación aplicada en discapacidad, pedagogía crítica y derechos humanos, con foco en las desigualdades estructurales que atraviesan la educación física escolar y universitaria. Desde una perspectiva anticapacitista, su trabajo aporta marcos conceptuales y metodológicos para diseñar prácticas accesibles que reconozcan la diversidad corporal y garanticen el derecho a la educación inclusiva.
+      </p>
+    </div>
+
+    <!-- CV downloads restored -->
+    <div class="cv-links bio-card__actions" aria-label="Descargas de CV">
+      <a class="btn" href="docs/EmilianoNaranjo_English_Summary.pdf" target="_blank" rel="noopener">🌐 Download English summary</a>
+      <a class="btn btn-alt" href="docs/EmilianoNaranjo_CV_Resumen.pdf" target="_blank" rel="noopener">📄 Descargar CV resumen</a>
+      <a class="btn" href="docs/EmilianoNaranjo_CV_Completo.pdf" target="_blank" rel="noopener">📘 CV completo</a>
+      <!-- TODO: cuando exista CV completo EN: docs/EmilianoNaranjo_English_Full_CV.pdf -->
+    </div>
   </div>
 
   <div class="bio-card">
@@ -81,7 +86,7 @@
 <footer>
   <img src="images/logos/en-logo.svg" alt="Logo Emiliano Naranjo" class="footer-logo" />
   <p>Educación inclusiva | Derechos Humanos | Anticapacitismo</p>
-  <p>© 2025 Emiliano Naranjo — Todos los derechos reservados.</p>
+  <p>© 2026 Emiliano Naranjo — Todos los derechos reservados.</p>
 </footer>
 <script src="js/hero-dynamic.js"></script>
 <script src="js/master.js"></script>
