@@ -186,6 +186,7 @@ nav a:hover {
   }
 }
 
+
 /* ======= SECCIÓN CONTACTO ======= */
 #contacto {
   padding: 60px 0;
@@ -511,3 +512,69 @@ footer p {
 .lang-toggle a:hover {
   background-color: #f2f2f2;
 }
+
+/* ====== INTRO INSTITUCIONAL HOME (Refinamiento editorial) ====== */
+
+.intro-institucional {
+  margin: 80px auto 60px auto;
+  padding: 0 20px;
+}
+
+.intro-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #f8f9fb;
+  border-left: 4px solid #0c2d57;
+  padding: 45px 50px 45px 35px;
+  border-radius: 10px;
+}
+
+/* Título institucional */
+.intro-container h3 {
+  font-size: 1.6rem;
+  color: #0c2d57;
+  margin-bottom: 28px;
+  position: relative;
+}
+
+/* Línea elegante debajo del título */
+.intro-container h3::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #0c2d57;
+  margin-top: 12px;
+}
+
+/* Párrafos */
+.intro-container p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #333;
+  margin-bottom: 20px;
+  text-indent: 1.2em;
+}
+
+/* Letra capital editorial */
+.intro-container p:first-of-type::first-letter {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #0c2d57;
+  float: left;
+  line-height: 1;
+  margin-right: 8px;
+  margin-top: 3px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .intro-container {
+    padding: 35px 25px;
+  }
+
+  .intro-container p {
+    text-indent: 0.8em;
+  }
+}
+
