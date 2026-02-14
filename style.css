@@ -187,38 +187,6 @@ nav a:hover {
 }
 
 
-/* ======= BLOQUE INSTITUCIONAL DE INTRODUCCIÓN (SEO + DISEÑO) ======= */
-.intro-institucional {
-  /* Caja blanca, compacta y centrada para mejorar legibilidad bajo el hero */
-  background-color: #ffffff;
-  max-width: 820px;
-  margin: 56px auto 24px;
-  padding: 34px 30px;
-  border-radius: 10px;
-}
-
-.intro-institucional h3 {
-  /* Subtítulo institucional con jerarquía visual clara */
-  color: #0c2d57;
-  font-size: clamp(1.28rem, 2.2vw, 1.6rem);
-  line-height: 1.3;
-  margin-bottom: 18px;
-  font-weight: 650;
-}
-
-.intro-institucional p {
-  /* Párrafos breves con tipografía más liviana para reducir peso visual */
-  color: #2a2a2a;
-  font-size: 1rem;
-  line-height: 1.62;
-  font-weight: 350;
-  margin-bottom: 13px;
-}
-
-.intro-institucional p:last-child {
-  margin-bottom: 0;
-}
-
 /* ======= SECCIÓN CONTACTO ======= */
 #contacto {
   padding: 60px 0;
@@ -544,3 +512,69 @@ footer p {
 .lang-toggle a:hover {
   background-color: #f2f2f2;
 }
+
+/* ====== INTRO INSTITUCIONAL HOME (Refinamiento editorial) ====== */
+
+.intro-institucional {
+  margin: 80px auto 60px auto;
+  padding: 0 20px;
+}
+
+.intro-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #f8f9fb;
+  border-left: 4px solid #0c2d57;
+  padding: 45px 50px 45px 35px;
+  border-radius: 10px;
+}
+
+/* Título institucional */
+.intro-container h3 {
+  font-size: 1.6rem;
+  color: #0c2d57;
+  margin-bottom: 28px;
+  position: relative;
+}
+
+/* Línea elegante debajo del título */
+.intro-container h3::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #0c2d57;
+  margin-top: 12px;
+}
+
+/* Párrafos */
+.intro-container p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #333;
+  margin-bottom: 20px;
+  text-indent: 1.2em;
+}
+
+/* Letra capital editorial */
+.intro-container p:first-of-type::first-letter {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #0c2d57;
+  float: left;
+  line-height: 1;
+  margin-right: 8px;
+  margin-top: 3px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .intro-container {
+    padding: 35px 25px;
+  }
+
+  .intro-container p {
+    text-indent: 0.8em;
+  }
+}
+
