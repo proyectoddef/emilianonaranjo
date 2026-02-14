@@ -11,11 +11,6 @@
   <link rel="stylesheet" href="style.css?v=20251110" />
   <link rel="stylesheet" href="responsive.css?v=20251110" />
   <link rel="stylesheet" href="hero.css" />
-  <style>
-    .bio-block { max-width: 980px; margin: 48px auto; padding: 0 20px; }
-    .bio-card { background: #f8f9fb; border-left: 5px solid #003366; padding: 18px; margin-bottom: 22px; border-radius: 8px; }
-    .bio-card h3 { margin: 0 0 10px; color: #002855; }
-  </style>
 </head>
 <body>
 <header>
@@ -48,40 +43,55 @@
   </div>
 </section>
 
-<section class="bio-block">
-  <div class="bio-card">
-    <h3>Trayectoria académica</h3>
-    <p>
-      Emiliano Naranjo es Licenciado en Educación Física, Magíster en Educación y Especialista en Gestión Educativa, con formación de posgrado orientada a las políticas de inclusión educativa en Argentina. Su recorrido académico integra investigación aplicada en discapacidad, pedagogía crítica y derechos humanos, con foco en las desigualdades estructurales que atraviesan la educación física escolar y universitaria. Desde una perspectiva anticapacitista, su trabajo aporta marcos conceptuales y metodológicos para diseñar prácticas accesibles que reconozcan la diversidad corporal y garanticen el derecho a la educación inclusiva.
-    </p>
-  </div>
+<section id="bio" class="bio-block">
+  <div class="bio-layout" aria-label="Sección biográfica con descargas de CV">
+    <aside class="bio-layout__buttons">
+      <div class="cv-links" aria-label="Descargas de CV">
+        <a class="btn" href="docs/EmilianoNaranjo_English_Summary.pdf" target="_blank" rel="noopener">🌐 Download English summary</a>
+        <a class="btn" href="docs/EmilianoNaranjo_CV_Resumen.pdf" target="_blank" rel="noopener">📄 Descargar CV resumen</a>
+        <a class="btn" href="docs/EmilianoNaranjo_CV_Completo.pdf" target="_blank" rel="noopener">📘 CV completo</a>
+      </div>
+      <!-- TODO: cuando exista CV completo EN: docs/EmilianoNaranjo_English_Full_CV.pdf -->
+    </aside>
 
-  <div class="bio-card">
-    <h3>Docencia universitaria</h3>
-    <p>
-      En la Universidad Nacional de Hurlingham (UNAHUR), Emiliano Naranjo desarrolla tareas de docencia universitaria y acompañamiento institucional en formación docente. Su labor promueve estrategias de educación física inclusiva en carreras de grado y espacios de actualización profesional, articulando diseño universal para el aprendizaje, ajustes razonables y evaluación formativa con enfoque de derechos. Esta experiencia fortalece la preparación de docentes capaces de intervenir en contextos heterogéneos, especialmente en escuelas argentinas con alta diversidad social y cultural.
-    </p>
-  </div>
+    <div class="bio-layout__divider" aria-hidden="true"></div>
 
-  <div class="bio-card">
-    <h3>Conferencias internacionales</h3>
-    <p>
-      Ha participado en congresos, seminarios y jornadas internacionales sobre inclusión, discapacidad y educación superior, compartiendo resultados de investigación y experiencias de gestión pedagógica en América Latina. En sus conferencias, Emiliano Naranjo aborda la relación entre educación física, justicia educativa y derechos humanos, destacando la necesidad de desmontar prácticas capacitistas y construir instituciones más accesibles. Estas intervenciones posicionan su voz como referente en debates regionales sobre educación inclusiva en Argentina.
-    </p>
-  </div>
+    <div class="bio-layout__content">
+      <div class="bio-card">
+        <h3>Trayectoria académica</h3>
+        <p>
+          Emiliano Naranjo es Licenciado en Educación Física, Magíster en Educación y Especialista en Gestión Educativa, con formación de posgrado orientada a las políticas de inclusión educativa en Argentina. Su recorrido académico integra investigación aplicada en discapacidad, pedagogía crítica y derechos humanos, con foco en las desigualdades estructurales que atraviesan la educación física escolar y universitaria. Desde una perspectiva anticapacitista, su trabajo aporta marcos conceptuales y metodológicos para diseñar prácticas accesibles que reconozcan la diversidad corporal y garanticen el derecho a la educación inclusiva.
+        </p>
+      </div>
 
-  <div class="bio-card">
-    <h3>Impacto académico y publicaciones destacadas</h3>
-    <p>
-      Su producción académica incluye artículos científicos, ensayos y materiales de formación docente sobre derecho a la educación, discapacidad y prácticas inclusivas en educación física. Las publicaciones de Emiliano Naranjo son utilizadas en espacios universitarios, capacitaciones docentes y proyectos institucionales que buscan mejorar la participación de estudiantes con discapacidad. Este impacto académico contribuye a consolidar una agenda de transformación educativa basada en derechos humanos, accesibilidad y anticapacitismo en el sistema educativo argentino.
-    </p>
+      <div class="bio-card">
+        <h3>Docencia universitaria</h3>
+        <p>
+          En la Universidad Nacional de Hurlingham (UNAHUR), Emiliano Naranjo desarrolla tareas de docencia universitaria y acompañamiento institucional en formación docente. Su labor promueve estrategias de educación física inclusiva en carreras de grado y espacios de actualización profesional, articulando diseño universal para el aprendizaje, ajustes razonables y evaluación formativa con enfoque de derechos. Esta experiencia fortalece la preparación de docentes capaces de intervenir en contextos heterogéneos, especialmente en escuelas argentinas con alta diversidad social y cultural.
+        </p>
+      </div>
+
+      <div class="bio-card">
+        <h3>Conferencias internacionales</h3>
+        <p>
+          Ha participado en congresos, seminarios y jornadas internacionales sobre inclusión, discapacidad y educación superior, compartiendo resultados de investigación y experiencias de gestión pedagógica en América Latina. En sus conferencias, Emiliano Naranjo aborda la relación entre educación física, justicia educativa y derechos humanos, destacando la necesidad de desmontar prácticas capacitistas y construir instituciones más accesibles. Estas intervenciones posicionan su voz como referente en debates regionales sobre educación inclusiva en Argentina.
+        </p>
+      </div>
+
+      <div class="bio-card">
+        <h3>Impacto académico y publicaciones destacadas</h3>
+        <p>
+          Su producción académica incluye artículos científicos, ensayos y materiales de formación docente sobre derecho a la educación, discapacidad y prácticas inclusivas en educación física. Las publicaciones de Emiliano Naranjo son utilizadas en espacios universitarios, capacitaciones docentes y proyectos institucionales que buscan mejorar la participación de estudiantes con discapacidad. Este impacto académico contribuye a consolidar una agenda de transformación educativa basada en derechos humanos, accesibilidad y anticapacitismo en el sistema educativo argentino.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
 <footer>
   <img src="images/logos/en-logo.svg" alt="Logo Emiliano Naranjo" class="footer-logo" />
   <p>Educación inclusiva | Derechos Humanos | Anticapacitismo</p>
-  <p>© 2025 Emiliano Naranjo — Todos los derechos reservados.</p>
+  <p>© 2026 Emiliano Naranjo — Todos los derechos reservados.</p>
 </footer>
 <script src="js/hero-dynamic.js"></script>
 <script src="js/master.js"></script>
