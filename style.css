@@ -319,6 +319,25 @@ footer p {
   padding: 60px 0;
 }
 
+.bio-block {
+  max-width: 980px;
+  margin: 48px auto;
+  padding: 0 20px;
+}
+
+.bio-card {
+  background: #f8f9fb;
+  border-left: 5px solid #003366;
+  border-radius: 8px;
+  padding: 18px;
+  margin-bottom: 22px;
+}
+
+.bio-card h3 {
+  margin: 0 0 10px;
+  color: #002855;
+}
+
 .bio-inner {
   width: 90%;
   max-width: 900px;
@@ -345,9 +364,12 @@ footer p {
 
 .cv-links {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 10px;
-  margin-top: 10px;
+  margin-top: 18px;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .btn {
@@ -360,12 +382,55 @@ footer p {
   font-size: 0.95em;
 }
 
+.cv-links .btn {
+  width: fit-content;
+}
+
 .btn-alt {
-  background-color: #e5332a;
+  background-color: #143b77;
 }
 
 .btn:hover {
   opacity: 0.9;
+}
+
+
+
+
+/* ===== Trayectoria: 2 columnas (texto izq, CV der) ===== */
+.bio-card--trayectoria {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 22px;
+  align-items: start;
+}
+
+.bio-card--trayectoria .bio-card__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+}
+
+.bio-card--trayectoria .bio-card__actions .btn {
+  width: 100%;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+@media (min-width: 992px) {
+  .bio-card--trayectoria .bio-card__actions {
+    position: sticky;
+    top: 120px;
+  }
+}
+
+@media (max-width: 991px) {
+  .bio-card--trayectoria {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ======= HERO PUBLICACIONES ======= */
