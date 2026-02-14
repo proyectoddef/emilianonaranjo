@@ -345,9 +345,10 @@ footer p {
 
 .cv-links {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 10px;
-  margin-top: 10px;
+  margin-top: 18px;
 }
 
 .btn {
@@ -360,8 +361,12 @@ footer p {
   font-size: 0.95em;
 }
 
+.cv-links .btn {
+  width: fit-content;
+}
+
 .btn-alt {
-  background-color: #e5332a;
+  background-color: #0c2d57;
 }
 
 .btn:hover {
