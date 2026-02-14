@@ -319,6 +319,26 @@ footer p {
   padding: 60px 0;
 }
 
+.bio-block {
+  max-width: 980px;
+  margin: 48px auto;
+  padding: 0 20px;
+}
+
+.bio-card {
+  background: #f8f9fb;
+  border-left: 4px solid #0c2d57;
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+  padding: 35px 40px;
+  margin-bottom: 22px;
+}
+
+.bio-card h3 {
+  margin: 0 0 10px;
+  color: #002855;
+}
+
 .bio-inner {
   width: 90%;
   max-width: 900px;
@@ -368,7 +388,7 @@ footer p {
 }
 
 .btn-alt {
-  background-color: #0c2d57;
+  background-color: #143b77;
 }
 
 .btn:hover {
@@ -376,14 +396,41 @@ footer p {
 }
 
 
-@media (min-width: 992px) {
-  .bio-card--trayectoria {
-    position: relative;
-  }
 
-  .bio-card--trayectoria .cv-links {
+
+/* ===== Trayectoria: 2 columnas (texto izq, CV der) ===== */
+.bio-card--trayectoria {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 22px;
+  align-items: start;
+}
+
+.bio-card--trayectoria .bio-card__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+}
+
+.bio-card--trayectoria .bio-card__actions .btn {
+  width: 100%;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+@media (min-width: 992px) {
+  .bio-card--trayectoria .bio-card__actions {
     position: sticky;
     top: 120px;
+  }
+}
+
+@media (max-width: 991px) {
+  .bio-card--trayectoria {
+    grid-template-columns: 1fr;
   }
 }
 
