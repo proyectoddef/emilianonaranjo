@@ -349,6 +349,8 @@ footer p {
   align-items: flex-start;
   gap: 10px;
   margin-top: 18px;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .btn {
@@ -371,6 +373,18 @@ footer p {
 
 .btn:hover {
   opacity: 0.9;
+}
+
+
+@media (min-width: 992px) {
+  .bio-card--trayectoria {
+    position: relative;
+  }
+
+  .bio-card--trayectoria .cv-links {
+    position: sticky;
+    top: 120px;
+  }
 }
 
 /* ======= HERO PUBLICACIONES ======= */
