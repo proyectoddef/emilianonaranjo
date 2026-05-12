@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 780" role="img" aria-labelledby="title desc">
+  <title id="title">Inclusión educativa y justicia</title>
+  <desc id="desc">Ilustración abstracta de personas diversas, accesibilidad y transformación institucional.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eef4ff"/>
+      <stop offset="100%" stop-color="#d7e7fb"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="780" fill="url(#bg)"/>
+  <path d="M120 680 L700 420 L1280 680 L1280 780 L120 780 Z" fill="#8cb0d9" opacity="0.95"/>
+  <path d="M240 520 Q700 150 1160 520" fill="none" stroke="#2b6797" stroke-width="18" stroke-linecap="round"/>
+
+  <!-- Figure left -->
+  <circle cx="380" cy="300" r="45" fill="#f0bf9b"/>
+  <rect x="320" y="345" width="120" height="180" rx="36" fill="#1f4d7a"/>
+  <rect x="280" y="420" width="75" height="22" rx="11" fill="#173a5d"/>
+  <rect x="405" y="420" width="75" height="22" rx="11" fill="#173a5d"/>
+
+  <!-- Figure center (wheelchair) -->
+  <circle cx="700" cy="285" r="40" fill="#f0bf9b"/>
+  <rect x="645" y="325" width="110" height="145" rx="32" fill="#245f8d"/>
+  <circle cx="700" cy="560" r="82" fill="none" stroke="#173a5d" stroke-width="18"/>
+  <line x1="700" y1="430" x2="700" y2="525" stroke="#173a5d" stroke-width="16" stroke-linecap="round"/>
+  <line x1="700" y1="470" x2="790" y2="520" stroke="#173a5d" stroke-width="16" stroke-linecap="round"/>
+  <line x1="700" y1="525" x2="640" y2="605" stroke="#173a5d" stroke-width="16" stroke-linecap="round"/>
+
+  <!-- Figure right -->
+  <circle cx="1020" cy="300" r="45" fill="#f0bf9b"/>
+  <rect x="960" y="345" width="120" height="180" rx="36" fill="#1f4d7a"/>
+  <rect x="920" y="420" width="75" height="22" rx="11" fill="#173a5d"/>
+  <rect x="1045" y="420" width="75" height="22" rx="11" fill="#173a5d"/>
+
+  <circle cx="1220" cy="120" r="74" fill="#ffd56b"/>
+  <path d="M210 620 C360 560, 520 560, 680 620" fill="none" stroke="#ffffff" stroke-opacity="0.7" stroke-width="10" stroke-linecap="round"/>
+  <path d="M720 620 C880 560, 1040 560, 1190 620" fill="none" stroke="#ffffff" stroke-opacity="0.7" stroke-width="10" stroke-linecap="round"/>
+</svg>
