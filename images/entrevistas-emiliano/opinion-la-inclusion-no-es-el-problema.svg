@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1079" viewBox="0 0 1536 1079" role="img" aria-label="Nota de opinión: La inclusión no es el problema">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e2e3e6"/>
+      <stop offset="100%" stop-color="#9fa3a8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1536" height="1079" fill="url(#bg)"/>
+  <polygon points="0,220 560,180 640,620 0,650" fill="#b0b0b0"/>
+  <polygon points="560,180 760,120 860,560 640,620" fill="#9d9d9d"/>
+  <polygon points="780,360 1536,260 1536,760 880,730" fill="#777b80"/>
+  <polygon points="200,740 860,650 940,980 120,1010" fill="#979797"/>
+  <line x1="830" y1="640" x2="930" y2="975" stroke="#d09f4e" stroke-width="12"/>
+  <line x1="140" y1="1000" x2="240" y2="760" stroke="#d09f4e" stroke-width="10"/>
+  <rect x="350" y="760" width="320" height="220" fill="#5079a0"/>
+  <circle cx="470" cy="875" r="62" fill="none" stroke="#ececec" stroke-width="9"/>
+  <rect x="478" y="785" width="20" height="70" fill="#ececec"/>
+  <line x1="490" y1="855" x2="558" y2="855" stroke="#ececec" stroke-width="9"/>
+  <line x1="554" y1="853" x2="590" y2="915" stroke="#ececec" stroke-width="9"/>
+  <line x1="492" y1="881" x2="566" y2="881" stroke="#ececec" stroke-width="9"/>
+  <line x1="564" y1="883" x2="564" y2="949" stroke="#ececec" stroke-width="9"/>
+  <circle cx="485" cy="776" r="15" fill="#ececec"/>
+
+  <rect x="0" y="820" width="1536" height="259" fill="#f5f5f7"/>
+  <text x="42" y="885" font-size="48" fill="#616166" font-family="Arial, Helvetica, sans-serif" letter-spacing="1">AGENCIAPACOURONDO.COM.AR</text>
+  <text x="42" y="983" font-size="64" fill="#141416" font-weight="700" font-family="Arial, Helvetica, sans-serif">La inclusión no es el problema | Agencia Paco Urondo</text>
+  <circle cx="1488" cy="884" r="39" fill="#fafafa" stroke="#bdbdbd" stroke-width="2"/>
+  <text x="1488" y="897" text-anchor="middle" font-size="54" fill="#222" font-family="Georgia, serif" font-style="italic">i</text>
+</svg>
