@@ -1184,3 +1184,44 @@
     line-height: 1.2 !important;
   }
 }
+
+/* Oculta la figura secundaria del encabezado de entrevistas en móviles. */
+@media (max-width: 900px) {
+  #hero-entrevistas::before {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.06) 36%,
+        rgba(0, 0, 0, 0.5) 56%,
+        rgba(0, 0, 0, 0.92) 72%,
+        rgba(0, 0, 0, 0.98) 100%
+      ),
+      radial-gradient(
+        ellipse at 80% 25%,
+        rgba(0, 0, 0, 0.98) 0%,
+        rgba(0, 0, 0, 0.86) 24%,
+        rgba(0, 0, 0, 0.42) 48%,
+        rgba(0, 0, 0, 0) 70%
+      );
+  }
+
+  #hero-entrevistas::after {
+    background:
+      radial-gradient(
+        ellipse at 82% 46%,
+        rgba(0, 0, 0, 0.95) 0%,
+        rgba(0, 0, 0, 0.78) 30%,
+        rgba(0, 0, 0, 0.24) 58%,
+        rgba(0, 0, 0, 0) 76%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.08) 42%,
+        rgba(0, 0, 0, 0.42) 62%,
+        rgba(0, 0, 0, 0.88) 82%,
+        rgba(0, 0, 0, 0.96) 100%
+      );
+  }
+}
