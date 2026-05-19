@@ -1224,4 +1224,40 @@
         #000 100%
       );
   }
+
+  #hero-entrevistas .hero-container {
+    z-index: 4;
+    overflow: hidden;
+  }
+
+  #hero-entrevistas .hero-container::before {
+    content: "";
+    position: absolute;
+    top: 30%;
+    right: -5%;
+    width: 56%;
+    height: 58%;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(
+        ellipse at 70% 45%,
+        #000 0%,
+        rgba(0, 0, 0, 0.98) 34%,
+        rgba(0, 0, 0, 0.82) 52%,
+        rgba(0, 0, 0, 0.16) 78%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.54) 30%,
+        rgba(0, 0, 0, 0.94) 62%,
+        #000 100%
+      );
+  }
+
+  #hero-entrevistas .hero-text {
+    z-index: 1;
+  }
 }
