@@ -1233,26 +1233,27 @@
   #hero-entrevistas .hero-container::before {
     content: "";
     position: absolute;
-    top: 42%;
-    right: -8%;
-    width: 68%;
-    height: 46%;
+    top: 34%;
+    right: -2%;
+    width: 50%;
+    height: 54%;
     pointer-events: none;
     z-index: 0;
     background:
       radial-gradient(
-        ellipse at 78% 44%,
+        ellipse at 76% 42%,
         #000 0%,
-        rgba(0, 0, 0, 0.98) 38%,
-        rgba(0, 0, 0, 0.82) 58%,
-        rgba(0, 0, 0, 0.18) 82%,
+        rgba(0, 0, 0, 0.98) 42%,
+        rgba(0, 0, 0, 0.82) 64%,
+        rgba(0, 0, 0, 0.22) 84%,
         rgba(0, 0, 0, 0) 100%
       ),
       linear-gradient(
         90deg,
         rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.54) 30%,
-        rgba(0, 0, 0, 0.94) 62%,
+        rgba(0, 0, 0, 0.18) 10%,
+        rgba(0, 0, 0, 0.76) 24%,
+        rgba(0, 0, 0, 0.96) 42%,
         #000 100%
       );
   }
