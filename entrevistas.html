@@ -169,6 +169,56 @@
     .media-card__link:hover {
       text-decoration: underline;
     }
+
+    /* Portadas editoriales para artículos sin imagen de prensa verificada */
+    .media-card__cover {
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: clamp(16px, 4vw, 28px);
+      text-decoration: none;
+      overflow: hidden;
+    }
+    .media-card__cover--pagina12 {
+      background: #f4f0e8;
+      color: #252525;
+      border-top: 7px solid #c52532;
+    }
+    .media-card__cover--nacion {
+      background: #112c4b;
+      color: #fff;
+      border-top: 7px solid #b7c7d9;
+    }
+    .media-card__cover-brand {
+      font-weight: 800;
+      font-size: clamp(1.5rem, 5vw, 2.4rem);
+      letter-spacing: -0.05em;
+      line-height: 1;
+    }
+    .media-card__cover--nacion .media-card__cover-brand {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 700;
+      letter-spacing: -0.035em;
+    }
+    .media-card__cover-kicker {
+      display: block;
+      font-size: .7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      opacity: .8;
+    }
+    .media-card__cover-headline {
+      display: block;
+      font-weight: 700;
+      font-size: clamp(.88rem, 2.5vw, 1.16rem);
+      line-height: 1.28;
+      max-width: 32ch;
+    }
   </style>
   <link rel="stylesheet" href="hero.css?v=20260524-mobile-entrevistas-4" />
   <style>
@@ -309,8 +359,10 @@
           <!-- Cobertura periodística de noviembre de 2026 -->
           <article class="media-card">
             <div class="media-card__image">
-              <a href="https://www.pagina12.com.ar/2026/11/06/no-deberia-haber-nadie-que-pelee-excesivamente-por-hacer-lo-que-le-gusta/" target="_blank" rel="noopener noreferrer" aria-label="Leer entrevista de Página/12">
-                <img src="images/profile/emiliano-naranjo-og.jpg" alt="Emiliano Naranjo, fotografía de archivo del sitio para la entrevista de Página/12" class="media-card__img">
+              <a href="https://www.pagina12.com.ar/2026/11/06/no-deberia-haber-nadie-que-pelee-excesivamente-por-hacer-lo-que-le-gusta/" class="media-card__cover media-card__cover--pagina12" target="_blank" rel="noopener noreferrer" aria-label="Leer la nota de Página/12">
+                <span class="media-card__cover-brand">Página/12</span>
+                <span class="media-card__cover-kicker">Entrevista · Educación y derechos</span>
+                <span class="media-card__cover-headline">“No debería haber nadie que pelee excesivamente por hacer lo que le gusta”</span>
               </a>
             </div>
             <div class="media-card__body">
@@ -322,8 +374,10 @@
           </article>
           <article class="media-card">
             <div class="media-card__image">
-              <a href="https://www.lanacion.com.ar/comunidad/es-profesor-de-educacion-fisica-usa-silla-de-ruedas-y-busca-cambiar-la-forma-de-ensenar-y-entender-nid04112026/" target="_blank" rel="noopener noreferrer" aria-label="Leer entrevista de LA NACION">
-                <img src="images/profile/emiliano-naranjo.jpg" alt="Emiliano Naranjo, fotografía de archivo del sitio para la entrevista de LA NACION" class="media-card__img">
+              <a href="https://www.lanacion.com.ar/comunidad/es-profesor-de-educacion-fisica-usa-silla-de-ruedas-y-busca-cambiar-la-forma-de-ensenar-y-entender-nid04112026/" class="media-card__cover media-card__cover--nacion" target="_blank" rel="noopener noreferrer" aria-label="Leer la nota de LA NACION">
+                <span class="media-card__cover-brand">LA NACION</span>
+                <span class="media-card__cover-kicker">Comunidad · Educación física</span>
+                <span class="media-card__cover-headline">Es profesor de educación física y busca transformar la enseñanza</span>
               </a>
             </div>
             <div class="media-card__body">
